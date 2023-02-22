@@ -12,11 +12,11 @@ TagManager:
   - 
   - Water
   - UI
+  - BG_Sky
   - BG_Far
   - BG_Mid
   - BG_Near
   - Foreground
-  - AI
   - 
   - 
   - 
@@ -41,4 +41,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG_Sky
+    uniqueID: 2858999267
+    locked: 0
+  - name: BG_Sun
+    uniqueID: 3836018933
+    locked: 0
+  - name: BG_Far
+    uniqueID: 1525116163
+    locked: 0
+  - name: BG_Mid
+    uniqueID: 2074015911
+    locked: 0
+  - name: BG_Near
+    uniqueID: 473612207
+    locked: 0
+  - name: Foreground
+    uniqueID: 1297805551
     locked: 0
