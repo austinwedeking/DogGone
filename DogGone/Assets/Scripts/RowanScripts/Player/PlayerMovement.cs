@@ -169,7 +169,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ChangeDirection(bool faceRight)
     { // true = right, false = left
-        if (faceRight) { gameObject.transform.rotation = Quaternion.Euler(180, 0, 180); }
+        if (!faceRight) { gameObject.transform.rotation = Quaternion.Euler(180, 0, 180); }
         else { gameObject.transform.rotation = Quaternion.Euler(0, 0, 0); }
     }
 
