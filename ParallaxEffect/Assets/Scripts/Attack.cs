@@ -15,7 +15,7 @@ public class Attack : MonoBehaviour
 
     private IEnumerator theCoroutine;
     private bool onTimer = false;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -87,7 +87,7 @@ public class Attack : MonoBehaviour
             //does this code after the frame has passed
 
             //does this code on the framed it is called
-            yield return new WaitForSeconds(0.001f); //waits 3 seconds
+            yield return new WaitForSeconds(.001f); //waits 3 seconds
                                                 //then does the code down here
 
             Rigidbody2D fireballPhysics = spawnedFireball.GetComponent<Rigidbody2D>();
