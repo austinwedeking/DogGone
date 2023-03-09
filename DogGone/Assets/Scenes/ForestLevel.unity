@@ -1755,6 +1755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906038174}
   - component: {fileID: 1906038175}
+  - component: {fileID: 1906038176}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1792,6 +1793,20 @@ MonoBehaviour:
   theInventory: []
   nextSpot: 0
   lastValidSpot: 0
+--- !u!114 &1906038176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906038173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f057421408e58fe4a81f0eac2af31205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseSceneIndex: 0
+  winSceneIndex: 0
 --- !u!1 &2077719715
 GameObject:
   m_ObjectHideFlags: 0
