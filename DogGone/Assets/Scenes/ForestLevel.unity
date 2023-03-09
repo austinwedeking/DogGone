@@ -1805,8 +1805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f057421408e58fe4a81f0eac2af31205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loseSceneIndex: 0
-  winSceneIndex: 0
+  loseSceneIndex: 1
+  winSceneIndex: 2
 --- !u!1 &2077719715
 GameObject:
   m_ObjectHideFlags: 0

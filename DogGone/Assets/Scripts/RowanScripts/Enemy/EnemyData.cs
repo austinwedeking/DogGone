@@ -13,11 +13,15 @@ public class EnemyData : MonoBehaviour
     [SerializeField] private int maxHealth;
     [Tooltip("Keep this at zero")] [SerializeField] private int currentHealth;
 
+    private LevelChange levelChange;
     private int damage = 5; public int getDamage() { return damage; }
 
     private void Start()
     {
         currentHealth = maxHealth;
+        levelChange = FindObjectOfType<LevelChange>();
+        if (levelChange == null) { Debug.LogError("bad"); }
+        else { levelChange.IncrementEnemies(); }
     }
 
     public void takeDamage(int damage)
@@ -26,13 +30,14 @@ public class EnemyData : MonoBehaviour
         Debug.Log($"enemy took {maxHealth - currentHealth} damage");
         if (currentHealth <= 0)
         {
-            Debug.Log("Enemy Died");
-            Destroy(gameObject);
+            Die();
         }
     }
 
-    public void die()
+    public void Die()
     {
-
+        Debug.Log("Enemy Died");
+        levelChange.DecrementEnemies();
+        Destroy(gameObject);
     }
 }

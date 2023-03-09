@@ -25,12 +25,12 @@ public class LevelChange : MonoBehaviour
         if (numEnemies <= 0) { Win(); }
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         SceneManager.LoadScene(loseSceneIndex);
     }
 
-    public void Win()
+    private void Win()
     {
         SceneManager.LoadScene(winSceneIndex);
     }

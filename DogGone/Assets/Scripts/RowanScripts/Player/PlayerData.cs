@@ -9,9 +9,13 @@ public class PlayerData : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private int currentHealth;
 
+    private LevelChange levelChange;
+
     public void Start()
     {
         currentHealth = maxHealth;
+        levelChange = FindObjectOfType<LevelChange>();
+        if (levelChange == null) { Debug.LogError("bad"); }
     }
 
     public void takeDamage(int damage)
@@ -20,7 +24,13 @@ public class PlayerData : MonoBehaviour
         Debug.Log(currentHealth);
         if (currentHealth <= 0)
         {
-            Debug.Log("Player has died");
+            Die();
         }
+    }
+
+    public void Die()
+    {
+        Debug.Log("Player has died");
+        levelChange.GameOver();
     }
 }
