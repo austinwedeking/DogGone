@@ -7,6 +7,7 @@ public class TestAI : BaseAI
     private Rigidbody2D AIRigid;
     private Transform playerTransform;
     private SpriteRenderer AIRenderer;
+    private Animator enemyAnimator;
 
     [Header("Attack Management")]
     [SerializeField] private GameObject rightAttack;
@@ -33,6 +34,7 @@ public class TestAI : BaseAI
         else { attackTransform = rightAttack.GetComponent<Transform>(); }
         isMoving = false;
         movementDirection = 1;
+        enemyAnimator = gameObject.GetComponent<Animator>();
     }
 
     override public void Attack()
@@ -45,6 +47,7 @@ public class TestAI : BaseAI
         else { facingLeft = true; }
         FaceLeft(facingLeft);
 
+        enemyAnimator.SetBool("isAttacking", true);
         AIRigid.velocity = new Vector2(0, AIRigid.velocity.y);
 
         collision = Physics2D.OverlapCircle(attackTransform.position, attackOverlapRadius, playerLayer);
@@ -75,12 +78,14 @@ public class TestAI : BaseAI
             isMoving = true;
             //AIRigid.velocity = new Vector2(-3.0f, AIRigid.velocity.y);
         }
+        enemyAnimator.SetBool("isAttacking", false);
         //Debug.Log("Chase");
     }
 
     override public void Wander()
     {
         isMoving = false;
+        enemyAnimator.SetBool("isAttacking", false);
         //Debug.Log("Wander");
     }
 
