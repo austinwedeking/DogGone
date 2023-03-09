@@ -28,7 +28,15 @@ public class DeathFloor : MonoBehaviour
             //loseScreen.SetActive(true);
             //loseScreen.transform.position = collision.gameObject.transform.position;
 
-            Destroy(collision.gameObject);
+            PlayerData playerdata;
+            playerdata = collision.GetComponent<PlayerData>();
+
+            if(playerdata != null)
+            {
+                playerdata.takeDamage(1000);
+
+            }
+
             Debug.Log("Player fell in! You lose!");
         }
     }
