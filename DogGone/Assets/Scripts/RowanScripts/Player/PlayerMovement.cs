@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 
     //TODO: Make jump so it can be heald to go higher, increase gravity when falling
 
+    private Animator playerAnimator;
+
     [Header("Movement Controls")]
     [SerializeField] private float moveSpeed = 8.0f;
     [SerializeField] private float jumpForce = 10.0f;
@@ -42,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         //facingRight = false;
         if (attackPosition == null) { Debug.LogError("No attack position object attached to game object"); }
         canAttack = true;
+        playerAnimator = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -121,6 +124,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 { rigid.AddForce(new Vector2(moveSpeed, 0)); }
+                playerAnimator.SetBool("isWalking", true); 
                 break;
             case 1:
                 if (rigid.velocity.x != 0)
@@ -132,12 +136,14 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 { rigid.AddForce(new Vector2(-moveSpeed, 0)); }
+                playerAnimator.SetBool("isWalking", true); 
                 break;
             case 2:
                 rigid.AddForce(new Vector2(0, jumpForce));
                 break;
             case 3:
                 rigid.velocity = new Vector2(0, rigid.velocity.y);
+                playerAnimator.SetBool("isWalking", false);
                 break;
             default:
                 break;

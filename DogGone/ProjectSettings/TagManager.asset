@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - Attack Collider
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - BG_Sky
@@ -18,7 +19,7 @@ TagManager:
   - BG_Mid
   - BG_Near
   - Foreground
-  - 
+  - Player
   - 
   - 
   - 
