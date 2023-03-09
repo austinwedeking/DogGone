@@ -31,13 +31,19 @@ public class DeathFloor : MonoBehaviour
             PlayerData playerdata;
             playerdata = collision.GetComponent<PlayerData>();
 
+            EnemyData enemydata;
+            enemydata = collision.GetComponent<EnemyData>();
+
             if(playerdata != null)
             {
                 playerdata.takeDamage(1000);
-
+                Debug.Log("Player fell in a pit!");
             }
-
-            Debug.Log("Player fell in! You lose!");
+            else if(enemydata != null)
+            {
+                enemydata.takeDamage(1000);
+                Debug.Log("Enemy fell in a pit!");
+            }
         }
     }
 }
