@@ -7,6 +7,7 @@ public class TestAI : BaseAI
     private Rigidbody2D AIRigid;
     private Transform playerTransform;
     private SpriteRenderer AIRenderer;
+    private Animator animator;
 
     [Header("Attack Management")]
     [SerializeField] private GameObject rightAttack;
@@ -33,6 +34,7 @@ public class TestAI : BaseAI
         else { attackTransform = rightAttack.GetComponent<Transform>(); }
         isMoving = false;
         movementDirection = 1;
+        animator = gameObject.GetComponent<Animator>();
     }
 
     override public void Attack()
@@ -44,6 +46,7 @@ public class TestAI : BaseAI
         { facingLeft = false; }
         else { facingLeft = true; }
         FaceLeft(facingLeft);
+        animator.SetBool("IsAttacking", true);
 
         AIRigid.velocity = new Vector2(0, AIRigid.velocity.y);
 
@@ -76,11 +79,13 @@ public class TestAI : BaseAI
             //AIRigid.velocity = new Vector2(-3.0f, AIRigid.velocity.y);
         }
         //Debug.Log("Chase");
+        animator.SetBool("IsAttacking", false);
     }
 
     override public void Wander()
     {
         isMoving = false;
+        animator.SetBool("IsAttacking", false);
         //Debug.Log("Wander");
     }
 
