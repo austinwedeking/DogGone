@@ -10253,7 +10253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4555572175120768935, guid: b08a19f6c33e2464c996703b71390568, type: 3}
       propertyPath: attackRadius
-      value: 1.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4555572175120768935, guid: b08a19f6c33e2464c996703b71390568, type: 3}
       propertyPath: maxXVelocity
