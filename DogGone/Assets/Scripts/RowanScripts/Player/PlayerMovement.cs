@@ -158,9 +158,11 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("geebs");
                 Collider2D collisions = Physics2D.OverlapCircle(attackPosition.transform.position, attackRadius, enemyLayer);
                 if (collisions != null) { collisions.GetComponent<EnemyData>().takeDamage(damage); }
+                attackPosition.GetComponent<Animator>().Play("AttackAnimation");
                 canAttack = false;
                 break;
             case 1:
+                //attackPosition.GetComponent<Animator>().Play("NoAttackAnimation");
                 canAttack = true;
                 break;
             default:
