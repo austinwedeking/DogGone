@@ -140,7 +140,6 @@ GameObject:
   - component: {fileID: 412914517770538732}
   - component: {fileID: 412914517770538733}
   - component: {fileID: 412914517770538730}
-  - component: {fileID: 412914517770538731}
   - component: {fileID: 412914517770538728}
   - component: {fileID: 412914517770538729}
   m_Layer: 6
@@ -279,29 +278,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8729310ffb6a924bacbda86f6ac2c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AIController: {fileID: 412914517770538731}
+  AIController: {fileID: 0}
   AIState: 0
   detectRadius: 8
   attackRadius: 2
---- !u!114 &412914517770538731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412914517770538726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a2a71603b4db2489765628aa0a05da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rightAttack: {fileID: 412914517348613524}
-  attackOverlapRadius: 1.5
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  damage: 20
-  moveSpeed: 2
 --- !u!114 &412914517770538728
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class EnemyData : MonoBehaviour
     {
         currentHealth = maxHealth;
         levelChange = FindObjectOfType<LevelChange>();
-        if (levelChange == null) { Debug.LogError("bad"); }
+        if (levelChange == null) { Debug.LogError("No Level change present in the current scene"); }
         else { levelChange.IncrementEnemies(); }
     }
 
