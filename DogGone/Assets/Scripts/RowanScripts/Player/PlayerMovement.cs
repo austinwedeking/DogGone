@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -27,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float attackRadius;
     [SerializeField] private int damage;
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private float attackCooldownTimer;
+    [SerializeField] private float ability1CooldownTimer;
+    [SerializeField] private float ability2CooldownTimer;
+    [SerializeField] private float ability3CooldownTimer;
+    [SerializeField] private float ability4CooldownTimer;
+
     private bool canAttack;
     private bool grounded;
     //private bool touchingRight;
@@ -104,10 +112,10 @@ public class PlayerMovement : MonoBehaviour
         ProcessAttack(0);
     }
 
-    public void processAttackUp()
+    /*public void processAttackUp()
     {
         ProcessAttack(1);
-    }
+    }*/
 
     private void ProcessMovement(int val)
     { // 0 = right, 1 = left, 2 = jump, 3 = stop movement
@@ -155,19 +163,31 @@ public class PlayerMovement : MonoBehaviour
         switch(val)
         {
             case 0:
-                Debug.Log("geebs");
-                Collider2D collisions = Physics2D.OverlapCircle(attackPosition.transform.position, attackRadius, enemyLayer);
-                if (collisions != null) { collisions.GetComponent<EnemyData>().takeDamage(damage); }
-                attackPosition.GetComponent<Animator>().Play("AttackAnimation");
-                canAttack = false;
+                if (canAttack)
+                {
+                    Debug.Log("Player used base attack");
+                    Collider2D collisions = Physics2D.OverlapCircle(attackPosition.transform.position, attackRadius, enemyLayer);
+                    if (collisions != null) { collisions.GetComponent<EnemyData>().takeDamage(damage); }
+                    attackPosition.GetComponent<Animator>().Play("AttackAnimation");
+                    StartCoroutine(AttackCooldown());
+                }
+                //canAttack = false;
                 break;
             case 1:
                 //attackPosition.GetComponent<Animator>().Play("NoAttackAnimation");
-                canAttack = true;
+                //canAttack = true;
                 break;
             default:
                 break;
         }
+    }
+
+    // Timers for attack cool-downs
+    private IEnumerator AttackCooldown() 
+    {
+        canAttack = false;
+        yield return new WaitForSeconds(attackCooldownTimer);
+        canAttack = true;
     }
 
     private void ClampXVelocity(int direction)

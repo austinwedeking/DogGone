@@ -11,6 +11,10 @@ public class PlayerInputManager : MonoBehaviour
     [SerializeField] private KeyCode left;
     [SerializeField] private KeyCode jump;
     [SerializeField] private KeyCode attack;
+    [SerializeField] private KeyCode ability1;
+    [SerializeField] private KeyCode ability2;
+    [SerializeField] private KeyCode ability3;
+    [SerializeField] private KeyCode ability4;
 
     private void Start()
     {
@@ -20,6 +24,7 @@ public class PlayerInputManager : MonoBehaviour
 
     public void GetInputs()
     {
+        // movement controlls ***
         if (Input.GetKey(right))
         {
             playerController.processRightDown();
@@ -44,15 +49,19 @@ public class PlayerInputManager : MonoBehaviour
         {
             playerController.processLeftUp();
         }
+        // end movement controlls ***
 
+        // attack/abilities controlls
         if (Input.GetKeyDown(attack))
         {
             playerController.processAttackDown();
         }
 
-        if (Input.GetKeyUp(attack))
+        /*if (Input.GetKeyUp(attack))
         {
             playerController.processAttackUp();
-        }
+        }*/
+
+        // end attack/abilities controlls
     }
 }
