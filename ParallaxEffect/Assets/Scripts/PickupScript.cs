@@ -36,6 +36,7 @@ public class PickupScript : MonoBehaviour
                 //Destroy(this.gameObject);
                 inventorySlot1Renderer.sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
                 this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                this.gameObject.GetComponent<Collider2D>().enabled = false;
 
             }
             else

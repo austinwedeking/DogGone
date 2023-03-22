@@ -28,6 +28,7 @@ public class PickUp : MonoBehaviour
                 //Destroy(this.gameObject);
                 inventorySlot1Renderer.sprite = this.gameObject.GetComponent<SpriteRenderer>().sprite; //Gets the sprite of the item
                 this.gameObject.GetComponent<SpriteRenderer>().enabled = false; //Makes the item that you grabbed become invisible
+                this.gameObject.GetComponent<Collider2D>().enabled = false; //Makes the items you grabbed unable to grab again
 
             }
             else{ //If every inventory slot is full then it will fail
