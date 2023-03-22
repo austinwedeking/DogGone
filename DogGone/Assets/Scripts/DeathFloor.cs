@@ -4,46 +4,38 @@ using UnityEngine;
 
 public class DeathFloor : MonoBehaviour
 {
-    // Start is called before the first frame update
     //GameObject loseScreen;
-    void Start()
-    {
+    void Start(){ //Leftovers for testing, IDK if save to remove
         //loseScreen = GameObject.Find("loseSprite");
         //loseScreen.SetActive(true);
     }
+    //void Update() was empty, removed for now
+    public void OnTriggerEnter2D(Collider2D collision){
+        //A lot of this could be deleted as its commented out
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        //if (collision.gameObject.tag == "Player")
-        {
+        //if (collision.gameObject.tag == "Player"){
             //player ran into deathfloor
-
             //show lose screen
             //loseScreen.SetActive(true);
             //loseScreen.transform.position = collision.gameObject.transform.position;
 
-            PlayerData playerdata;
-            playerdata = collision.GetComponent<PlayerData>();
 
-            EnemyData enemydata;
-            enemydata = collision.GetComponent<EnemyData>();
+        //Gets the collision component for the player and enemy(s)
+        PlayerData playerdata;
+        playerdata = collision.GetComponent<PlayerData>();
 
-            if(playerdata != null)
-            {
-                playerdata.takeDamage(1000);
-                Debug.Log("Player fell in a pit!");
-            }
-            else if(enemydata != null)
-            {
-                enemydata.takeDamage(1000);
-                Debug.Log("Enemy fell in a pit!");
-            }
+        EnemyData enemydata;
+        enemydata = collision.GetComponent<EnemyData>();
+        
+        //If either the player or an enemy hits the death plane then make them take 1000 damage to kill them
+        if(playerdata != null){
+            playerdata.takeDamage(1000);
+            Debug.Log("Player fell in a pit!");
         }
+        else if(enemydata != null){
+            enemydata.takeDamage(1000);
+            Debug.Log("Enemy fell in a pit!");
+        }
+        //} commented out from the top IF statement
     }
 }

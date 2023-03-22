@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Bully Austin into commenting this so we can roughly understand whats going on
+
+
 public class ParallaxEffect : MonoBehaviour
 {
     [SerializeField] [Range(0f, 1f)] float lagAmount = 0f;
@@ -13,27 +16,22 @@ public class ParallaxEffect : MonoBehaviour
 
     private float ParallaxAmount => 1f - lagAmount;
 
-    private void Awake()
-    {
+    private void Awake(){ //Called when this object is created, sets the camera position
         _camera = Camera.main.transform;
         _prevCamPosition = _camera.position;
     }
 
-    private void LateUpdate()
-    {
+    private void LateUpdate(){
         Vector3 movement = CameraMovement;
-        if (movement == Vector3.zero)
-        {
+        if (movement == Vector3.zero){
             return;
         }
         _targetPosition = new Vector3(transform.position.x + movement.x * ParallaxAmount, transform.position.y, transform.position.z);
         transform.position = _targetPosition;
     }
 
-    Vector3 CameraMovement
-    {
-        get
-        {
+    Vector3 CameraMovement{
+        get{
             Vector3 movement = _camera.position - _prevCamPosition;
             _prevCamPosition = _camera.position;
             return movement;
