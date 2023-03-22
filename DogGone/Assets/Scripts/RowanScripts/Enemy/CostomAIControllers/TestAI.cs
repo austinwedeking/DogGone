@@ -22,6 +22,11 @@ public class TestAI : BaseAI
     private bool isMoving;
     private int movementDirection;
 
+    private void Awake()
+    {
+        animator = gameObject.GetComponent<Animator>();
+        if (animator == null) { Debug.LogError("no animator for some reason"); }
+    }
 
     private void Start()
     {
@@ -34,7 +39,6 @@ public class TestAI : BaseAI
         else { attackTransform = rightAttack.GetComponent<Transform>(); }
         isMoving = false;
         movementDirection = 1;
-        animator = gameObject.GetComponent<Animator>();
     }
 
     override public void Attack()

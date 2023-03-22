@@ -57,10 +57,10 @@ public class PlayerInputManager : MonoBehaviour
             playerController.processAttackDown();
         }
 
-        /*if (Input.GetKeyUp(attack))
+        if (Input.GetKeyDown(ability1))
         {
-            playerController.processAttackUp();
-        }*/
+            playerController.processAbilityDown(1);
+        }
 
         // end attack/abilities controlls
     }

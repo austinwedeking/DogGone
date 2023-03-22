@@ -35,7 +35,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float ability3CooldownTimer;
     [SerializeField] private float ability4CooldownTimer;
 
+    // ability bools
     private bool canAttack;
+    private bool canUseAbility1;
+    private bool canUseAbility2;
+    private bool canUseAbility3;
+    private bool canUseAbility4;
+
     private bool grounded;
     //private bool touchingRight;
     //private bool touchingLeft;
@@ -51,8 +57,13 @@ public class PlayerMovement : MonoBehaviour
         if (inputManager == null) { Debug.LogError("No component of type PlayerInputManager attached to game object"); }
         //facingRight = false;
         if (attackPosition == null) { Debug.LogError("No attack position object attached to game object"); }
-        canAttack = true;
         playerAnimator = gameObject.GetComponent<Animator>();
+
+        canAttack = true;
+        canUseAbility1 = true;
+        canUseAbility2 = true;
+        canUseAbility3 = true;
+        canUseAbility4 = true;
     }
 
     void Update()
@@ -112,10 +123,10 @@ public class PlayerMovement : MonoBehaviour
         ProcessAttack(0);
     }
 
-    /*public void processAttackUp()
+    public void processAbilityDown(int abilityNum)
     {
-        ProcessAttack(1);
-    }*/
+        ProcessAttack(abilityNum);
+    }
 
     private void ProcessMovement(int val)
     { // 0 = right, 1 = left, 2 = jump, 3 = stop movement
@@ -159,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void ProcessAttack(int val)
-    { // 0 = attack, 1 = reset attack
+    { // 0 = basic attack, 1 = ability 1
         switch(val)
         {
             case 0:
@@ -171,11 +182,18 @@ public class PlayerMovement : MonoBehaviour
                     attackPosition.GetComponent<Animator>().Play("AttackAnimation");
                     StartCoroutine(AttackCooldown());
                 }
-                //canAttack = false;
                 break;
             case 1:
-                //attackPosition.GetComponent<Animator>().Play("NoAttackAnimation");
-                //canAttack = true;
+                // ability 1
+                break;
+            case 2:
+                // ability 2
+                break;
+            case 3:
+                // ability 3
+                break;
+            case 4:
+                // ability 4
                 break;
             default:
                 break;
