@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Attack : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Attack : MonoBehaviour
 
     private IEnumerator theCoroutine;
     private bool onTimer = false;
+
+    Light2D lightBeam;
     
     // Start is called before the first frame update
     void Start()
@@ -22,6 +25,7 @@ public class Attack : MonoBehaviour
         theGameManager = GameObject.Find("GameManager");
         theInventoryScript = theGameManager.GetComponent<Inventory>();
         spawnPoint = GameObject.Find("SpawnPoint");
+        lightBeam = GameObject.Find("DrakeBeam").GetComponent<Light2D>();
     }
 
     // Update is called once per frame
@@ -42,6 +46,7 @@ public class Attack : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.R))
         {
+            lightBeam.intensity = 100;
             GameObject fireball = theInventoryScript.find("drake_collect");
 
             if(fireball != null)
