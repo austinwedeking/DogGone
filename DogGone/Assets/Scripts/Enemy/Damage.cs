@@ -5,29 +5,20 @@ using UnityEngine;
 public class Damage : MonoBehaviour
 {
     private int health;
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){ //On start sets health to 10
         health = 10;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    //void Update() is unused so commented out   
 
-    }
-
-    public void damageEnemy(int incomingDamage)
-    {
-        health -= incomingDamage;
+    public void damageEnemy(int incomingDamage){
+        health -= incomingDamage; //Remove the incoming damage from the health
         Debug.Log("Enemy took a hit!");
-        possiblyDestroy();
+        possiblyDestroy(); //Will see if it died
     }
 
-    private void possiblyDestroy()
-    {
-        if (health <= 0)
-        {
+    private void possiblyDestroy(){ //If its health is under 0 then will kill the enemy and destroy the object
+        if (health <= 0){
             Debug.Log("Destroying enemy");
             Destroy(this.gameObject);
             Debug.Log("Enemy defeated! You win!");
