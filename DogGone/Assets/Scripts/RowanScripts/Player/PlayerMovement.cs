@@ -29,9 +29,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float attackRadius;
     [SerializeField] private int damage;
     [SerializeField] private LayerMask enemyLayer;
+
+    [Space(10)]
+    [Header("Player Attack Cooldowns")]
     [SerializeField] private float attackCooldownTimer;
-    [SerializeField] private float ability1CooldownTimer;
-    [SerializeField] private float ability2CooldownTimer;
+    [SerializeField] private float ability1CooldownTimer; // this os going to need to swap out for reading this value from the 
+    [SerializeField] private float ability2CooldownTimer; // array of abilities
     [SerializeField] private float ability3CooldownTimer;
     [SerializeField] private float ability4CooldownTimer;
 
