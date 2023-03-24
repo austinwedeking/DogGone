@@ -33,16 +33,16 @@ public class Attack : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.G))
         {
-            if(enemyInZone != null)
-            {
-                Debug.Log("Attacking");
-                Damage enemyScript = enemyInZone.GetComponent<Damage>();
-                enemyScript.damageEnemy(3);
-            }
-            else
-            {
-                Debug.Log("Trying to attack, but no enemy in zone");
-            }
+            //if(enemyInZone != null)
+            //{
+            //    Debug.Log("Attacking");
+            //    Damage enemyScript = enemyInZone.GetComponent<Damage>();
+            //    enemyScript.damageEnemy(3);
+            //}
+            //else
+            //{
+            //    Debug.Log("Trying to attack, but no enemy in zone");
+            //}
         }
         else if(Input.GetKeyDown(KeyCode.R))
         {

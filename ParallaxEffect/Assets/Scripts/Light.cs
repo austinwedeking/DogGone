@@ -11,8 +11,8 @@ public class Light : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        characterLight = GameObject.Find("CharacterLight").GetComponent<Light2D>();
-        StartCoroutine(lightFlash());
+        //characterLight = GameObject.Find("CharacterLight").GetComponent<Light2D>();
+        //StartCoroutine(lightFlash());
     }
 
     // Update is called once per frame

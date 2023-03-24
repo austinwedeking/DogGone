@@ -6,6 +6,9 @@ public class Damage : MonoBehaviour
 {
     private int health;
     // Start is called before the first frame update
+
+    private LevelChange levelChange;
+
     void Start()
     {
         health = 10;
@@ -29,7 +32,8 @@ public class Damage : MonoBehaviour
         if(health <= 0)
         {
             Debug.Log("Destroying enemy");
-            Destroy(this.gameObject);
+            levelChange.DecrementEnemies();
+            Destroy(gameObject);
         }
     }
 }
