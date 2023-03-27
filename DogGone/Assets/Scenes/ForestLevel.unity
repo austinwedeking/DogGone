@@ -19183,6 +19183,7 @@ GameObject:
   - component: {fileID: 1113589316}
   - component: {fileID: 1113589315}
   - component: {fileID: 1113589314}
+  - component: {fileID: 1113589317}
   m_Layer: 0
   m_Name: drake
   m_TagString: Untagged
@@ -19283,6 +19284,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1113589317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113589313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d27fc5061c40e44b44264de1d387b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityReference: {fileID: 2693641834674448341, guid: 438ad72b4484a9147a4434a40d2c52c9, type: 3}
 --- !u!1 &1122899279
 GameObject:
   m_ObjectHideFlags: 0
@@ -20849,6 +20863,10 @@ PrefabInstance:
     - target: {fileID: 8332427366887102714, guid: 2b5d4fd8b734e174f884782e756c4915, type: 3}
       propertyPath: attackCooldownTimer
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8332427366887102715, guid: 2b5d4fd8b734e174f884782e756c4915, type: 3}
+      propertyPath: ability1
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 8332427366887102717, guid: 2b5d4fd8b734e174f884782e756c4915, type: 3}
       propertyPath: m_Name

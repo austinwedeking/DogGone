@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerAnimator;
     private Inventory inventory;
 
-    private string[] abilityKeys;   
+    private string[] abilityKeys = { "TestAbility", "test2" };   
 
     [Header("Movement Controls")]
     [SerializeField] private float moveSpeed = 8.0f;
@@ -68,8 +68,6 @@ public class PlayerMovement : MonoBehaviour
         inventory = FindObjectOfType<Inventory>();
         if (inventory == null) { Debug.Log("Could not find inventory in game manager"); }
 
-        abilityKeys = new string[4];
-
         canAttack = true;
         canUseAbility1 = true;
         canUseAbility2 = true;
@@ -100,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else { ClampXVelocity(1); }
             //ChangeDirection(true);
-        } else { rigid.velocity = new Vector2(0f, rigid.velocity.y); Debug.Log("Hitting right wall"); }
+        } else { rigid.velocity = new Vector2(0f, rigid.velocity.y); }
     }
 
     public void processLeftDown()
@@ -114,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else { ClampXVelocity(-1); }
             //ChangeDirection(false);
-        } else { rigid.velocity = new Vector2(0f, rigid.velocity.y); Debug.Log("Hitting left wall"); }
+        } else { rigid.velocity = new Vector2(0f, rigid.velocity.y); }
     }
 
     public void processRightUp()
@@ -207,7 +205,11 @@ public class PlayerMovement : MonoBehaviour
                 }
                 break;
             case 1:
-                // ability 1
+                GameObject temp = inventory.find(abilityKeys[0]);
+                if (temp != null)
+                {
+                    Debug.Log("It Worked!");
+                } else { Debug.Log("O was pressed"); }
                 break;
             case 2:
                 // ability 2
