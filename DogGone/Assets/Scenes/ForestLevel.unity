@@ -18327,11 +18327,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightAttack: {fileID: 220409574}
-  attackOverlapRadius: 1.5
+  attackOverlapRadius: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 2048
   damage: 10
+  attackDelay: 0.28
   moveSpeed: 2
 --- !u!1 &220409574 stripped
 GameObject:
@@ -19080,11 +19081,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightAttack: {fileID: 245586088}
-  attackOverlapRadius: 1.5
+  attackOverlapRadius: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 2048
   damage: 10
+  attackDelay: 0.28
   moveSpeed: 2
 --- !u!1 &960908761
 GameObject:
@@ -20331,11 +20333,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightAttack: {fileID: 448397235}
-  attackOverlapRadius: 1.5
+  attackOverlapRadius: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 2048
   damage: 10
+  attackDelay: 0.28
   moveSpeed: 2
 --- !u!1001 &1877695062
 PrefabInstance:
