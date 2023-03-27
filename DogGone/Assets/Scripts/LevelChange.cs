@@ -9,6 +9,9 @@ public class LevelChange : MonoBehaviour
     [SerializeField] private int loseSceneIndex;
     [SerializeField] private int winSceneIndex;
 
+    [Header("References to ability pickup objects")]
+    [SerializeField] private GameObject ability1;
+
     GameObject button1;
     GameObject button2;
     GameObject theGameManager;
@@ -71,10 +74,11 @@ public class LevelChange : MonoBehaviour
 
             if (theInventoryScript.nextSpot <= theInventoryScript.lastValidSpot)
             {
-                theInventoryScript.theInventory[theInventoryScript.nextSpot] = GameObject.Find("thewhale");
+                /*theInventoryScript.theInventory[theInventoryScript.nextSpot] = GameObject.Find("thewhale");
                 theInventoryScript.nextSpot++;
-                Debug.Log("Picked up the whale");
-                Win();
+                Debug.Log("Picked up the whale");*/
+                Instantiate(ability1, new Vector3(0, 0, 0), Quaternion.identity);
+                //Win();
             }
             else
             {

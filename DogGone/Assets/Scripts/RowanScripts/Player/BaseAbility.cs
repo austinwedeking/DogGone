@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class BaseAbility : MonoBehaviour
 {
-    protected int damage; // the list of abilitied will sore game objects, each will have a script derived form this one
-    protected float cooldownTimer; // this will allow the same functions to be called on the list to use/modify the abilities
+    [SerializeField] protected int damage; // the list of abilitied will sore game objects, each will have a script derived form this one
+    [SerializeField] protected float cooldownTimer; // this will allow the same functions to be called on the list to use/modify the abilities
 
     protected SpriteRenderer spriteRend;
     protected Animator animator;

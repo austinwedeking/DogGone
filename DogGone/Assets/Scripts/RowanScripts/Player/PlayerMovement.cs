@@ -208,7 +208,7 @@ public class PlayerMovement : MonoBehaviour
                 GameObject temp = inventory.find(abilityKeys[0]);
                 if (temp != null)
                 {
-                    Debug.Log("It Worked!");
+                    temp.GetComponent<BaseAbility>().Cast();
                 } else { Debug.Log("O was pressed"); }
                 break;
             case 2:

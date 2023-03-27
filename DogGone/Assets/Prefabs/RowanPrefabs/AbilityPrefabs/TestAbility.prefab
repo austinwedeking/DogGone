@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3157250217265426475}
   - component: {fileID: 7714546151705483298}
+  - component: {fileID: -3110689128406808221}
   m_Layer: 0
   m_Name: TestAbility
   m_TagString: Untagged
@@ -58,3 +59,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-3110689128406808221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2693641834674448341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7f33ee961b18c489172316ee669695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  cooldownTimer: 0
