@@ -15,6 +15,7 @@ public class TestAI : BaseAI
     [SerializeField] private float attackOverlapRadius;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private int damage;
+    [SerializeField] private float attackDelay;
 
     [Space(10)]
     [Header("Movement Info")]
@@ -45,7 +46,7 @@ public class TestAI : BaseAI
     {
         isMoving = false;
         bool facingLeft;
-        Collider2D collision;
+        //Collider2D collision;
         if (playerTransform.position.x > gameObject.transform.position.x)
         { facingLeft = false; }
         else { facingLeft = true; }
@@ -54,10 +55,19 @@ public class TestAI : BaseAI
 
         AIRigid.velocity = new Vector2(0, AIRigid.velocity.y);
 
-        collision = Physics2D.OverlapCircle(attackTransform.position, attackOverlapRadius, playerLayer);
+        //collision = Physics2D.OverlapCircle(attackTransform.position, attackOverlapRadius, playerLayer);
 
+        //if (collision != null) { collision.GetComponentInParent<PlayerData>().takeDamage(damage); }
+
+        StartCoroutine(AttackCoroutine());
+
+    }
+
+    private IEnumerator AttackCoroutine()
+    {
+        yield return new WaitForSeconds(attackDelay);
+        Collider2D collision = Physics2D.OverlapCircle(attackTransform.position, attackOverlapRadius, playerLayer);
         if (collision != null) { collision.GetComponentInParent<PlayerData>().takeDamage(damage); }
-
     }
 
     override public void ChaseWithinRange()
