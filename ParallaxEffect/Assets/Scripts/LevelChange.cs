@@ -102,6 +102,7 @@ public class LevelChange : MonoBehaviour
                 theInventoryScript.theInventory[theInventoryScript.nextSpot] = GameObject.Find("thewhale");
                 theInventoryScript.nextSpot++;
                 Debug.Log("Picked up the whale");
+                SceneManager.LoadScene(winSceneIndex);
             }
             else
             {
@@ -118,6 +119,7 @@ public class LevelChange : MonoBehaviour
                 theInventoryScript.theInventory[theInventoryScript.nextSpot] = GameObject.Find("map");
                 theInventoryScript.nextSpot++;
                 Debug.Log("Picked up map");
+                SceneManager.LoadScene(winSceneIndex);
             }
             else
             {
