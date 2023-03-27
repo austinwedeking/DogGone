@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //TODO: Negate friction when running into walls, ASK ABOUT THIS
-
     //TODO: Make jump so it can be heald to go higher, increase gravity when falling
 
     private Animator playerAnimator;
+    private Inventory inventory;
+
+    private string[] abilityKeys;   
 
     [Header("Movement Controls")]
     [SerializeField] private float moveSpeed = 8.0f;
@@ -64,6 +65,10 @@ public class PlayerMovement : MonoBehaviour
         //facingRight = false;
         if (attackPosition == null) { Debug.LogError("No attack position object attached to game object"); }
         playerAnimator = gameObject.GetComponent<Animator>();
+        inventory = FindObjectOfType<Inventory>();
+        if (inventory == null) { Debug.Log("Could not find inventory in game manager"); }
+
+        abilityKeys = new string[4];
 
         canAttack = true;
         canUseAbility1 = true;
