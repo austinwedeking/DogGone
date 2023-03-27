@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //TODO: Negate friction when running into walls, ASK ABOUT THIS
-
     //TODO: Make jump so it can be heald to go higher, increase gravity when falling
 
     private Animator playerAnimator;
+    private Inventory inventory;
+
+    private string[] abilityKeys;   
 
     [Header("Movement Controls")]
     [SerializeField] private float moveSpeed = 8.0f;
@@ -46,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
     private bool canUseAbility4;
 
     private bool grounded;
+    private bool isHittingRightWall;
+    private bool isHittingLeftWall;
+    private bool isHittingWall;
     //private bool touchingRight;
     //private bool touchingLeft;
 
@@ -61,12 +65,20 @@ public class PlayerMovement : MonoBehaviour
         //facingRight = false;
         if (attackPosition == null) { Debug.LogError("No attack position object attached to game object"); }
         playerAnimator = gameObject.GetComponent<Animator>();
+        inventory = FindObjectOfType<Inventory>();
+        if (inventory == null) { Debug.Log("Could not find inventory in game manager"); }
+
+        abilityKeys = new string[4];
 
         canAttack = true;
         canUseAbility1 = true;
         canUseAbility2 = true;
         canUseAbility3 = true;
         canUseAbility4 = true;
+
+        isHittingLeftWall = false;
+        isHittingRightWall = false;
+        isHittingWall = false;
     }
 
     void Update()
@@ -79,22 +91,30 @@ public class PlayerMovement : MonoBehaviour
 
     public void processRightDown()
     {
-        if (rigid.velocity.x < maxXVelocity)
-        {
-            ProcessMovement(0);
-        }
-        else { ClampXVelocity(1); }
         ChangeDirection(true);
+        if (!isHittingWall)
+        {
+            if (rigid.velocity.x < maxXVelocity)
+            {
+                ProcessMovement(0);
+            }
+            else { ClampXVelocity(1); }
+            //ChangeDirection(true);
+        } else { rigid.velocity = new Vector2(0f, rigid.velocity.y); Debug.Log("Hitting right wall"); }
     }
 
     public void processLeftDown()
     {
-        if (rigid.velocity.x > -maxXVelocity)
-        {
-            ProcessMovement(1);
-        }
-        else { ClampXVelocity(-1); }
         ChangeDirection(false);
+        if (!isHittingWall)
+        {
+            if (rigid.velocity.x > -maxXVelocity)
+            {
+                ProcessMovement(1);
+            }
+            else { ClampXVelocity(-1); }
+            //ChangeDirection(false);
+        } else { rigid.velocity = new Vector2(0f, rigid.velocity.y); Debug.Log("Hitting left wall"); }
     }
 
     public void processRightUp()
@@ -161,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
                 playerAnimator.SetBool("isWalking", true); 
                 break;
             case 2:
-                rigid.AddForce(new Vector2(0, jumpForce));
+                rigid.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 break;
             case 3:
                 rigid.velocity = new Vector2(0, rigid.velocity.y);
@@ -225,5 +245,20 @@ public class PlayerMovement : MonoBehaviour
     public void toggleGrounded(bool val)
     {
         grounded = val;
+    }
+
+    public void toggleIsHittingLeftWall(bool val)
+    {
+        isHittingLeftWall = val;
+    }
+
+    public void toggleIsHittingRightWall(bool val)
+    {
+        isHittingRightWall = val;
+    }
+
+    public void toggleIsHittingWall(bool val)
+    {
+        isHittingWall = val;
     }
 }

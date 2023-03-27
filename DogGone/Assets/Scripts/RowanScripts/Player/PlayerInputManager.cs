@@ -51,7 +51,7 @@ public class PlayerInputManager : MonoBehaviour
         }
         // end movement controlls ***
 
-        // attack/abilities controlls
+        // attack/abilities controlls ***
         if (Input.GetKeyDown(attack))
         {
             playerController.processAttackDown();
@@ -62,6 +62,21 @@ public class PlayerInputManager : MonoBehaviour
             playerController.processAbilityDown(1);
         }
 
-        // end attack/abilities controlls
+        if (Input.GetKeyDown(ability2))
+        {
+            playerController.processAbilityDown(2);
+        }
+
+        if (Input.GetKeyDown(ability3))
+        {
+            playerController.processAbilityDown(3);
+        }
+
+        if (Input.GetKeyDown(ability4))
+        {
+            playerController.processAbilityDown(4);
+        }
+
+        // end attack/abilities controlls ***
     }
 }
