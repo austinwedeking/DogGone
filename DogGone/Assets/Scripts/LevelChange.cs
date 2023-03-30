@@ -9,6 +9,8 @@ public class LevelChange : MonoBehaviour
     [SerializeField] private int loseSceneIndex;
     [SerializeField] private int winSceneIndex;
 
+    private GameObject player;
+
     [Header("References to ability pickup objects")]
     [SerializeField] private GameObject ability1;
 
@@ -16,6 +18,12 @@ public class LevelChange : MonoBehaviour
     GameObject button2;
     GameObject theGameManager;
     Inventory theInventoryScript;
+
+    private void Start()
+    {
+        player = FindObjectOfType<PlayerData>().gameObject;
+        if (player == null) { Debug.Log("No player found in active scene"); }
+    }
 
     private void Awake(){ //Called before start on object creation, just here to make the value start at 0
         numEnemies = 0;
@@ -77,7 +85,8 @@ public class LevelChange : MonoBehaviour
                 /*theInventoryScript.theInventory[theInventoryScript.nextSpot] = GameObject.Find("thewhale");
                 theInventoryScript.nextSpot++;
                 Debug.Log("Picked up the whale");*/
-                Instantiate(ability1, new Vector3(0, 0, 0), Quaternion.identity);
+                Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
+                Instantiate(ability1, tempVector, Quaternion.identity);
                 //Win();
             }
             else
