@@ -8,7 +8,7 @@ public abstract class BaseAbility : MonoBehaviour
     [SerializeField] protected float cooldownTimer; // this will allow the same functions to be called on the list to use/modify the abilities
 
     protected Animator animator;
-    protected LayerMask enemyLayer;
+    [SerializeField] protected LayerMask enemyLayer;
 
     public abstract void Cast();
     public abstract void Upgrade();

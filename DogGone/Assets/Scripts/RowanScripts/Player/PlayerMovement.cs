@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInputManager inputManager;
 
     [Header("Player Attack Options")]
-    [SerializeField] private GameObject attackPosition;
+    public GameObject attackPosition;
     [SerializeField] private float attackRadius;
     [SerializeField] private int damage;
     [SerializeField] private LayerMask enemyLayer;
@@ -209,16 +209,31 @@ public class PlayerMovement : MonoBehaviour
                 if (temp != null)
                 {
                     temp.GetComponent<BaseAbility>().Cast();
-                } else { Debug.Log("O was pressed"); }
+                } else { Debug.Log("1 was pressed"); }
                 break;
             case 2:
-                // ability 2
+                GameObject temp2 = inventory.find(abilityKeys[1]);
+                if (temp2 != null)
+                {
+                    temp2.GetComponent<BaseAbility>().Cast();
+                }
+                else { Debug.Log("2 was pressed"); }
                 break;
             case 3:
-                // ability 3
+                GameObject temp3 = inventory.find(abilityKeys[2]);
+                if (temp3 != null)
+                {
+                    temp3.GetComponent<BaseAbility>().Cast();
+                }
+                else { Debug.Log("3 was pressed"); }
                 break;
             case 4:
-                // ability 4
+                GameObject temp4 = inventory.find(abilityKeys[3]);
+                if (temp4 != null)
+                {
+                    temp4.GetComponent<BaseAbility>().Cast();
+                }
+                else { Debug.Log("4 was pressed"); }
                 break;
             default:
                 break;
