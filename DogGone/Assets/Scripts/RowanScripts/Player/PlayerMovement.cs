@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerAnimator;
     private Inventory inventory;
 
-    private string[] abilityKeys = { "TestAbility", "test2" };   
+    private string[] abilityKeys = { "FireAbility", "test2" };   
 
     [Header("Movement Controls")]
     [SerializeField] private float moveSpeed = 8.0f;
