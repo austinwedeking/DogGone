@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d74a6f4966f358e4fbf4fb6b3bca0c23
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - LevelBlock1: {fileID: 4795698338626488748, guid: 45b7a3b9c7bb7154d8b39a2331326e70, type: 3}
+  - LevelBlock2: {fileID: 4683526460175156552, guid: 540fd257df5e2cd48a1a349900d2b763, type: 3}
+  - LevelBlock3: {fileID: 114563799543293817, guid: 6eb38b5b21ac1e247892a6b6e3749c74, type: 3}
+  - LevelBlock4: {fileID: 7826686550468212799, guid: 689661ca7d3d2fd4c8f4d25f5898d992, type: 3}
+  - LevelBlock5: {fileID: 5531144755422570563, guid: af89ecaf7a1b05549a0895833332bb13, type: 3}
+  - LevelBlock6: {fileID: 5294869098434596298, guid: 34ab58a3c00ab4443ac33cd8bb530c7f, type: 3}
+  - LevelBlock7: {fileID: 8245598063980135165, guid: b6a2611104723a349a934154b6fd2f1b, type: 3}
+  - LevelBlock8: {fileID: 92725429342135020, guid: e53e91d7aef44d64ba8dbd6ff74d6c0b, type: 3}
+  - LevelBlock9: {fileID: 8841686978714772062, guid: 873b065d92bef4f4ba1c5308d143b156, type: 3}
+  - LevelBlock10: {fileID: 1104015001671700054, guid: 5e23f385b1c90c440941b1ccec565ba2, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
