@@ -202,6 +202,7 @@ public class PlayerMovement : MonoBehaviour
                     if (collisions != null) { collisions.GetComponent<EnemyData>().takeDamage(damage); }
                     attackPosition.GetComponent<Animator>().Play("AttackAnimation");
                     StartCoroutine(AttackCooldown());
+                    FindObjectOfType<AudioManager>().Play("DogBark");
                 }
                 break;
             case 1:
