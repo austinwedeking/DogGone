@@ -25,17 +25,22 @@ public class ProjectileScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.tag);
         if (collision.tag == tagToDamage)
         {
             if (tagToDamage == "Enemy") // damage enemy
             {
-                collision.gameObject;
+                collision.gameObject.GetComponent<EnemyData>().takeDamage(damage);
+                Destroy(gameObject);
             }
-            if (tagToDamage == "Player") // damage player
+            else if (tagToDamage == "Player") // damage player
             {
-
+                collision.gameObject.GetComponent<PlayerData>().takeDamage(damage);
+                Destroy(gameObject);
             }
         }
+
+        if (collision.tag == "Ground") { Destroy(gameObject); }
     }
 
 }
