@@ -9,21 +9,22 @@ public class FireballAbility : BaseAbility
 
     [SerializeField] private GameObject projectile;
 
-    bool hasStarted = false;
+    bool startBool = false;
 
     private void PseudoStart()
     {
         PlayerMovement temp = FindObjectOfType<PlayerMovement>();
         if (temp == null) { Debug.Log("No player present in the current scene"); }
         else { player = temp.gameObject; playerAttackPosition = temp.attackPosition; }
+        Debug.Log("Start was run");
     }
 
     public override void Cast()
     {
-        if (!hasStarted)
+        if (!startBool)
         {
             PseudoStart();
-            hasStarted = true;
+            startBool = true;
         }
 
         if (player == null) { Debug.Log("Bad"); }
