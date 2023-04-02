@@ -20,7 +20,7 @@ public class ProjectileScript : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>(); 
         if (animator == null) { Debug.Log("No animator is present on this projectile"); }
-        else { animator.Play(animationName); } // initilizes the animation
+        // else { animator.Play(animationName); } // initilizes the animation
 
         PlayerMovement temp = FindObjectOfType<PlayerMovement>();
         if (temp != null) {
