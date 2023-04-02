@@ -17,4 +17,7 @@ public class Sound{
 
     [HideInInspector]
     public AudioSource source;
+
+    internal int volumeVariance;
+    internal int pitchVariance;
 }

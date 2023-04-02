@@ -6,32 +6,42 @@ public class FireballAbility : BaseAbility
 {
     private GameObject player;
     private GameObject playerAttackPosition;
+    private PlayerMovement directionBool;
 
     [SerializeField] private GameObject projectile;
 
-    bool start2Bool = false;
+    bool startBool = false;
 
     private void PseudoStart()
     {
-        PlayerMovement temp = FindObjectOfType<PlayerMovement>();
-        if (temp == null) { Debug.Log("No player present in the current scene"); }
-        else { player = temp.gameObject; playerAttackPosition = temp.attackPosition; }
+        directionBool = FindObjectOfType<PlayerMovement>();
+        if (directionBool == null) { Debug.Log("No player present in the current scene"); }
+        else { player = directionBool.gameObject; playerAttackPosition = directionBool.attackPosition; }
         Debug.Log("Start was run");
     }
 
     public override void Cast()
     {
-        if (!start2Bool)
+        if (!startBool)
         {
             PseudoStart();
-            start2Bool = true;
+            startBool = true;
         }
 
         if (player == null) { Debug.Log("Bad"); }
         if (playerAttackPosition == null) { Debug.Log("Double Bad"); }
 
-        Instantiate(projectile, playerAttackPosition.transform.position, 
-            Quaternion.Euler(player.transform.rotation.x, 0, player.transform.rotation.z));
+        directionBool = FindObjectOfType<PlayerMovement>(); // have to get a new refference every time, no idea why
+        if (directionBool.isFacingRight)
+        {
+            Instantiate(projectile, playerAttackPosition.transform.position,
+                Quaternion.Euler(0, 0, 0));
+        }
+        else if (!directionBool.isFacingRight)
+        {
+            Instantiate(projectile, playerAttackPosition.transform.position,
+                Quaternion.Euler(180, 0, 180));
+        }
     }
 
     public override void Upgrade()

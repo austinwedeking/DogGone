@@ -25,18 +25,33 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
-
-        Play("MonkeysSpinningMonkeys");
     }
 
     public void Play(string name){
         Sound s = Array.Find(sounds, sound => sound.name == name); //Gets a sound from the array
 
-        if (s == null){ //If it cant find a sound put a debug message in the log
+        if (s == null)
+        { //If it cant find a sound put a debug message in the log
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
+
         //Play the sound
         s.source.Play();
+    }
+
+    public void StopPlaying(string name)
+    {
+        Sound s = Array.Find(sounds, item => item.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        //s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+        //s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+
+        s.source.Stop();
     }
 }

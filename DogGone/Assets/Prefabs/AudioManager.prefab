@@ -44,4 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26bcbddae3ccb2149af28bc3bfda6e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: MonkeysSpinningMonkeys
+    clip: {fileID: 8300000, guid: f892bde3c10add84b99eeb0804783c0c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: DogBark
+    clip: {fileID: 8300000, guid: 846661b9cd6f3a64ca9796feb1c965a3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

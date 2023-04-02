@@ -7,8 +7,19 @@ public class Inventory : MonoBehaviour
     public GameObject[] theInventory;
     public int nextSpot;
     public int lastValidSpot;
-    
+    public static Inventory instance;
+
     void Start(){
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         //Stops screen change from purging inventory
         DontDestroyOnLoad(this.gameObject); 
         

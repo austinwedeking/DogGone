@@ -20,7 +20,7 @@ TagManager:
   - BG_Near
   - Foreground
   - Player
-  - 
+  - Projectile
   - 
   - 
   - 
@@ -58,6 +58,9 @@ TagManager:
     locked: 0
   - name: BG_Near
     uniqueID: 473612207
+    locked: 0
+  - name: Foreground Transparent
+    uniqueID: 591694765
     locked: 0
   - name: Foreground
     uniqueID: 1297805551
