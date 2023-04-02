@@ -16,7 +16,7 @@ public class LoadForestAreas : MonoBehaviour
     public GameObject LevelBlock10;
 
     void Start() {
-        int Areas = 6; //How many Areas are going to generate
+        int Areas = 1; //How many Areas are going to generate
         int Offset; //Stores how much offset a Area needs when being placed
         int RandNum; //Stores a random number to decide what Area to generate
         for (int i = 0; i < Areas; i++){
