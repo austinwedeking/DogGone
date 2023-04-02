@@ -12,12 +12,12 @@ public class CameraFollow : MonoBehaviour
     void Update(){ //Camera has a set Y position, the camera constantly tracks the players X value to move with it
         Vector3 temp = transform.position;
         temp.x = playerTransform.position.x;
-        //if (temp.x >= -11.5 && FreeCam == false){
+        if (temp.x >= -27.9 && temp.x <= 212.85 && FreeCam == false){
             transform.position = temp;
-        //}
+        }
         Vector3 temp2 = transform.position;
         temp2.y = playerTransform.position.y;
-        if (temp2.y >= 0 && temp2.y <= 2 && FreeCam == false){
+        if (temp2.y >= -2 && temp2.y <= 5 && FreeCam == false){
             transform.position = temp2;
         }
         
