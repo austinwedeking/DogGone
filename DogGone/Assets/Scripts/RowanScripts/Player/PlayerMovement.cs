@@ -34,10 +34,10 @@ public class PlayerMovement : MonoBehaviour
     [Space(10)]
     [Header("Player Attack Cooldowns")]
     [SerializeField] private float attackCooldownTimer;
-    [SerializeField] private float ability1CooldownTimer; // this os going to need to swap out for reading this value from the 
-    [SerializeField] private float ability2CooldownTimer; // array of abilities
-    [SerializeField] private float ability3CooldownTimer;
-    [SerializeField] private float ability4CooldownTimer;
+    //[SerializeField] private float ability1CooldownTimer; // this os going to need to swap out for reading this value from the 
+    //[SerializeField] private float ability2CooldownTimer; // array of abilities
+    //[SerializeField] private float ability3CooldownTimer;
+    //[SerializeField] private float ability4CooldownTimer;
 
     // ability bools
     private bool canAttack;
@@ -213,8 +213,12 @@ public class PlayerMovement : MonoBehaviour
                 GameObject temp = inventory.find(abilityKeys[0]);
                 if (temp != null)
                 {
-                    temp.GetComponent<BaseAbility>().Cast();
-                } else { Debug.Log("1 was pressed"); }
+                    if (canUseAbility1) 
+                    { 
+                        temp.GetComponent<BaseAbility>().Cast(); 
+                        StartCoroutine(Ability1Cooldown(temp.GetComponent<BaseAbility>().GetCooldown())); 
+                    }
+                } else { Debug.Log("1 was pressed but there is no ability"); }
                 break;
             case 2:
                 GameObject temp2 = inventory.find(abilityKeys[1]);
@@ -222,7 +226,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     temp2.GetComponent<BaseAbility>().Cast();
                 }
-                else { Debug.Log("2 was pressed"); }
+                else { Debug.Log("2 was pressed but there is no ability"); }
                 break;
             case 3:
                 GameObject temp3 = inventory.find(abilityKeys[2]);
@@ -230,7 +234,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     temp3.GetComponent<BaseAbility>().Cast();
                 }
-                else { Debug.Log("3 was pressed"); }
+                else { Debug.Log("3 was pressed but there is no ability"); }
                 break;
             case 4:
                 GameObject temp4 = inventory.find(abilityKeys[3]);
@@ -238,7 +242,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     temp4.GetComponent<BaseAbility>().Cast();
                 }
-                else { Debug.Log("4 was pressed"); }
+                else { Debug.Log("4 was pressed but there is no ability"); }
                 break;
             default:
                 break;
@@ -251,6 +255,13 @@ public class PlayerMovement : MonoBehaviour
         canAttack = false;
         yield return new WaitForSeconds(attackCooldownTimer);
         canAttack = true;
+    }
+
+    private IEnumerator Ability1Cooldown(float cooldown)
+    {
+        canUseAbility1 = false;
+        yield return new WaitForSeconds(cooldown);
+        canUseAbility1 = true;
     }
 
     private void ClampXVelocity(int direction)

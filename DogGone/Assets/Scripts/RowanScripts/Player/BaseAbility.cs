@@ -13,4 +13,6 @@ public abstract class BaseAbility : MonoBehaviour
 
     public abstract void Cast();
     public abstract void Upgrade();
+
+    public float GetCooldown() { return cooldownTimer; }
 }
