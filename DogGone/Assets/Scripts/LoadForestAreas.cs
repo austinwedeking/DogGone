@@ -16,7 +16,7 @@ public class LoadForestAreas : MonoBehaviour
     public GameObject LevelBlock10;
 
     void Start() {
-        int Areas = 6;
+        int Areas = 1;
         int Offset;
         int RandNum;
         for (int i = 0; i < Areas; i++){

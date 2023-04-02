@@ -53,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
     //private bool touchingRight;
     //private bool touchingLeft;
 
+    public bool isFacingRight;
+
     void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody2D>();
@@ -77,6 +79,8 @@ public class PlayerMovement : MonoBehaviour
         isHittingLeftWall = false;
         isHittingRightWall = false;
         isHittingWall = false;
+
+        isFacingRight = true;
     }
 
     void Update()
@@ -256,8 +260,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void ChangeDirection(bool faceRight)
     { // true = right, false = left
-        if (!faceRight) { gameObject.transform.rotation = Quaternion.Euler(180, 0, 180); }
-        else { gameObject.transform.rotation = Quaternion.Euler(0, 0, 0); }
+        if (!faceRight) { gameObject.transform.rotation = Quaternion.Euler(180, 0, 180); isFacingRight = false; }
+        else { gameObject.transform.rotation = Quaternion.Euler(0, 0, 0); isFacingRight = true; }
     }
 
     public void toggleGrounded(bool val)

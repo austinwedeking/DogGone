@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1297805551
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -350796773, guid: 936f2e8e348180248a8cef4c12bc3f53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -161,6 +161,12 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  attackCooldownTimer: 0
+  ability1CooldownTimer: 0
+  ability2CooldownTimer: 0
+  ability3CooldownTimer: 0
+  ability4CooldownTimer: 0
+  isFacingRight: 0
 --- !u!114 &8332427366887102715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +183,10 @@ MonoBehaviour:
   left: 97
   jump: 119
   attack: 101
+  ability1: 0
+  ability2: 0
+  ability3: 0
+  ability4: 0
 --- !u!114 &8332427366887102716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +202,7 @@ MonoBehaviour:
   bones: 0
   maxHealth: 100
   currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!95 &5519757599951948629
 Animator:
   serializedVersion: 4
@@ -284,7 +295,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1297805551
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -374,7 +385,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.85, y: 0.3}
+  m_Size: {x: 0.85, y: 0.32}
   m_EdgeRadius: 0
 --- !u!114 &8332427367161131696
 MonoBehaviour:

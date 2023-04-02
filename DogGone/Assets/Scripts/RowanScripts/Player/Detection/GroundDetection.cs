@@ -13,11 +13,12 @@ public class GroundDetection : MonoBehaviour
     {
         playerController = FindObjectOfType<PlayerMovement>();
         if (playerController != null) { playerController.toggleGrounded(startGroundedState); }
-        else { Debug.LogError("Could not find and object with a PlayerMovement script"); }
+        else { Debug.LogError("Could not find an object with a PlayerMovement script"); }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == ("Ground"))
         {
             playerController.toggleGrounded(true);
