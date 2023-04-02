@@ -20,6 +20,7 @@ public class LevelChange : MonoBehaviour
     Inventory theInventoryScript;
 
     GameObject eatPoster;
+    public int index;
 
     private void Start()
     {
@@ -68,7 +69,8 @@ public class LevelChange : MonoBehaviour
     }
 
     public void GameOver()
-    { //Loads the loose screen
+    { //Loads the lose screen
+        index = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(loseSceneIndex);
     }
 

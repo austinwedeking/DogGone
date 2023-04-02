@@ -2075,7 +2075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e7dad0719c19d4286e593cc27fc7a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 5161728868364591843}
 --- !u!1001 &5161728868364591842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2133,3 +2133,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+--- !u!114 &5161728868364591843 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+  m_PrefabInstance: {fileID: 5161728868364591842}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26bcbddae3ccb2149af28bc3bfda6e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
