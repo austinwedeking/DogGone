@@ -59,6 +59,9 @@ TagManager:
   - name: BG_Near
     uniqueID: 473612207
     locked: 0
+  - name: Foreground Transparent
+    uniqueID: 591694765
+    locked: 0
   - name: Foreground
     uniqueID: 1297805551
     locked: 0
