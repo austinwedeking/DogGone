@@ -9,6 +9,8 @@ public class GroundDetection : MonoBehaviour
 
     private PlayerMovement playerController;
 
+    private int count = 0;
+
     private void Start()
     {
         playerController = FindObjectOfType<PlayerMovement>();
@@ -22,6 +24,7 @@ public class GroundDetection : MonoBehaviour
         if (collision.gameObject.tag == ("Ground"))
         {
             playerController.toggleGrounded(true);
+            ++count;
         }
     }
 
@@ -29,7 +32,10 @@ public class GroundDetection : MonoBehaviour
     {
         if (collision.gameObject.tag == ("Ground"))
         {
-            playerController.toggleGrounded(false);
+            if (--count == 0)
+            {
+                playerController.toggleGrounded(false);
+            }
         }
     }
 }
