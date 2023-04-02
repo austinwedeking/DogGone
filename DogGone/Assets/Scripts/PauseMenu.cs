@@ -52,7 +52,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Loading menu...");
         Time.timeScale = 1f;
-        //audioManager.StopPlaying("MonkeysSpinningMonkeys");
+        audioManager.StopPlaying("MonkeysSpinningMonkeys");
         SceneManager.LoadScene("Menu");
     }
 

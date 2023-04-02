@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
         //}
         Vector3 temp2 = transform.position;
         temp2.y = playerTransform.position.y;
-        if (temp2.y >= -1 && temp2.y <= 4 && FreeCam == false){
+        if (temp2.y >= 0 && temp2.y <= 2 && FreeCam == false){
             transform.position = temp2;
         }
         
