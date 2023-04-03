@@ -2083,6 +2083,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f317e07e3113d341ad0307d9d2ab161, type: 3}
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.data[2].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: DogHurt
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4533596005107755761, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
       propertyPath: m_Name
       value: AudioManager

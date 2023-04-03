@@ -53,7 +53,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: DogBark
     clip: {fileID: 8300000, guid: 846661b9cd6f3a64ca9796feb1c965a3, type: 3}
-    volume: 1
+    volume: 0.75
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: Footstep
+    clip: {fileID: 8300000, guid: c170afc082e06b54cb6b3b32bba94730, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 1
     source: {fileID: 0}

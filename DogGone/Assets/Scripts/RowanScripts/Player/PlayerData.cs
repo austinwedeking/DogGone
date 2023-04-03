@@ -25,6 +25,7 @@ public class PlayerData : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        FindObjectOfType<AudioManager>().Play("DogHurt");
         Debug.Log(currentHealth);
         if (currentHealth <= 0)
         {
