@@ -69,3 +69,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: FireCast
+    clip: {fileID: 8300000, guid: 43353550d6dcbf14791d838ac39bb567, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

@@ -8,10 +8,21 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     AudioManager audioManager;
+    public static PauseMenu instance;
 
     private void Start()
     {
-        //DontDestroyOnLoad(this.gameObject);
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(this.gameObject);
 
         audioManager = FindObjectOfType<AudioManager>();
         if (audioManager == null)

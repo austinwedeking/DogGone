@@ -10,7 +10,7 @@ public class FireballAbility : BaseAbility
 
     [SerializeField] private GameObject projectile;
 
-    bool startBool2 = false;
+    bool startBool = false;
 
     private void PseudoStart()
     {
@@ -22,10 +22,10 @@ public class FireballAbility : BaseAbility
 
     public override void Cast()
     {
-        if (!startBool2)
+        if (!startBool)
         {
             PseudoStart();
-            startBool2 = true;
+            startBool = true;
         }
 
         if (player == null) { Debug.Log("Bad"); }

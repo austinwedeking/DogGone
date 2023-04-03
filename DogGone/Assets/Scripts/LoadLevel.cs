@@ -28,7 +28,7 @@ public class LoadLevel : MonoBehaviour
                 button2.SetActive(false);
             }
 
-            eatPoster = GameObject.Find("eat_poster");
+            eatPoster = GameObject.Find("eat_poster2");
             if (eatPoster != null)
             {
                 eatPoster.SetActive(false);
