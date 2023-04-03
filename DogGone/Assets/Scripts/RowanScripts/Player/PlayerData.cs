@@ -15,7 +15,7 @@ public class PlayerData : MonoBehaviour
 
     public void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        gameObject.transform.position = new Vector3(-32.5f, -1, 0);
 
         currentHealth = maxHealth;
 
