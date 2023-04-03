@@ -60,7 +60,7 @@ public class TestAI : BaseAI
         //if (collision != null) { collision.GetComponentInParent<PlayerData>().takeDamage(damage); }
 
         StartCoroutine(AttackCoroutine());
-
+        FindObjectOfType<AudioManager>().Play("MaskBonk");
     }
 
     private IEnumerator AttackCoroutine()
