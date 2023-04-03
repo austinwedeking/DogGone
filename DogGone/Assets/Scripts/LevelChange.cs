@@ -68,6 +68,11 @@ public class LevelChange : MonoBehaviour
         }
     }
 
+    public void ResetEnemies()
+    {
+        numEnemies = 0;
+    }
+
     public void GameOver()
     { //Loads the lose screen
         index = SceneManager.GetActiveScene().buildIndex;
