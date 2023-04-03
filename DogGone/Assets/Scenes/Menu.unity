@@ -2083,6 +2083,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 43353550d6dcbf14791d838ac39bb567, type: 3}
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: FireCast
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533596005107755760, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4533596005107755761, guid: e43c2721c92b1ab45961568e33ec2f63, type: 3}
       propertyPath: m_Name
       value: AudioManager

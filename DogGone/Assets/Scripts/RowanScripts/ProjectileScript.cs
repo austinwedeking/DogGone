@@ -24,6 +24,7 @@ public class ProjectileScript : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<AudioManager>().Play("FireCast");
 
         animator = gameObject.GetComponent<Animator>(); 
         if (animator == null) { Debug.Log("No animator is present on this projectile"); }

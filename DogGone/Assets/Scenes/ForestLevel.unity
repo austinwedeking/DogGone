@@ -240,6 +240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: drake (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8865910770818380648, guid: f4e6112c7f7292d4481ee46b33ee391c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8865910770818380653, guid: f4e6112c7f7292d4481ee46b33ee391c, type: 3}
       propertyPath: m_RootOrder
       value: 2
