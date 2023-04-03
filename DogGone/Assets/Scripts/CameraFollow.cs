@@ -6,7 +6,9 @@ public class CameraFollow : MonoBehaviour
 {
     private Transform playerTransform;
     bool FreeCam = false; //False will have the locked camera on the map. True will track the player no matter what
+
     void Start(){ //Gets the player object on start
+        gameObject.transform.position = new Vector3(-26.1f, -1, -10);
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
     void Update(){ //Camera has a set Y position, the camera constantly tracks the players X value to move with it

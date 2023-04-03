@@ -15,8 +15,14 @@ public class PlayerData : MonoBehaviour
 
     public void Start()
     {
+        DontDestroyOnLoad(gameObject);
+
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+
+        healthBar = FindObjectOfType<HealthBar>();
+        if (healthBar == null) { Debug.LogError("bad"); }
+        healthBar.SetMaxHealth(currentHealth);
+
         levelChange = FindObjectOfType<LevelChange>();
         if (levelChange == null) { Debug.LogError("bad"); }
     }

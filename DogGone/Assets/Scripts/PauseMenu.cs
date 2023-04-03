@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
+        //DontDestroyOnLoad(this.gameObject);
+
         audioManager = FindObjectOfType<AudioManager>();
         if (audioManager == null)
         {
