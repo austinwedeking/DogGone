@@ -15,17 +15,35 @@ public class ProjectileScript : MonoBehaviour
     [SerializeField] private float detectRadius;
 
     private int direction;
+    private GameObject owner;
+    private PlayerData data;
+
+    [Space(10)]
+    [Header("Projectile Options")]
+    [SerializeField] private bool firedFromPlayer;
 
     private void Start()
     {
+
         animator = gameObject.GetComponent<Animator>(); 
         if (animator == null) { Debug.Log("No animator is present on this projectile"); }
         // else { animator.Play(animationName); } // initilizes the animation
 
-        PlayerMovement temp = FindObjectOfType<PlayerMovement>();
-        if (temp != null) {
-            if (temp.isFacingRight) { direction = 1; }
-            else { direction = -1; }
+        if (firedFromPlayer)
+        {
+            PlayerMovement temp = FindObjectOfType<PlayerMovement>();
+            if (temp != null)
+            {
+                if (temp.isFacingRight) { direction = 1; }
+                else { direction = -1; }
+            }
+        } else
+        {
+            if (owner != null)
+            {
+                if (owner.GetComponent<SnakeAI>().IsFacingRight()) { direction = 1; }
+                else { direction = -1; } // instaid look for BaseAI and then get costom AI via function
+            }
         }
     }
 
@@ -35,7 +53,23 @@ public class ProjectileScript : MonoBehaviour
         Collider2D collision = Physics2D.OverlapCircle(gameObject.transform.position, detectRadius, groundLayer);
         if (collision != null) { Debug.Log("Fireball has been destroyed");  Destroy(gameObject); }
         Collider2D collision2 = Physics2D.OverlapCircle(gameObject.transform.position, detectRadius, hitLayer);
-        if (collision2 != null) { Debug.Log("Enemy was hit with fireball"); }
+        if (collision2 != null) {
+
+            if (collision2.tag == "Player")
+            {
+                data = collision2.GetComponent<PlayerData>();
+                if (data != null)
+                {
+                    Debug.Log("The player was hit by the fireball");
+                    data.takeDamage(damage);
+                }
+            }
+            //if (data != null)
+            //{
+            //    Debug.Log("take damage is being called");
+            //    data.takeDamage(damage);
+            //}
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,4 +93,8 @@ public class ProjectileScript : MonoBehaviour
         //if (collision.tag == "Ground") { Destroy(gameObject); }
     }
 
+    public void SetOwner(GameObject obj)
+    {
+        owner = obj;
+    }
 }
