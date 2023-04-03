@@ -62,6 +62,7 @@ public class ProjectileScript : MonoBehaviour
                 {
                     Debug.Log("The player was hit by the fireball");
                     data.takeDamage(damage);
+                    Destroy(gameObject);
                 }
             }
             //if (data != null)

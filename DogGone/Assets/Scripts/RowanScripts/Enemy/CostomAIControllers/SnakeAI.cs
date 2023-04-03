@@ -54,6 +54,7 @@ public class SnakeAI : BaseAI
         { facingLeft = false; }
         else { facingLeft = true; }
         FaceLeft(facingLeft);
+        animator.SetBool("IsWalking", false);
         animator.SetBool("IsAttacking", true);
 
         AIRigid.velocity = new Vector2(0, AIRigid.velocity.y);
@@ -101,12 +102,14 @@ public class SnakeAI : BaseAI
         }
         //Debug.Log("Chase");
         animator.SetBool("IsAttacking", false);
+        animator.SetBool("IsWalking", true);
     }
 
     public override void Wander()
     {
         isMoving = false;
         animator.SetBool("IsAttacking", false);
+        animator.SetBool("IsWalking", false);
     }
 
     private void Update()
