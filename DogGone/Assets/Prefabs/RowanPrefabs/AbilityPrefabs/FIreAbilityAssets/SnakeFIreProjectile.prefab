@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06553c1888b2f841ac74fc0a9a29a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 15
   speed: 0.1
   animationName: poopy
   tagToDamage: Player
