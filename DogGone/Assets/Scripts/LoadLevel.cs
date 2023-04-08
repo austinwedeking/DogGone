@@ -8,6 +8,12 @@ public class LoadLevel : MonoBehaviour
     GameObject button1;
     GameObject button2;
     GameObject eatPoster;
+    LevelChange levelChange;
+
+    private void Start()
+    {
+        levelChange = FindObjectOfType<LevelChange>();
+    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,23 +22,25 @@ public class LoadLevel : MonoBehaviour
             Debug.Log("Loading new level...");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
-            button1 = GameObject.Find("FirstOption");
-            if (button1 != null)
-            {
-                button1.SetActive(false);
-            }
+            levelChange.PsuedoStart();
 
-            button2 = GameObject.Find("SecondOption");
-            if (button2 != null)
-            {
-                button2.SetActive(false);
-            }
+            //button1 = GameObject.Find("FirstOption");
+            //if (button1 != null)
+            //{
+            //    button1.SetActive(false);
+            //}
 
-            eatPoster = GameObject.Find("eat_poster2");
-            if (eatPoster != null)
-            {
-                eatPoster.SetActive(false);
-            }
+            //button2 = GameObject.Find("SecondOption");
+            //if (button2 != null)
+            //{
+            //    button2.SetActive(false);
+            //}
+
+            //eatPoster = GameObject.Find("eat_poster2");
+            //if (eatPoster != null)
+            //{
+            //    eatPoster.SetActive(false);
+            //}
         }
     }
 }
