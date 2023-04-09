@@ -35,6 +35,7 @@ public class LoseMenu : MonoBehaviour
         Debug.Log("Reloading last level...");
         levelChange.ResetEnemies();
         SceneManager.LoadScene(levelChange.GetComponent<LevelChange>().index);
+        levelChange.PsuedoStart();
     }
 
     public void LoadMenu()
