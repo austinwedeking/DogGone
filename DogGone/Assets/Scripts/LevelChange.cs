@@ -78,6 +78,8 @@ public class LevelChange : MonoBehaviour
     { //Called before start on object creation, just here to make the value start at 0
         numEnemies = 0;
 
+        eatPoster = FindObjectOfType<LoadLevel>().gameObject;
+
         PsuedoStart();
 
         theGameManager = GameObject.Find("GameManager");
