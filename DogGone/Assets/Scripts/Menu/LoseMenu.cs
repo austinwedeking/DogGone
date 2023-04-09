@@ -8,6 +8,9 @@ public class LoseMenu : MonoBehaviour
     AudioManager audioManager;
     LevelChange levelChange;
 
+    GameObject theGameManager;
+    Inventory theInventoryScript;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,6 +25,9 @@ public class LoseMenu : MonoBehaviour
         {
             Debug.Log($"Cannot find {levelChange}");
         }
+
+        theGameManager = GameObject.Find("GameManager");
+        theInventoryScript = theGameManager.GetComponent<Inventory>();
     }
 
     public void RetryLevel()
@@ -35,6 +41,12 @@ public class LoseMenu : MonoBehaviour
     {
         Debug.Log("Loading menu...");
         audioManager.StopPlaying("MonkeysSpinningMonkeys");
+
+        for (int i = 0; i < theInventoryScript.lastValidSpot; i++)
+        {
+            theInventoryScript.theInventory[i] = null;
+        }
+
         SceneManager.LoadScene("Menu");
     }
 

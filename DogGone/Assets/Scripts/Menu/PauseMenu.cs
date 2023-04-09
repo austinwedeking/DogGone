@@ -10,6 +10,9 @@ public class PauseMenu : MonoBehaviour
     AudioManager audioManager;
     public static PauseMenu instance;
 
+    GameObject theGameManager;
+    Inventory theInventoryScript;
+
     private void Start()
     {
         if (instance == null)
@@ -29,6 +32,9 @@ public class PauseMenu : MonoBehaviour
         {
             Debug.Log($"Cannot find {audioManager}");
         }
+
+        theGameManager = GameObject.Find("GameManager");
+        theInventoryScript = theGameManager.GetComponent<Inventory>();
     }
 
     // Update is called once per frame
@@ -64,8 +70,17 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Debug.Log("Loading menu...");
+        pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        GameIsPaused = false;
+
         audioManager.StopPlaying("MonkeysSpinningMonkeys");
+
+        for (int i = 0; i < theInventoryScript.lastValidSpot; i++)
+        {
+            theInventoryScript.theInventory[i] = null;
+        }
+
         SceneManager.LoadScene("Menu");
     }
 

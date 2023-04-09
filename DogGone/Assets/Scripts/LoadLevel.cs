@@ -12,7 +12,9 @@ public class LoadLevel : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         levelChange = FindObjectOfType<LevelChange>();
+        eatPoster = GameObject.Find("eat_poster");
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -20,9 +22,17 @@ public class LoadLevel : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             Debug.Log("Loading new level...");
+
+            //if (eatPoster != null)
+            //{
+            //    eatPoster.SetActive(false);
+            //}
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             levelChange.PsuedoStart();
+
+            //StartCoroutine(Wait());
 
             //button1 = GameObject.Find("FirstOption");
             //if (button1 != null)
@@ -43,4 +53,11 @@ public class LoadLevel : MonoBehaviour
             //}
         }
     }
+
+    //private IEnumerator Wait()
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+
+    //    levelChange.PsuedoStart();
+    //}
 }
