@@ -10,7 +10,7 @@ public class FireballAbility : BaseAbility
 
     [SerializeField] private GameObject projectile;
 
-    bool startBool = false;
+    bool startBool1 = false;
 
     private void PseudoStart()
     {
@@ -22,11 +22,13 @@ public class FireballAbility : BaseAbility
 
     public override void Cast()
     {
-        if (!startBool)
-        {
-            PseudoStart();
-            startBool = true;
-        }
+        //if (!startBool1)
+        //{
+        //    PseudoStart();
+        //    startBool1 = true;
+        //}
+
+        PseudoStart();
 
         if (player == null) { Debug.Log("Bad"); }
         if (playerAttackPosition == null) { Debug.Log("Double Bad"); }
@@ -34,11 +36,13 @@ public class FireballAbility : BaseAbility
         directionBool = FindObjectOfType<PlayerMovement>(); // have to get a new refference every time, no idea why
         if (directionBool.isFacingRight)
         {
+            Debug.Log("Player fired the fire ball");
             Instantiate(projectile, playerAttackPosition.transform.position,
                 Quaternion.Euler(0, 0, 0));
         }
         else if (!directionBool.isFacingRight)
         {
+            Debug.Log("Player fired the fire ball");
             Instantiate(projectile, playerAttackPosition.transform.position,
                 Quaternion.Euler(180, 0, 180));
         }

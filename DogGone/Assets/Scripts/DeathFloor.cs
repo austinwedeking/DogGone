@@ -33,7 +33,7 @@ public class DeathFloor : MonoBehaviour
             Debug.Log("Player fell in a pit!");
         }
         else if(enemydata != null){
-            enemydata.takeDamage(1000);
+            enemydata.takeDamage(1000, 0, 0);
             Debug.Log("Enemy fell in a pit!");
         }
         //} commented out from the top IF statement

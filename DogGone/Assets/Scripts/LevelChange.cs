@@ -41,7 +41,7 @@ public class LevelChange : MonoBehaviour
             {
                 if (enemyList[i] != null)
                 {
-                    enemyList[i].GetComponent<EnemyData>().takeDamage(1000);
+                    enemyList[i].GetComponent<EnemyData>().takeDamage(1000, 0, 0);
                 }
             }
         }

@@ -17,6 +17,7 @@ public class ProjectileScript : MonoBehaviour
     private int direction;
     private GameObject owner;
     private PlayerData data;
+    private EnemyData data2;
 
     [Space(10)]
     [Header("Projectile Options")]
@@ -56,6 +57,8 @@ public class ProjectileScript : MonoBehaviour
         Collider2D collision2 = Physics2D.OverlapCircle(gameObject.transform.position, detectRadius, hitLayer);
         if (collision2 != null) {
 
+            Debug.Log($"A collision has happened with {collision2.tag}");
+
             if (collision2.tag == "Player")
             {
                 data = collision2.GetComponent<PlayerData>();
@@ -63,6 +66,16 @@ public class ProjectileScript : MonoBehaviour
                 {
                     Debug.Log("The player was hit by the fireball");
                     data.takeDamage(damage);
+                    Destroy(gameObject);
+                }
+            }
+            else if (collision2.tag == "Enemy")
+            {
+                data2 = collision2.GetComponent<EnemyData>();
+                if (data2 != null)
+                {
+                    Debug.Log("The enemy was hit by the fireball");
+                    data2.takeDamage(damage, 5f, 5f);
                     Destroy(gameObject);
                 }
             }

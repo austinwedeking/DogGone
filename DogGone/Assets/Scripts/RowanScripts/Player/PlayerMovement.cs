@@ -201,9 +201,11 @@ public class PlayerMovement : MonoBehaviour
             case 0:
                 if (canAttack)
                 {
+                    float direction;
                     Debug.Log("Player used base attack");
                     Collider2D collisions = Physics2D.OverlapCircle(attackPosition.transform.position, attackRadius, enemyLayer);
-                    if (collisions != null) { collisions.GetComponent<EnemyData>().takeDamage(damage); }
+                    if (isFacingRight) { direction = 1; } else { direction = -1; }
+                    if (collisions != null) { collisions.GetComponent<EnemyData>().takeDamage(damage, 3f * direction, 5f); }
                     attackPosition.GetComponent<Animator>().Play("AttackAnimation");
                     StartCoroutine(AttackCooldown());
                     FindObjectOfType<AudioManager>().Play("DogBark");
