@@ -68,7 +68,7 @@ public class SlimeAI : BaseAI
     {
         yield return new WaitForSeconds(attackDelay);
         Collider2D collision = Physics2D.OverlapCircle(attackTransform.position, attackOverlapRadius, playerLayer);
-        if (collision != null) { collision.GetComponentInParent<PlayerData>().takeDamage(damage); }
+        if (collision != null) { collision.GetComponentInParent<PlayerData>().takeDamage(damage, 5 * movementDirection, 6); }
     }
 
     override public void ChaseWithinRange()

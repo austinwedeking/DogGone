@@ -15,6 +15,7 @@ public class EnemyData : MonoBehaviour
 
     private LevelChange levelChange;
     private Rigidbody2D rigid;
+    private SpriteRenderer renderer;
     private int damage = 5; public int getDamage() { return damage; }
 
     private void Start()
@@ -25,17 +26,27 @@ public class EnemyData : MonoBehaviour
         else { levelChange.IncrementEnemies(); }
         rigid = gameObject.GetComponent<Rigidbody2D>();
         if (rigid == null) { Debug.Log("No rigidbody on this enemy"); }
+        renderer = gameObject.GetComponent<SpriteRenderer>();
+        if (renderer == null) { Debug.Log("No renderer (somehow)"); }
     }
 
     public void takeDamage(int damage, float horiz, float vert)
     {
         currentHealth -= damage;
+        StartCoroutine(damageFlash());
         rigid.AddForce(new Vector2(horiz, vert), ForceMode2D.Impulse);
         Debug.Log($"enemy took {maxHealth - currentHealth} damage");
         if (currentHealth <= 0)
         {
             Die();
         }
+    }
+
+    private IEnumerator damageFlash()
+    {
+        renderer.color = Color.red;
+        yield return new WaitForSeconds(0.15f);
+        renderer.color = Color.white;
     }
 
     public void Die()

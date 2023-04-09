@@ -29,7 +29,7 @@ public class DeathFloor : MonoBehaviour
         
         //If either the player or an enemy hits the death plane then make them take 1000 damage to kill them
         if(playerdata != null){
-            playerdata.takeDamage(1000);
+            playerdata.takeDamage(1000, 0, 0);
             Debug.Log("Player fell in a pit!");
         }
         else if(enemydata != null){

@@ -16,6 +16,7 @@ public class ProjectileScript : MonoBehaviour
 
     private int direction;
     private GameObject owner;
+    private PlayerMovement playerMovement;
     private PlayerData data;
     private EnemyData data2;
 
@@ -26,6 +27,8 @@ public class ProjectileScript : MonoBehaviour
     private void Start()
     {
         FindObjectOfType<AudioManager>().Play("FireCast");
+
+        playerMovement = FindObjectOfType<PlayerMovement>();
 
         animator = gameObject.GetComponent<Animator>(); 
         if (animator == null) { Debug.Log("No animator is present on this projectile"); }
@@ -65,7 +68,7 @@ public class ProjectileScript : MonoBehaviour
                 if (data != null)
                 {
                     Debug.Log("The player was hit by the fireball");
-                    data.takeDamage(damage);
+                    data.takeDamage(damage, 5 * direction, 8);
                     Destroy(gameObject);
                 }
             }
@@ -74,8 +77,10 @@ public class ProjectileScript : MonoBehaviour
                 data2 = collision2.GetComponent<EnemyData>();
                 if (data2 != null)
                 {
+                    float direction;
+                    if (playerMovement.isFacingRight) { direction = 1; } else { direction = -1; }
                     Debug.Log("The enemy was hit by the fireball");
-                    data2.takeDamage(damage, 5f, 5f);
+                    data2.takeDamage(damage, 8f * direction, 5f);
                     Destroy(gameObject);
                 }
             }

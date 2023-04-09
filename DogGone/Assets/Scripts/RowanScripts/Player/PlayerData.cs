@@ -10,6 +10,8 @@ public class PlayerData : MonoBehaviour
     [SerializeField] private int currentHealth;
 
     private LevelChange levelChange;
+    private SpriteRenderer renderer;
+    private Rigidbody2D rigid;
 
     public HealthBar healthBar;
 
@@ -25,18 +27,34 @@ public class PlayerData : MonoBehaviour
 
         levelChange = FindObjectOfType<LevelChange>();
         if (levelChange == null) { Debug.LogError("bad"); }
+
+        renderer = gameObject.GetComponent<SpriteRenderer>();
+        if (renderer == null) { Debug.Log("No sprite renderer (somehow)"); }
+
+        rigid = gameObject.GetComponent<Rigidbody2D>();
+        if (rigid == null) { Debug.Log("No rigidbody (somehow)"); }
     }
 
-    public void takeDamage(int damage)
+    public void takeDamage(int damage, float horiz, float vert)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        StartCoroutine(damageFlash());
+        rigid.AddForce(new Vector2(0, vert), ForceMode2D.Impulse);
+        rigid.AddForce(new Vector2(horiz, 0), ForceMode2D.Impulse);
         FindObjectOfType<AudioManager>().Play("DogHurt");
         Debug.Log(currentHealth);
         if (currentHealth <= 0)
         {
             Die();
         }
+    }
+
+    private IEnumerator damageFlash()
+    {
+        renderer.color = Color.red;
+        yield return new WaitForSeconds(0.15f);
+        renderer.color = Color.white;
     }
 
     public void Die()

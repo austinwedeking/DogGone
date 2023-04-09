@@ -67,7 +67,7 @@ public class TestAI : BaseAI
     {
         yield return new WaitForSeconds(attackDelay);
         Collider2D collision = Physics2D.OverlapCircle(attackTransform.position, attackOverlapRadius, playerLayer);
-        if (collision != null) { collision.GetComponentInParent<PlayerData>().takeDamage(damage); }
+        if (collision != null) { collision.GetComponentInParent<PlayerData>().takeDamage(damage, 5 * movementDirection, 5); }
     }
 
     override public void ChaseWithinRange()
