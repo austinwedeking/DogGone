@@ -14,6 +14,7 @@ public class EnemyData : MonoBehaviour
     [Tooltip("Keep this at zero")] [SerializeField] private int currentHealth;
 
     private LevelChange levelChange;
+    private Rigidbody2D rigid;
     private int damage = 5; public int getDamage() { return damage; }
 
     private void Start()
@@ -22,11 +23,14 @@ public class EnemyData : MonoBehaviour
         levelChange = FindObjectOfType<LevelChange>();
         if (levelChange == null) { Debug.LogError("No Level change present in the current scene"); }
         else { levelChange.IncrementEnemies(); }
+        rigid = gameObject.GetComponent<Rigidbody2D>();
+        if (rigid == null) { Debug.Log("No rigidbody on this enemy"); }
     }
 
-    public void takeDamage(int damage)
+    public void takeDamage(int damage, float horiz, float vert)
     {
         currentHealth -= damage;
+        rigid.AddForce(new Vector2(horiz, vert), ForceMode2D.Impulse);
         Debug.Log($"enemy took {maxHealth - currentHealth} damage");
         if (currentHealth <= 0)
         {
