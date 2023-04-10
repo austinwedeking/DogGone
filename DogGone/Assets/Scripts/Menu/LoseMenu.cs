@@ -48,8 +48,6 @@ public class LoseMenu : MonoBehaviour
             theInventoryScript.theInventory[i] = null;
         }
 
-        theInventoryScript.nextSpot = 0;
-
         SceneManager.LoadScene("Menu");
     }
 

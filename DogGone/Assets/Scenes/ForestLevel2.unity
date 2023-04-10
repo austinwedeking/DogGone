@@ -412,18 +412,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5806189689212226305, guid: 74cc891bad2bf32458164bb8d65dac11, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e10ddc684915889409889157d95b5599, type: 3}
-    - target: {fileID: 5806189689342032524, guid: 74cc891bad2bf32458164bb8d65dac11, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2724eb67a5b24964b83a54ac6cc1d4ed, type: 3}
-    - target: {fileID: 5806189690152894935, guid: 74cc891bad2bf32458164bb8d65dac11, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 199ba04047260cd43a970cba2d24cb6f, type: 3}
     - target: {fileID: 5806189690320379410, guid: 74cc891bad2bf32458164bb8d65dac11, type: 3}
       propertyPath: m_Tiles.Array.size
       value: 185
@@ -4316,10 +4304,6 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[0].m_ColliderPaths.Array.data[2].Array.data[19].Y
       value: -50000100
       objectReference: {fileID: 0}
-    - target: {fileID: 5806189690518000942, guid: 74cc891bad2bf32458164bb8d65dac11, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 27a66c9e798a9114b8bef19119c1a762, type: 3}
     - target: {fileID: 5806189691189548110, guid: 74cc891bad2bf32458164bb8d65dac11, type: 3}
       propertyPath: m_RootOrder
       value: 3
