@@ -66,7 +66,7 @@ public class LevelChange : MonoBehaviour
         button1.SetActive(false);
         button2.SetActive(false);
 
-        eatPoster = FindObjectOfType<LoadLevel>().gameObject;
+        //eatPoster = FindObjectOfType<LoadLevel>().gameObject;
  
         if (eatPoster != null)
         {
