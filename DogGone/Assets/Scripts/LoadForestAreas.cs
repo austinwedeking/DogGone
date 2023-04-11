@@ -14,29 +14,38 @@ public class LoadForestAreas : MonoBehaviour
     public GameObject LevelBlock8;
     public GameObject LevelBlock9;
     public GameObject LevelBlock10;
+    public GameObject LevelBlock11;
 
     void Start() {
         int Areas = 4; //How many Areas are going to generate
         int Offset; //Stores how much offset a Area needs when being placed
         int RandNum; //Stores a random number to decide what Area to generate
+        bool Shop = false; //Stores whether or not a shop spawned yet so we can't have duplicates even though its a 1/121 chance for even 1 duplicate
         for (int i = 0; i < Areas; i++){
             Offset = 40; //Inital offset of 40 as an Area is 40 units long
-            RandNum = Random.Range(1, 11); //Generates a number 1 to 10
+            RandNum = Random.Range(1, 11); //Generates a number 1 to 11
+            if(Shop == true){ //Only checks if its generating a shop if a shop has already generated
+                if(RandNum==11){ //Only runs if its generating a shop after a shop has already generated
+                    RandNum = Random.Range(1, 11); //Generates a number 1 to 10 so it cannot roll the shop
+                }
+            }
+            if(RandNum == 11){Shop = true;} //If its going to spawn a shop set the bool that a shop has spawned
             Offset = Offset + ((i - 1) * 40); //Offsets the inital position by how many Areas have been loaded
             Offset = Offset - ((RandNum-1)*45); //Offsets the Area by the position of the prefab because I am an idiot and didn't stack them
             Vector3 StartPosition = new Vector3(Offset, -63, 0); //Sets the placement position of the Area
-            
+
             //Mega if statement to decide what Level Area to instantiate
-            if (RandNum == 1){Instantiate(LevelBlock1, StartPosition, Quaternion.identity);}
-            else if (RandNum == 2){Instantiate(LevelBlock2, StartPosition, Quaternion.identity);}
-            else if (RandNum == 3){Instantiate(LevelBlock3, StartPosition, Quaternion.identity);}
-            else if (RandNum == 4){Instantiate(LevelBlock4, StartPosition, Quaternion.identity);}
-            else if (RandNum == 5){Instantiate(LevelBlock5, StartPosition, Quaternion.identity);}
-            else if (RandNum == 6){Instantiate(LevelBlock6, StartPosition, Quaternion.identity);}
-            else if (RandNum == 7){Instantiate(LevelBlock7, StartPosition, Quaternion.identity);}
-            else if (RandNum == 8){Instantiate(LevelBlock8, StartPosition, Quaternion.identity);}
-            else if (RandNum == 9){Instantiate(LevelBlock9, StartPosition, Quaternion.identity);}
-            else if (RandNum == 10){Instantiate(LevelBlock10, StartPosition, Quaternion.identity);}
+            if (RandNum == 1) { Instantiate(LevelBlock1, StartPosition, Quaternion.identity); }
+            else if (RandNum == 2) { Instantiate(LevelBlock2, StartPosition, Quaternion.identity); }
+            else if (RandNum == 3) { Instantiate(LevelBlock3, StartPosition, Quaternion.identity); }
+            else if (RandNum == 4) { Instantiate(LevelBlock4, StartPosition, Quaternion.identity); }
+            else if (RandNum == 5) { Instantiate(LevelBlock5, StartPosition, Quaternion.identity); }
+            else if (RandNum == 6) { Instantiate(LevelBlock6, StartPosition, Quaternion.identity); }
+            else if (RandNum == 7) { Instantiate(LevelBlock7, StartPosition, Quaternion.identity); }
+            else if (RandNum == 8) { Instantiate(LevelBlock8, StartPosition, Quaternion.identity); }
+            else if (RandNum == 9) { Instantiate(LevelBlock9, StartPosition, Quaternion.identity); }
+            else if (RandNum == 10) { Instantiate(LevelBlock10, StartPosition, Quaternion.identity); }
+            else if (RandNum == 11) { Instantiate(LevelBlock11, StartPosition, Quaternion.identity); }
         }
     }
 }
