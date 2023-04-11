@@ -40,4 +40,9 @@ public class SlamAI : BaseAI
         throw new System.NotImplementedException(); //Eventually we will force feed it a boolean to make it look where it's supposed to be looking
         //Likely update what way its facing when it re lands on ground and when it jumps
     }
+
+    public override void Die()
+    {
+        throw new System.NotImplementedException();
+    }
 }

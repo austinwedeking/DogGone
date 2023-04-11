@@ -9,6 +9,7 @@ public abstract class BaseAI : MonoBehaviour
     abstract public void ChaseWithinRange();
     abstract public void Chase();
     abstract public void Wander();
+    abstract public void Die();
     abstract public void FaceLeft(bool faceRight);
 
 }

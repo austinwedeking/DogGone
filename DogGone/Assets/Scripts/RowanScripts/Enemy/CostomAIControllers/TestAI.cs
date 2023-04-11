@@ -113,4 +113,10 @@ public class TestAI : BaseAI
         if (faceLeft) { gameObject.transform.rotation = Quaternion.Euler(180, 0, 180); }
         else { gameObject.transform.rotation = Quaternion.Euler(0, 0, 0); }
     }
+
+    public override void Die()
+    {
+        //TODO: implement this
+        Destroy(gameObject);
+    }
 }
