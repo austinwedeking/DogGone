@@ -62,5 +62,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numEnemies: 0
   loseSceneIndex: 1
-  winSceneIndex: 2
-  ability1: {fileID: 8865910770818380648, guid: f4e6112c7f7292d4481ee46b33ee391c, type: 3}
+  winSceneIndex: 4
+  button1: {fileID: 0}
+  button2: {fileID: 0}
+  ability1: {fileID: 0}
+  index: 0

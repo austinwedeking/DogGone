@@ -162,7 +162,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -263,6 +263,8 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  attackCooldownTimer: 0
+  isFacingRight: 0
 --- !u!114 &4555572175120768934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +281,10 @@ MonoBehaviour:
   left: 97
   jump: 119
   attack: 101
+  ability1: 0
+  ability2: 0
+  ability3: 0
+  ability4: 0
 --- !u!114 &4555572175120768929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,3 +300,4 @@ MonoBehaviour:
   bones: 0
   maxHealth: 100
   currentHealth: 0
+  healthBar: {fileID: 0}
