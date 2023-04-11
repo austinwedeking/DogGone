@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerData : MonoBehaviour
 {
     [SerializeField] private int bones;
 
-    [SerializeField] private int maxHealth;
-    [SerializeField] private int currentHealth;
+    [SerializeField] private int maxHealth; public int GetMaxPlayerHealth() { return maxHealth; }
+    [SerializeField] private int currentHealth; public int GetCurrentPlayerHealth() { return currentHealth; }
 
     private LevelChange levelChange;
     private SpriteRenderer renderer;
@@ -19,20 +20,29 @@ public class PlayerData : MonoBehaviour
     {
         gameObject.transform.position = new Vector3(-32.5f, -1, 0);
 
-        currentHealth = maxHealth;
+        levelChange = FindObjectOfType<LevelChange>();
+        if (levelChange == null) { Debug.LogError("bad"); }
 
         healthBar = FindObjectOfType<HealthBar>();
         if (healthBar == null) { Debug.LogError("bad"); }
-        healthBar.SetMaxHealth(currentHealth);
-
-        levelChange = FindObjectOfType<LevelChange>();
-        if (levelChange == null) { Debug.LogError("bad"); }
 
         renderer = gameObject.GetComponent<SpriteRenderer>();
         if (renderer == null) { Debug.Log("No sprite renderer (somehow)"); }
 
         rigid = gameObject.GetComponent<Rigidbody2D>();
         if (rigid == null) { Debug.Log("No rigidbody (somehow)"); }
+
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(currentHealth);
+        }
+        else
+        {
+            Debug.Log("hi");
+            currentHealth = levelChange.GetTemp();
+            healthBar.SetHealth(currentHealth);
+        }
     }
 
     public void takeDamage(int damage, float horiz, float vert)
@@ -60,6 +70,7 @@ public class PlayerData : MonoBehaviour
     public void Die()
     {
         Debug.Log("Player has died");
+        levelChange.SetTemp(100);
         levelChange.GameOver();
     }
 }

@@ -26,10 +26,16 @@ public class LevelChange : MonoBehaviour
     EnemyData[] enemies = new EnemyData[100];
     GameObject[] enemyList; // = new GameObject[100];
 
+    PlayerData playerData;
+    private int temp = 0; public int GetTemp() { return temp; } public void SetTemp(int i) { temp = i; }
+
+
     private void Start()
     {
         player = FindObjectOfType<PlayerData>().gameObject;
         if (player == null) { Debug.Log("No player found in active scene"); }
+
+        playerData = FindObjectOfType<PlayerData>();
     }
 
     private void Update()
@@ -97,6 +103,7 @@ public class LevelChange : MonoBehaviour
         if (numEnemies <= 0)
         { //If no enemies are alive then show the win screen
             Choose();
+            temp = playerData.GetCurrentPlayerHealth();
         }
     }
 
