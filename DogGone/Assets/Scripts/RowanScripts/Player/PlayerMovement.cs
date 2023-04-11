@@ -9,7 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator playerAnimator;
     private Inventory inventory;
 
-    private string[] abilityKeys = { "FireAbility", "test2" };   
+    private string[] abilityKeys = { "FireAbility" };
+    //private int abilityArraySize = 3;
+    //private int currArrayPos;
 
     [Header("Movement Controls")]
     [SerializeField] private float moveSpeed = 8.0f;
@@ -57,14 +59,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        abilityKeys = new string[3];
+
         rigid = gameObject.GetComponent<Rigidbody2D>();
         if (rigid == null) { Debug.LogError("No component of type Rigidbody2D attached to game object"); }
         spriteRend = gameObject.GetComponent<SpriteRenderer>();
         if (spriteRend == null) { Debug.LogError("No component of type SpriteRenderer attached to game object"); }
-        //detection = gameObject.GetComponentInChildren<GroundDetection>();
         inputManager = GetComponent<PlayerInputManager>();
         if (inputManager == null) { Debug.LogError("No component of type PlayerInputManager attached to game object"); }
-        //facingRight = false;
         if (attackPosition == null) { Debug.LogError("No attack position object attached to game object"); }
         playerAnimator = gameObject.GetComponent<Animator>();
         inventory = FindObjectOfType<Inventory>();
@@ -81,6 +83,8 @@ public class PlayerMovement : MonoBehaviour
         isHittingWall = false;
 
         isFacingRight = true;
+
+        //currArrayPos = 0;
     }
 
     void Update()
@@ -90,6 +94,15 @@ public class PlayerMovement : MonoBehaviour
         // for debuging
         //Debug.Log(rigid.velocity.x);
     }
+
+    //public void addAbility(string name)
+    //{
+    //    if (currArrayPos! > abilityArraySize)
+    //    {
+    //        abilityKeys[currArrayPos] = name;
+    //        currArrayPos++;
+    //    }
+    //}
 
     public void processRightDown()
     {
@@ -212,7 +225,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 break;
             case 1:
-                GameObject temp = inventory.find(abilityKeys[0]);
+                GameObject temp = inventory.find("FireAbility");
                 if (temp != null)
                 {
                     if (canUseAbility1) 

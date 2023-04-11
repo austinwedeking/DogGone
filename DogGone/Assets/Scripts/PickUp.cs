@@ -11,6 +11,7 @@ public class PickUp : MonoBehaviour
 
     [Tooltip("This should be a reference to an ability prefab")]
     [SerializeField] GameObject abilityReference;
+    [SerializeField] string abilityName;
 
     void Start(){
         //On start will get the GameManager component and the Inventory component
@@ -27,6 +28,7 @@ public class PickUp : MonoBehaviour
             //oldFunction();
             theInventoryScript.theInventory[theInventoryScript.nextSpot] = abilityReference; //Insert it into the spot
             theInventoryScript.nextSpot++; //Increment the next slot
+            //collision.GetComponent<PlayerMovement>().addAbility(abilityName);
             Debug.Log("Picked up by player");
             Destroy(this.gameObject);
         }
