@@ -241,7 +241,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 2048
-  damage: 40
+  damage: 33
   attackDelay: 0.3
   moveSpeed: 2
 --- !u!1 &2596522185424884386

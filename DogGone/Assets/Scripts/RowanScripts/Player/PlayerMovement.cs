@@ -181,7 +181,12 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 { rigid.AddForce(new Vector2(moveSpeed, 0)); }
-                playerAnimator.SetBool("isWalking", true); 
+
+                if (canAttack)
+                {
+                    playerAnimator.SetBool("isIdol", false);
+                    playerAnimator.SetBool("isWalking", true);
+                }
                 break;
             case 1:
                 if (rigid.velocity.x != 0)
@@ -193,14 +198,22 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 { rigid.AddForce(new Vector2(-moveSpeed, 0)); }
-                playerAnimator.SetBool("isWalking", true); 
+                if (canAttack)
+                {
+                    playerAnimator.SetBool("isIdol", false);
+                    playerAnimator.SetBool("isWalking", true);
+                }
                 break;
             case 2:
                 rigid.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 break;
             case 3:
                 rigid.velocity = new Vector2(0, rigid.velocity.y);
-                playerAnimator.SetBool("isWalking", false);
+                if (canAttack)
+                {
+                    playerAnimator.SetBool("isIdol", true);
+                    playerAnimator.SetBool("isWalking", false);
+                }
                 break;
             default:
                 break;
@@ -216,10 +229,19 @@ public class PlayerMovement : MonoBehaviour
                 {
                     float direction;
                     Debug.Log("Player used base attack");
+
+                    playerAnimator.SetBool("isWalking", false);
+                    playerAnimator.SetBool("isIdol", false);
+
                     Collider2D collisions = Physics2D.OverlapCircle(attackPosition.transform.position, attackRadius, enemyLayer);
                     if (isFacingRight) { direction = 1; } else { direction = -1; }
                     if (collisions != null) { collisions.GetComponent<EnemyData>().takeDamage(damage, 3f * direction, 5f); }
-                    attackPosition.GetComponent<Animator>().Play("AttackAnimation");
+                    //attackPosition.GetComponent<Animator>().Play("AttackAnimation");
+                    playerAnimator.Play("NewAttackAnimation");
+
+                    //playerAnimator.SetBool("isWalking", true);
+                    //playerAnimator.SetBool("isIdol", true);
+
                     StartCoroutine(AttackCooldown());
                     FindObjectOfType<AudioManager>().Play("DogBark");
                 }
@@ -269,6 +291,7 @@ public class PlayerMovement : MonoBehaviour
     {
         canAttack = false;
         yield return new WaitForSeconds(attackCooldownTimer);
+        playerAnimator.SetBool("isIdol", true);
         canAttack = true;
     }
 
