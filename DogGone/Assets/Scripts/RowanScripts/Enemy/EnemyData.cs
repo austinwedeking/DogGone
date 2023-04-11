@@ -34,7 +34,7 @@ public class EnemyData : MonoBehaviour
     {
         currentHealth -= damage;
         StartCoroutine(damageFlash());
-        rigid.AddForce(new Vector2(horiz, vert), ForceMode2D.Impulse);
+        rigid.AddForce(new Vector2(horiz, vert/2), ForceMode2D.Impulse);
         Debug.Log($"enemy took {maxHealth - currentHealth} damage");
         if (currentHealth <= 0)
         {
