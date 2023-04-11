@@ -234,7 +234,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
-  attackCooldownTimer: 0.5
+  attackCooldownTimer: 0.06
   isFacingRight: 0
 --- !u!114 &2608055571553023552
 MonoBehaviour:
