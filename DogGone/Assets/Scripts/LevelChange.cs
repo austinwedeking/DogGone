@@ -16,6 +16,7 @@ public class LevelChange : MonoBehaviour
 
     [Header("References to ability pickup objects")]
     [SerializeField] private GameObject ability1;
+    [SerializeField] private GameObject ability2;
 
     GameObject theGameManager;
     Inventory theInventoryScript;
@@ -177,9 +178,8 @@ public class LevelChange : MonoBehaviour
 
             if (theInventoryScript.nextSpot <= theInventoryScript.lastValidSpot)
             {
-                theInventoryScript.theInventory[theInventoryScript.nextSpot] = GameObject.Find("map");
-                theInventoryScript.nextSpot++;
-                Debug.Log("Picked up map");
+                Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
+                Instantiate(ability2, tempVector, Quaternion.identity);
             }
             else
             {

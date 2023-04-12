@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d27fc5061c40e44b44264de1d387b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityReference: {fileID: 6499179747225943129, guid: 1d0ad4216eaa92847bab2085fbcf05ae, type: 3}
-  abilityName: FireAbility
+  abilityReference: {fileID: 559420645026006051, guid: 7a7e779b8a5b7c74b8e1e12bc8294738, type: 3}
+  abilityName: DashAbility
 --- !u!1001 &8842667245694983927
 PrefabInstance:
   m_ObjectHideFlags: 0

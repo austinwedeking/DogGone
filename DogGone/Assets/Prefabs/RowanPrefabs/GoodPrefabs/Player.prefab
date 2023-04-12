@@ -234,7 +234,9 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
-  attackCooldownTimer: 0.06
+  dashSpeed: 20
+  dashLength: 0.15
+  attackCooldownTimer: 0.5
   isFacingRight: 0
 --- !u!114 &2608055571553023552
 MonoBehaviour:
@@ -253,9 +255,9 @@ MonoBehaviour:
   jump: 119
   attack: 101
   ability1: 49
-  ability2: 0
-  ability3: 0
-  ability4: 0
+  ability2: 50
+  ability3: 51
+  ability4: 52
 --- !u!95 &1948097628248991214
 Animator:
   serializedVersion: 4
@@ -314,6 +316,7 @@ MonoBehaviour:
   LevelBlock8: {fileID: 92725429342135020, guid: e53e91d7aef44d64ba8dbd6ff74d6c0b, type: 3}
   LevelBlock9: {fileID: 8841686978714772062, guid: 873b065d92bef4f4ba1c5308d143b156, type: 3}
   LevelBlock10: {fileID: 1104015001671700054, guid: 5e23f385b1c90c440941b1ccec565ba2, type: 3}
+  LevelBlock11: {fileID: 0}
 --- !u!1 &2608055571783768806
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class PlayerData : MonoBehaviour
     private LevelChange levelChange;
     private SpriteRenderer renderer;
     private Rigidbody2D rigid;
+    private PlayerMovement playerMovement;
 
     public HealthBar healthBar;
 
@@ -32,6 +33,8 @@ public class PlayerData : MonoBehaviour
         rigid = gameObject.GetComponent<Rigidbody2D>();
         if (rigid == null) { Debug.Log("No rigidbody (somehow)"); }
 
+        playerMovement = gameObject.GetComponent<PlayerMovement>();
+
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             currentHealth = maxHealth;
@@ -47,16 +50,19 @@ public class PlayerData : MonoBehaviour
 
     public void takeDamage(int damage, float horiz, float vert)
     {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
-        StartCoroutine(damageFlash());
-        rigid.AddForce(new Vector2(0, vert), ForceMode2D.Impulse);
-        rigid.AddForce(new Vector2(horiz, 0), ForceMode2D.Impulse);
-        FindObjectOfType<AudioManager>().Play("DogHurt");
-        Debug.Log(currentHealth);
-        if (currentHealth <= 0)
+        if (!playerMovement.GetIsDashing())
         {
-            Die();
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
+            StartCoroutine(damageFlash());
+            rigid.AddForce(new Vector2(0, vert), ForceMode2D.Impulse);
+            rigid.AddForce(new Vector2(horiz, 0), ForceMode2D.Impulse);
+            FindObjectOfType<AudioManager>().Play("DogHurt");
+            Debug.Log(currentHealth);
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 

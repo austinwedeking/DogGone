@@ -33,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private LayerMask enemyLayer;
 
+    [Header("Player Dash Options")]
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashLength;
+    private bool isDashing; public bool GetIsDashing() { return isDashing; }
+
     [Space(10)]
     [Header("Player Attack Cooldowns")]
     [SerializeField] private float attackCooldownTimer;
@@ -84,12 +89,14 @@ public class PlayerMovement : MonoBehaviour
 
         isFacingRight = true;
 
+        isDashing = false;
+
         //currArrayPos = 0;
     }
 
     void Update()
     {
-        inputManager.GetInputs();
+        if (!CheckDash()) { inputManager.GetInputs(); }
 
         // for debuging
         //Debug.Log(rigid.velocity.x);
@@ -168,124 +175,158 @@ public class PlayerMovement : MonoBehaviour
 
     private void ProcessMovement(int val)
     { // 0 = right, 1 = left, 2 = jump, 3 = stop movement
-        float velocityNonZeroCheck = 0;
-        switch (val)
-        {
-            case 0:
-                if (rigid.velocity.x != 0)
-                {
-                    velocityNonZeroCheck = Mathf.Ceil(rigid.velocity.x * accelerationMultiplier);
-                    if (velocityNonZeroCheck < 1.0f)
-                    { velocityNonZeroCheck = 1.0f; }
-                    rigid.AddForce(new Vector2(moveSpeed * (maxXVelocity / velocityNonZeroCheck), 0));
-                }
-                else
-                { rigid.AddForce(new Vector2(moveSpeed, 0)); }
+        if (!isDashing) {
+            float velocityNonZeroCheck = 0;
+            switch (val)
+            {
+                case 0:
+                    if (rigid.velocity.x != 0)
+                    {
+                        velocityNonZeroCheck = Mathf.Ceil(rigid.velocity.x * accelerationMultiplier);
+                        if (velocityNonZeroCheck < 1.0f)
+                        { velocityNonZeroCheck = 1.0f; }
+                        rigid.AddForce(new Vector2(moveSpeed * (maxXVelocity / velocityNonZeroCheck), 0));
+                    }
+                    else
+                    { rigid.AddForce(new Vector2(moveSpeed, 0)); }
 
-                if (canAttack)
-                {
-                    playerAnimator.SetBool("isIdol", false);
-                    playerAnimator.SetBool("isWalking", true);
-                }
-                break;
-            case 1:
-                if (rigid.velocity.x != 0)
-                {
-                    velocityNonZeroCheck = Mathf.Ceil(-rigid.velocity.x * accelerationMultiplier);
-                    if (velocityNonZeroCheck < 1.0f)
-                    { velocityNonZeroCheck = 1.0f; }
-                    rigid.AddForce(new Vector2(-moveSpeed * (maxXVelocity / velocityNonZeroCheck), 0));
-                }
-                else
-                { rigid.AddForce(new Vector2(-moveSpeed, 0)); }
-                if (canAttack)
-                {
-                    playerAnimator.SetBool("isIdol", false);
-                    playerAnimator.SetBool("isWalking", true);
-                }
-                break;
-            case 2:
-                rigid.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-                break;
-            case 3:
-                rigid.velocity = new Vector2(0, rigid.velocity.y);
-                if (canAttack)
-                {
-                    playerAnimator.SetBool("isIdol", true);
-                    playerAnimator.SetBool("isWalking", false);
-                }
-                break;
-            default:
-                break;
+                    if (canAttack)
+                    {
+                        playerAnimator.SetBool("isIdol", false);
+                        playerAnimator.SetBool("isWalking", true);
+                    }
+                    break;
+                case 1:
+                    if (rigid.velocity.x != 0)
+                    {
+                        velocityNonZeroCheck = Mathf.Ceil(-rigid.velocity.x * accelerationMultiplier);
+                        if (velocityNonZeroCheck < 1.0f)
+                        { velocityNonZeroCheck = 1.0f; }
+                        rigid.AddForce(new Vector2(-moveSpeed * (maxXVelocity / velocityNonZeroCheck), 0));
+                    }
+                    else
+                    { rigid.AddForce(new Vector2(-moveSpeed, 0)); }
+                    if (canAttack)
+                    {
+                        playerAnimator.SetBool("isIdol", false);
+                        playerAnimator.SetBool("isWalking", true);
+                    }
+                    break;
+                case 2:
+                    rigid.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                    break;
+                case 3:
+                    rigid.velocity = new Vector2(0, rigid.velocity.y);
+                    if (canAttack)
+                    {
+                        playerAnimator.SetBool("isIdol", true);
+                        playerAnimator.SetBool("isWalking", false);
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
     private void ProcessAttack(int val)
     { // 0 = basic attack, 1 = ability 1
-        switch(val)
+        if (!isDashing)
         {
-            case 0:
-                if (canAttack)
-                {
-                    float direction;
-                    Debug.Log("Player used base attack");
+            switch (val)
+            {
+                case 0:
+                    if (canAttack)
+                    {
+                        float direction;
+                        Debug.Log("Player used base attack");
 
-                    playerAnimator.SetBool("isWalking", false);
-                    playerAnimator.SetBool("isIdol", false);
+                        playerAnimator.SetBool("isWalking", false);
+                        playerAnimator.SetBool("isIdol", false);
 
-                    Collider2D collisions = Physics2D.OverlapCircle(attackPosition.transform.position, attackRadius, enemyLayer);
-                    if (isFacingRight) { direction = 1; } else { direction = -1; }
-                    if (collisions != null) { collisions.GetComponent<EnemyData>().takeDamage(damage, 3f * direction, 5f); }
-                    //attackPosition.GetComponent<Animator>().Play("AttackAnimation");
-                    playerAnimator.Play("NewAttackAnimation");
+                        Collider2D collisions = Physics2D.OverlapCircle(attackPosition.transform.position, attackRadius, enemyLayer);
+                        if (isFacingRight) { direction = 1; } else { direction = -1; }
+                        if (collisions != null) { collisions.GetComponent<EnemyData>().takeDamage(damage, 3f * direction, 5f); }
+                        //attackPosition.GetComponent<Animator>().Play("AttackAnimation");
+                        playerAnimator.Play("NewAttackAnimation");
 
-                    //playerAnimator.SetBool("isWalking", true);
-                    //playerAnimator.SetBool("isIdol", true);
+                        //playerAnimator.SetBool("isWalking", true);
+                        //playerAnimator.SetBool("isIdol", true);
 
-                    StartCoroutine(AttackCooldown());
-                    StartCoroutine(AnimationDelay());
-                    FindObjectOfType<AudioManager>().Play("DogBark");
-                }
-                break;
-            case 1:
-                GameObject temp = inventory.find("FireAbility");
-                if (temp != null)
-                {
-                    if (canUseAbility1) 
-                    { 
-                        temp.GetComponent<BaseAbility>().Cast(); 
-                        StartCoroutine(Ability1Cooldown(temp.GetComponent<BaseAbility>().GetCooldown())); 
+                        StartCoroutine(AttackCooldown());
+                        StartCoroutine(AnimationDelay());
+                        FindObjectOfType<AudioManager>().Play("DogBark");
                     }
-                } else { Debug.Log("1 was pressed but there is no ability"); }
-                break;
-            case 2:
-                GameObject temp2 = inventory.find(abilityKeys[1]);
-                if (temp2 != null)
-                {
-                    temp2.GetComponent<BaseAbility>().Cast();
-                }
-                else { Debug.Log("2 was pressed but there is no ability"); }
-                break;
-            case 3:
-                GameObject temp3 = inventory.find(abilityKeys[2]);
-                if (temp3 != null)
-                {
-                    temp3.GetComponent<BaseAbility>().Cast();
-                }
-                else { Debug.Log("3 was pressed but there is no ability"); }
-                break;
-            case 4:
-                GameObject temp4 = inventory.find(abilityKeys[3]);
-                if (temp4 != null)
-                {
-                    temp4.GetComponent<BaseAbility>().Cast();
-                }
-                else { Debug.Log("4 was pressed but there is no ability"); }
-                break;
-            default:
-                break;
+                    break;
+                case 1:
+                    GameObject temp = inventory.find("FireAbility");
+                    if (temp != null)
+                    {
+                        if (canUseAbility1)
+                        {
+                            temp.GetComponent<BaseAbility>().Cast();
+                            StartCoroutine(Ability1Cooldown(temp.GetComponent<BaseAbility>().GetCooldown()));
+                        }
+                    }
+                    else { Debug.Log("1 was pressed but there is no ability"); }
+                    break;
+                case 2:
+                    GameObject temp2 = inventory.find("DashAbility");
+                    if (temp2 != null)
+                    {
+                        if (canUseAbility2)
+                        {
+                            temp2.GetComponent<BaseAbility>().Cast();
+
+                            // special case for dash ability
+                            StartCoroutine(DashCooldwn());
+                            StartCoroutine(Ability2Cooldown(temp2.GetComponent<BaseAbility>().GetCooldown()));
+                        }
+                    }
+                    else { Debug.Log("2 was pressed but there is no ability"); }
+                    break;
+                case 3:
+                    GameObject temp3 = inventory.find(abilityKeys[2]);
+                    if (temp3 != null)
+                    {
+                        temp3.GetComponent<BaseAbility>().Cast();
+                    }
+                    else { Debug.Log("3 was pressed but there is no ability"); }
+                    break;
+                case 4:
+                    GameObject temp4 = inventory.find(abilityKeys[3]);
+                    if (temp4 != null)
+                    {
+                        temp4.GetComponent<BaseAbility>().Cast();
+                    }
+                    else { Debug.Log("4 was pressed but there is no ability"); }
+                    break;
+                default:
+                    break;
+            }
         }
     }
+
+    // functions for player dash
+    private IEnumerator DashCooldwn()
+    {
+        isDashing = true;
+        yield return new WaitForSeconds(dashLength);
+        isDashing = false;
+    }
+
+    private bool CheckDash()
+    {
+        if (isDashing)
+        {
+            int direction;
+            if (isFacingRight) { direction = 1; } else { direction = -1; }
+            rigid.velocity = new Vector2(dashSpeed * direction, 0);
+            return true;
+        }
+        return false;
+    }
+
 
     // Timers for attack cool-downs
     private IEnumerator AttackCooldown() 
@@ -307,6 +348,13 @@ public class PlayerMovement : MonoBehaviour
         canUseAbility1 = false;
         yield return new WaitForSeconds(cooldown);
         canUseAbility1 = true;
+    }
+
+    private IEnumerator Ability2Cooldown(float cooldown)
+    {
+        canUseAbility2 = false;
+        yield return new WaitForSeconds(cooldown);
+        canUseAbility2 = true;
     }
 
     private void ClampXVelocity(int direction)
