@@ -23,11 +23,9 @@ public class LoadForestAreas : MonoBehaviour
         bool Shop = false; //Stores whether or not a shop spawned yet so we can't have duplicates even though its a 1/121 chance for even 1 duplicate
         for (int i = 0; i < Areas; i++){
             Offset = 40; //Inital offset of 40 as an Area is 40 units long
-            RandNum = Random.Range(1, 11); //Generates a number 1 to 11
-            if(Shop == true){ //Only checks if its generating a shop if a shop has already generated
-                if(RandNum==11){ //Only runs if its generating a shop after a shop has already generated
+            RandNum = Random.Range(1, 12); //Generates a number 1 to 11
+            if(Shop == true && RandNum == 11){ //Only checks if its generating a shop if a shop has already generated
                     RandNum = Random.Range(1, 11); //Generates a number 1 to 10 so it cannot roll the shop
-                }
             }
             if(RandNum == 11){Shop = true;} //If its going to spawn a shop set the bool that a shop has spawned
             Offset = Offset + ((i - 1) * 40); //Offsets the inital position by how many Areas have been loaded
@@ -45,7 +43,7 @@ public class LoadForestAreas : MonoBehaviour
             else if (RandNum == 8) { Instantiate(LevelBlock8, StartPosition, Quaternion.identity); }
             else if (RandNum == 9) { Instantiate(LevelBlock9, StartPosition, Quaternion.identity); }
             else if (RandNum == 10) { Instantiate(LevelBlock10, StartPosition, Quaternion.identity); }
-            else if (RandNum == 11) { Instantiate(LevelBlock11, StartPosition, Quaternion.identity); }
+            else if (RandNum == 11) { Instantiate(LevelBlock11, StartPosition, Quaternion.identity); }  
         }
     }
 }
