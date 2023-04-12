@@ -127,4 +127,10 @@ public class SnakeAI : BaseAI
     {
         return facingRight;
     }
+
+    public override void Die()
+    {
+        //TODO: implement this
+        Destroy(gameObject);
+    }
 }

@@ -16,6 +16,7 @@ public class EnemyData : MonoBehaviour
     private LevelChange levelChange;
     private Rigidbody2D rigid;
     private SpriteRenderer renderer;
+    private BaseAI baseAI;
     private int damage = 5; public int getDamage() { return damage; }
 
     private void Start()
@@ -28,6 +29,7 @@ public class EnemyData : MonoBehaviour
         if (rigid == null) { Debug.Log("No rigidbody on this enemy"); }
         renderer = gameObject.GetComponent<SpriteRenderer>();
         if (renderer == null) { Debug.Log("No renderer (somehow)"); }
+        baseAI = GetComponent<BaseAI>();
     }
 
     public void takeDamage(int damage, float horiz, float vert)
@@ -53,6 +55,6 @@ public class EnemyData : MonoBehaviour
     {
         Debug.Log("Enemy Died");
         levelChange.DecrementEnemies();
-        Destroy(gameObject);
+        baseAI.Die();
     }
 }
