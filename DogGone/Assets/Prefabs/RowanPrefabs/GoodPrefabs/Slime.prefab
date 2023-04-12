@@ -204,6 +204,7 @@ MonoBehaviour:
   chaseTimer: 0.2
   maxHealth: 60
   currentHealth: 0
+  slashAffect: {fileID: 4223967124453810894, guid: 978d148962188a24a9c4b7096dc4d949, type: 3}
 --- !u!95 &2596522185342756442
 Animator:
   serializedVersion: 4

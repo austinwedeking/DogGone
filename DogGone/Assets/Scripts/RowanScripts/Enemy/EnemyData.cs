@@ -17,6 +17,7 @@ public class EnemyData : MonoBehaviour
     private Rigidbody2D rigid;
     private SpriteRenderer renderer;
     private BaseAI baseAI;
+    [SerializeField] private GameObject slashAffect;
     private int damage = 5; public int getDamage() { return damage; }
 
     private void Start()
@@ -36,6 +37,10 @@ public class EnemyData : MonoBehaviour
     {
         currentHealth -= damage;
         StartCoroutine(damageFlash());
+        if (slashAffect != null)
+        {
+            Instantiate(slashAffect, gameObject.transform.position, Quaternion.identity);
+        }
         rigid.AddForce(new Vector2(horiz, vert/2), ForceMode2D.Impulse);
         Debug.Log($"enemy took {maxHealth - currentHealth} damage");
         if (currentHealth <= 0)
