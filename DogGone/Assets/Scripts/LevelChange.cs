@@ -104,7 +104,10 @@ public class LevelChange : MonoBehaviour
         if (numEnemies <= 0)
         { //If no enemies are alive then show the win screen
             Choose();
+            Debug.Log("temp = " + temp);
+            //player = FindObjectOfType<PlayerData>().gameObject;
             temp = playerData.GetCurrentPlayerHealth();
+            Debug.Log("temp = " + temp);
         }
     }
 
@@ -128,11 +131,11 @@ public class LevelChange : MonoBehaviour
     { //Loads the win screen
         Debug.Log("Choose a power");
 
-        if (button1 != null)
+        if (button1 == null)
         {
             Debug.Log("button1 is null");
         }
-        if (button2 != null)
+        if (button2 == null)
         {
             Debug.Log("button2 is null");
         }
@@ -178,6 +181,11 @@ public class LevelChange : MonoBehaviour
 
             if (theInventoryScript.nextSpot <= theInventoryScript.lastValidSpot)
             {
+                if (player == null)
+                {
+                    player = GameObject.Find("Player");
+                }
+
                 Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
                 Instantiate(ability2, tempVector, Quaternion.identity);
             }

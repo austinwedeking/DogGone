@@ -8,7 +8,7 @@ public class PlayerData : MonoBehaviour
     [SerializeField] private int bones;
 
     [SerializeField] private int maxHealth; public int GetMaxPlayerHealth() { return maxHealth; }
-    [SerializeField] private int currentHealth; public int GetCurrentPlayerHealth() { return currentHealth; }
+    [SerializeField] private int currentHealth = 25; public int GetCurrentPlayerHealth() { return currentHealth; } public void SetCurrentPlayerHealth(int i) { currentHealth = i; }
 
     private LevelChange levelChange;
     private SpriteRenderer renderer;
@@ -43,7 +43,9 @@ public class PlayerData : MonoBehaviour
         else
         {
             Debug.Log("hi");
+            Debug.Log("health = " + currentHealth);
             currentHealth = levelChange.GetTemp();
+            Debug.Log("health = " + currentHealth);
             healthBar.SetHealth(currentHealth);
         }
     }

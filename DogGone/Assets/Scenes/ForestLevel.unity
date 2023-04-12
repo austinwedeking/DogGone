@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 1122899281}
   - component: {fileID: 1122899280}
   - component: {fileID: 1122899283}
+  - component: {fileID: 1122899284}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -547,6 +548,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8122205d08181e942b51f62b05721a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1122899284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122899279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!4 &1219522422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 92725429342135021, guid: e53e91d7aef44d64ba8dbd6ff74d6c0b, type: 3}
@@ -716,6 +750,10 @@ PrefabInstance:
       propertyPath: ability2
       value: 
       objectReference: {fileID: 6084954744602099697, guid: 5baa63a83c0fdab4dae13636aea874a0, type: 3}
+    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
+      propertyPath: winSceneIndex
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
 --- !u!1001 &1720632826618223368
@@ -10713,7 +10751,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7165594089210483340}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76d27fc5061c40e44b44264de1d387b4, type: 3}
   m_Name: 

@@ -10,11 +10,16 @@ public class LoadLevel : MonoBehaviour
     GameObject eatPoster;
     LevelChange levelChange;
 
+    PlayerData playerData;
+    HealthBar healthBar;
+
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         levelChange = FindObjectOfType<LevelChange>();
         eatPoster = GameObject.Find("eat_poster");
+        playerData = FindObjectOfType<PlayerData>();
+        healthBar = FindObjectOfType<HealthBar>();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -27,6 +32,11 @@ public class LoadLevel : MonoBehaviour
             //{
             //    eatPoster.SetActive(false);
             //}
+            //Debug.Log(playerData.GetCurrentPlayerHealth());
+            //levelChange.SetTemp(playerData.GetCurrentPlayerHealth());
+            //playerData.SetCurrentPlayerHealth(levelChange.GetTemp());
+            //healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
+            //Debug.Log(playerData.GetCurrentPlayerHealth());
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
