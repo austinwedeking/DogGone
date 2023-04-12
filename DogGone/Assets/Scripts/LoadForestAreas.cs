@@ -33,17 +33,17 @@ public class LoadForestAreas : MonoBehaviour
             Vector3 StartPosition = new Vector3(Offset, -63, 0); //Sets the placement position of the Area
 
             //Mega if statement to decide what Level Area to instantiate
-            if (RandNum == 1) { Instantiate(LevelBlock1, StartPosition, Quaternion.identity); }
-            else if (RandNum == 2) { Instantiate(LevelBlock2, StartPosition, Quaternion.identity); }
-            else if (RandNum == 3) { Instantiate(LevelBlock3, StartPosition, Quaternion.identity); }
-            else if (RandNum == 4) { Instantiate(LevelBlock4, StartPosition, Quaternion.identity); }
-            else if (RandNum == 5) { Instantiate(LevelBlock5, StartPosition, Quaternion.identity); }
-            else if (RandNum == 6) { Instantiate(LevelBlock6, StartPosition, Quaternion.identity); }
-            else if (RandNum == 7) { Instantiate(LevelBlock7, StartPosition, Quaternion.identity); }
-            else if (RandNum == 8) { Instantiate(LevelBlock8, StartPosition, Quaternion.identity); }
-            else if (RandNum == 9) { Instantiate(LevelBlock9, StartPosition, Quaternion.identity); }
-            else if (RandNum == 10) { Instantiate(LevelBlock10, StartPosition, Quaternion.identity); }
-            else if (RandNum == 11) { Instantiate(LevelBlock11, StartPosition, Quaternion.identity); }  
+            if      (RandNum == 1) {Instantiate(LevelBlock1, StartPosition, Quaternion.identity);}
+            else if (RandNum == 2) {Instantiate(LevelBlock2, StartPosition, Quaternion.identity);}
+            else if (RandNum == 3) {Instantiate(LevelBlock3, StartPosition, Quaternion.identity);}
+            else if (RandNum == 4) {Instantiate(LevelBlock4, StartPosition, Quaternion.identity);}
+            else if (RandNum == 5) {Instantiate(LevelBlock5, StartPosition, Quaternion.identity);}
+            else if (RandNum == 6) {Instantiate(LevelBlock6, StartPosition, Quaternion.identity);}
+            else if (RandNum == 7) {Instantiate(LevelBlock7, StartPosition, Quaternion.identity);}
+            else if (RandNum == 8) {Instantiate(LevelBlock8, StartPosition, Quaternion.identity);}
+            else if (RandNum == 9) {Instantiate(LevelBlock9, StartPosition, Quaternion.identity);}
+            else if (RandNum == 10){Instantiate(LevelBlock10,StartPosition, Quaternion.identity);}
+            else if (RandNum == 11){Instantiate(LevelBlock11,StartPosition, Quaternion.identity);}  
         }
     }
 }
