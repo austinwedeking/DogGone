@@ -772,6 +772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2608055571553023553, guid: 6bd16d848938286468e1f28f5f926fe9, type: 3}
+      propertyPath: attackCooldownTimer
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2608055571553023558, guid: 6bd16d848938286468e1f28f5f926fe9, type: 3}
       propertyPath: m_Name
       value: Player

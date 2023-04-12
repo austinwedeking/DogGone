@@ -243,6 +243,7 @@ public class PlayerMovement : MonoBehaviour
                     //playerAnimator.SetBool("isIdol", true);
 
                     StartCoroutine(AttackCooldown());
+                    StartCoroutine(AnimationDelay());
                     FindObjectOfType<AudioManager>().Play("DogBark");
                 }
                 break;
@@ -291,8 +292,14 @@ public class PlayerMovement : MonoBehaviour
     {
         canAttack = false;
         yield return new WaitForSeconds(attackCooldownTimer);
-        playerAnimator.SetBool("isIdol", true);
         canAttack = true;
+    }
+
+    private IEnumerator AnimationDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
+        playerAnimator.SetBool("isIdol", true);
+        playerAnimator.Play("IdolAnimation");
     }
 
     private IEnumerator Ability1Cooldown(float cooldown)
