@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d27fc5061c40e44b44264de1d387b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityReference: {fileID: 6499179747225943129, guid: 1d0ad4216eaa92847bab2085fbcf05ae, type: 3}
-  abilityName: FireAbility
+  abilityReference: {fileID: 4800201301203175116, guid: 649b3246eb44f084a807dc50677e0857, type: 3}
+  abilityName: WaterAbility
 --- !u!1001 &8842667245694983927
 PrefabInstance:
   m_ObjectHideFlags: 0
