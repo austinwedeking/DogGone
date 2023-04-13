@@ -17,6 +17,7 @@ public class LevelChange : MonoBehaviour
     [Header("References to ability pickup objects")]
     [SerializeField] private GameObject ability1;
     [SerializeField] private GameObject ability2;
+    [SerializeField] private GameObject ability3;
 
     GameObject theGameManager;
     Inventory theInventoryScript;
@@ -164,7 +165,7 @@ public class LevelChange : MonoBehaviour
                 }
 
                 Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
-                Instantiate(ability1, tempVector, Quaternion.identity);
+                Instantiate(ability3, tempVector, Quaternion.identity);
             }
             else
             {
