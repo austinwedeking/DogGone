@@ -107,8 +107,6 @@ public class LevelChange : MonoBehaviour
             Choose();
             Debug.Log("temp = " + temp);
             //player = FindObjectOfType<PlayerData>().gameObject;
-            temp = playerData.GetCurrentPlayerHealth();
-            Debug.Log("temp = " + temp);
         }
     }
 

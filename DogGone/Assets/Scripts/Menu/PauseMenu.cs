@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
 
     GameObject theGameManager;
     Inventory theInventoryScript;
+    LevelChange levelChange;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
 
         theGameManager = GameObject.Find("GameManager");
         theInventoryScript = theGameManager.GetComponent<Inventory>();
+        levelChange = FindObjectOfType<LevelChange>();
     }
 
     // Update is called once per frame
@@ -81,6 +83,8 @@ public class PauseMenu : MonoBehaviour
             theInventoryScript.theInventory[i] = null;
         }
 
+        levelChange.ResetEnemies();
+        theInventoryScript.nextSpot = 0;
         SceneManager.LoadScene("Menu");
     }
 

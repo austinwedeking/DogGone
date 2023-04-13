@@ -38,6 +38,11 @@ public class LoadLevel : MonoBehaviour
             //healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
             //Debug.Log(playerData.GetCurrentPlayerHealth());
 
+            if (levelChange.GetTemp() <= 0)
+            {
+                levelChange.SetTemp(100);
+            }
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
             levelChange.PsuedoStart();

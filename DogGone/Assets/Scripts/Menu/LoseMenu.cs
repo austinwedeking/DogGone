@@ -33,6 +33,34 @@ public class LoseMenu : MonoBehaviour
     public void RetryLevel()
     {
         Debug.Log("Reloading last level...");
+
+        //if (levelChange.GetComponent<LevelChange>().index == 2)
+        //{
+        //    for (int i = 0; i < theInventoryScript.lastValidSpot; i++)
+        //    {
+        //        theInventoryScript.theInventory[i] = null;
+        //    }
+        //}
+
+        for (int i = levelChange.GetComponent<LevelChange>().index; i < levelChange.GetComponent<LevelChange>().index + 1; i++)
+        {
+            if (theInventoryScript.theInventory[i - 2] != null)
+            {
+                Debug.Log(theInventoryScript.theInventory[i - 2].name + " is in this spot");
+                theInventoryScript.theInventory[i - 2] = null;
+                if (theInventoryScript.theInventory[i - 2] == null)
+                {
+                    Debug.Log("same spot is now null");
+                }
+                theInventoryScript.nextSpot--;
+            }
+        }
+
+        if (levelChange.GetTemp() <= 0)
+        {
+            levelChange.SetTemp(100);
+        }
+
         levelChange.ResetEnemies();
         SceneManager.LoadScene(levelChange.GetComponent<LevelChange>().index);
         levelChange.PsuedoStart();
@@ -48,6 +76,8 @@ public class LoseMenu : MonoBehaviour
             theInventoryScript.theInventory[i] = null;
         }
 
+        levelChange.ResetEnemies();
+        theInventoryScript.nextSpot = 0;
         SceneManager.LoadScene("Menu");
     }
 

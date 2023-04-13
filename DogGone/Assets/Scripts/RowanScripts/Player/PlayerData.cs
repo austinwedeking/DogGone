@@ -7,8 +7,8 @@ public class PlayerData : MonoBehaviour
 {
     [SerializeField] private int bones;
 
-    [SerializeField] private int maxHealth; public int GetMaxPlayerHealth() { return maxHealth; }
-    [SerializeField] private int currentHealth = 25; public int GetCurrentPlayerHealth() { return currentHealth; } public void SetCurrentPlayerHealth(int i) { currentHealth = i; }
+    [SerializeField] private int maxHealth = 100; public int GetMaxPlayerHealth() { return maxHealth; }
+    [SerializeField] private int currentHealth = 100; public int GetCurrentPlayerHealth() { return currentHealth; } public void SetCurrentPlayerHealth(int i) { currentHealth = i; }
 
     private LevelChange levelChange;
     private SpriteRenderer renderer;
@@ -39,15 +39,13 @@ public class PlayerData : MonoBehaviour
         {
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(currentHealth);
+            levelChange.SetTemp(maxHealth);
         }
-        else
-        {
-            Debug.Log("hi");
-            Debug.Log("health = " + currentHealth);
-            currentHealth = levelChange.GetTemp();
-            Debug.Log("health = " + currentHealth);
-            healthBar.SetHealth(currentHealth);
-        }
+
+        Debug.Log("health = " + currentHealth);
+        currentHealth = levelChange.GetTemp();
+        Debug.Log("health = " + currentHealth);
+        healthBar.SetHealth(currentHealth);
     }
 
     public void takeDamage(int damage, float horiz, float vert)
@@ -55,6 +53,9 @@ public class PlayerData : MonoBehaviour
         if (!playerMovement.GetIsDashing())
         {
             currentHealth -= damage;
+            SetCurrentPlayerHealth(currentHealth);
+            levelChange.SetTemp(currentHealth);
+            Debug.Log("after damage temp = " + levelChange.GetTemp());
             healthBar.SetHealth(currentHealth);
             StartCoroutine(damageFlash());
             rigid.AddForce(new Vector2(0, vert), ForceMode2D.Impulse);
