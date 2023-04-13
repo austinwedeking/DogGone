@@ -286,10 +286,14 @@ public class PlayerMovement : MonoBehaviour
                     else { Debug.Log("2 was pressed but there is no ability"); }
                     break;
                 case 3:
-                    GameObject temp3 = inventory.find(abilityKeys[2]);
+                    GameObject temp3 = inventory.find("WaterAbility");
                     if (temp3 != null)
                     {
-                        temp3.GetComponent<BaseAbility>().Cast();
+                        if (canUseAbility3)
+                        {
+                            temp3.GetComponent<BaseAbility>().Cast();
+                            StartCoroutine(Ability3Cooldown(temp3.GetComponent<BaseAbility>().GetCooldown()));
+                        }
                     }
                     else { Debug.Log("3 was pressed but there is no ability"); }
                     break;
@@ -355,6 +359,13 @@ public class PlayerMovement : MonoBehaviour
         canUseAbility2 = false;
         yield return new WaitForSeconds(cooldown);
         canUseAbility2 = true;
+    }
+
+    private IEnumerator Ability3Cooldown(float cooldown)
+    {
+        canUseAbility3 = false;
+        yield return new WaitForSeconds(cooldown);
+        canUseAbility3 = true;
     }
 
     private void ClampXVelocity(int direction)
