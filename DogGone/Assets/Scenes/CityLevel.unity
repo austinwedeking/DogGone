@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &21233427
 Transform:
   m_ObjectHideFlags: 0
@@ -1897,7 +1897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &367292856
 Transform:
   m_ObjectHideFlags: 0
@@ -7424,7 +7424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &508866843
 Transform:
   m_ObjectHideFlags: 0
@@ -7469,7 +7469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &611842848
 Grid:
   m_ObjectHideFlags: 0
@@ -7707,7 +7707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &903915903
 Transform:
   m_ObjectHideFlags: 0
@@ -13501,7 +13501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1321670675
 Transform:
   m_ObjectHideFlags: 0
@@ -13546,7 +13546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1455869994
 Transform:
   m_ObjectHideFlags: 0
@@ -14763,7 +14763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1528310605
 Transform:
   m_ObjectHideFlags: 0
@@ -16746,7 +16746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1763518813
 Transform:
   m_ObjectHideFlags: 0
@@ -16963,6 +16963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a2a71603b4db2489765628aa0a05da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonesValue: 0
+  bonePrefab: {fileID: 0}
   rightAttack: {fileID: 1781546723}
   attackOverlapRadius: 0.6
   playerLayer:
