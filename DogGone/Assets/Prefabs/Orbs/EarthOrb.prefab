@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d27fc5061c40e44b44264de1d387b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityReference: {fileID: 6499179747225943129, guid: 1d0ad4216eaa92847bab2085fbcf05ae, type: 3}
-  abilityName: FireAbility
+  abilityReference: {fileID: 5035673228973293685, guid: 9e674be6f4486b04584665e3e403a546, type: 3}
+  abilityName: EarthAbility
 --- !u!1001 &8842667245694983927
 PrefabInstance:
   m_ObjectHideFlags: 0

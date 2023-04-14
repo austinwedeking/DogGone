@@ -298,10 +298,14 @@ public class PlayerMovement : MonoBehaviour
                     else { Debug.Log("3 was pressed but there is no ability"); }
                     break;
                 case 4:
-                    GameObject temp4 = inventory.find(abilityKeys[3]);
+                    GameObject temp4 = inventory.find("EarthAbility");
                     if (temp4 != null)
                     {
-                        temp4.GetComponent<BaseAbility>().Cast();
+                        if (canUseAbility4)
+                        {
+                            temp4.GetComponent<BaseAbility>().Cast();
+                            StartCoroutine(Ability4Cooldown(temp4.GetComponent<BaseAbility>().GetCooldown()));
+                        }
                     }
                     else { Debug.Log("4 was pressed but there is no ability"); }
                     break;
@@ -366,6 +370,13 @@ public class PlayerMovement : MonoBehaviour
         canUseAbility3 = false;
         yield return new WaitForSeconds(cooldown);
         canUseAbility3 = true;
+    }
+
+    private IEnumerator Ability4Cooldown(float cooldown)
+    {
+        canUseAbility4 = false;
+        yield return new WaitForSeconds(cooldown);
+        canUseAbility4 = true;
     }
 
     private void ClampXVelocity(int direction)

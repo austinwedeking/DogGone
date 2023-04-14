@@ -18,6 +18,7 @@ public class LevelChange : MonoBehaviour
     [SerializeField] private GameObject ability1;
     [SerializeField] private GameObject ability2;
     [SerializeField] private GameObject ability3;
+    [SerializeField] private GameObject ability4;
 
     GameObject theGameManager;
     Inventory theInventoryScript;
@@ -186,7 +187,7 @@ public class LevelChange : MonoBehaviour
                 }
 
                 Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
-                Instantiate(ability2, tempVector, Quaternion.identity);
+                Instantiate(ability4, tempVector, Quaternion.identity);
             }
             else
             {
