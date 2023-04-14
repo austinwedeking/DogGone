@@ -21,14 +21,16 @@ public class EnterShop : MonoBehaviour
             Collider2D temp;
             temp = Physics2D.OverlapCircle(transform.position, 3f, playerLayer);
 
-            if (temp != null)
+            if (temp != null && temp.tag == "Player")
             {
                 if (shopScript.GetShopIsOpen())
                 {
+                    temp.GetComponent<PlayerMovement>().ToggleMovement();
                     shopScript.CloseShop();
                 }
                 else
                 {
+                    temp.GetComponent<PlayerMovement>().ToggleMovement();
                     shopScript.OpenShop();
                 }
             }

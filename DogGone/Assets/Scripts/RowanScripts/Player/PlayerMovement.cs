@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
     //private bool touchingLeft;
 
     public bool isFacingRight;
+    private bool canMove;
 
     void Start()
     {
@@ -88,15 +89,24 @@ public class PlayerMovement : MonoBehaviour
         isHittingWall = false;
 
         isFacingRight = true;
+        canMove = true;
 
         isDashing = false;
 
         //currArrayPos = 0;
     }
 
+    public void ToggleMovement()
+    {
+        canMove = !canMove;
+    }
+
     void Update()
     {
-        if (!CheckDash()) { inputManager.GetInputs(); }
+        if (canMove)
+        {
+            if (!CheckDash()) { inputManager.GetInputs(); }
+        }
 
         // for debuging
         //Debug.Log(rigid.velocity.x);

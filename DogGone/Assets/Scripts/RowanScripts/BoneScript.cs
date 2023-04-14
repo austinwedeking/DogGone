@@ -41,7 +41,7 @@ public class BoneScript : MonoBehaviour
     {
         if (canPickup && collision.gameObject.tag == "Player")
         {
-            collision.GetComponent<PlayerData>().GetBones(value);
+            collision.GetComponent<PlayerData>().AquireBones(value);
             Destroy(gameObject);
         }
     }

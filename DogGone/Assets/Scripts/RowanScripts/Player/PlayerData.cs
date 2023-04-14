@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerData : MonoBehaviour
 {
     [SerializeField] private int bones;
+    private Text bonesTextRefference;
 
     [SerializeField] private int maxHealth = 100; public int GetMaxPlayerHealth() { return maxHealth; }
     [SerializeField] private int currentHealth = 100; public int GetCurrentPlayerHealth() { return currentHealth; } public void SetCurrentPlayerHealth(int i) { currentHealth = i; }
@@ -19,6 +21,10 @@ public class PlayerData : MonoBehaviour
 
     public void Start()
     {
+        bonesTextRefference = GameObject.Find("BonesAmount").GetComponent<Text>();
+
+        AquireBones(0);
+
         gameObject.transform.position = new Vector3(-32.5f, -1, 0);
 
         levelChange = FindObjectOfType<LevelChange>();
@@ -76,9 +82,15 @@ public class PlayerData : MonoBehaviour
         renderer.color = Color.white;
     }
 
-    public void GetBones(int numBones)
+    public void AquireBones(int numBones)
     {
         bones += numBones;
+        bonesTextRefference.text = bones.ToString();
+    }
+
+    public int GetBones()
+    {
+        return bones;
     }
 
     public void Die()
