@@ -762,6 +762,26 @@ PrefabInstance:
       propertyPath: winSceneIndex
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
+      propertyPath: abilityList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
+      propertyPath: abilityList.Array.data[0]
+      value: 
+      objectReference: {fileID: 6084954744602099697, guid: c983bcfac3aef29458e45d1ac0342416, type: 3}
+    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
+      propertyPath: abilityList.Array.data[1]
+      value: 
+      objectReference: {fileID: 6084954744602099697, guid: 5baa63a83c0fdab4dae13636aea874a0, type: 3}
+    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
+      propertyPath: abilityList.Array.data[2]
+      value: 
+      objectReference: {fileID: 6084954744602099697, guid: 927d89a76268c9946a4e25c80689647a, type: 3}
+    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
+      propertyPath: abilityList.Array.data[3]
+      value: 
+      objectReference: {fileID: 6084954744602099697, guid: 5c5f47d204a6a93468680f89313b7638, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
 --- !u!1001 &1720632826618223368

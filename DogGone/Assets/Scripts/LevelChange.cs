@@ -15,10 +15,13 @@ public class LevelChange : MonoBehaviour
     [SerializeField] GameObject button2;
 
     [Header("References to ability pickup objects")]
-    [SerializeField] private GameObject ability1;
-    [SerializeField] private GameObject ability2;
-    [SerializeField] private GameObject ability3;
-    [SerializeField] private GameObject ability4;
+    [SerializeField] private GameObject[] abilityList;
+
+    [Header("Ability Sprites")]
+    [SerializeField] private Sprite ability1Sprite;
+    [SerializeField] private Sprite ability2Sprite;
+    [SerializeField] private Sprite ability3Sprite;
+    [SerializeField] private Sprite ability4Sprite;
 
     GameObject theGameManager;
     Inventory theInventoryScript;
@@ -147,6 +150,25 @@ public class LevelChange : MonoBehaviour
 
     public void doThisWhenClicked(int whichButton)
     {
+        // Begin script to randomize abilities ***
+        // initialize variables to hold random abilities
+        GameObject randAbility1;
+        GameObject randAbility2;
+        int firstPos;
+        int secondPos;
+
+        // randomize the abilities
+        firstPos = Random.Range(0, abilityList.Length);
+        randAbility1 = abilityList[firstPos];
+
+        secondPos = firstPos; // initialize second pos for propper use in the loop
+        while (secondPos == firstPos)
+        {
+            secondPos = Random.Range(0, abilityList.Length);
+        }
+        randAbility2 = abilityList[secondPos]; // set after loop, ability 1 and 2 will never be the same
+        // End script to randomize abilities ***
+
         if (whichButton == 1)
         {
             Debug.Log("chose 1");
@@ -165,7 +187,7 @@ public class LevelChange : MonoBehaviour
                 }
 
                 Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
-                Instantiate(ability3, tempVector, Quaternion.identity);
+                Instantiate(randAbility1, tempVector, Quaternion.identity);
             }
             else
             {
@@ -188,7 +210,7 @@ public class LevelChange : MonoBehaviour
                 }
 
                 Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
-                Instantiate(ability4, tempVector, Quaternion.identity);
+                Instantiate(randAbility2, tempVector, Quaternion.identity);
             }
             else
             {
