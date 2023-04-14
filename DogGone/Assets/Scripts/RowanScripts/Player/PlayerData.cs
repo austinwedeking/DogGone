@@ -76,6 +76,11 @@ public class PlayerData : MonoBehaviour
         renderer.color = Color.white;
     }
 
+    public void GetBones(int numBones)
+    {
+        bones += numBones;
+    }
+
     public void Die()
     {
         Debug.Log("Player has died");

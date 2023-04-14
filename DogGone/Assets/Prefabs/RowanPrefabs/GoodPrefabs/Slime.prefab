@@ -237,6 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9a3dcdaa94c704aa87c61d0a8c4f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonesValue: 5
+  bonePrefab: {fileID: 8488709929069242251, guid: 967307e4e5c21ae46ae537a4a2d14817, type: 3}
   rightAttack: {fileID: 2596522184721323303}
   attackOverlapRadius: 0.4
   playerLayer:

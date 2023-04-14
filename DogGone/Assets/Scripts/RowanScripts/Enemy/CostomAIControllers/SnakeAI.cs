@@ -131,6 +131,7 @@ public class SnakeAI : BaseAI
     public override void Die()
     {
         //TODO: implement this
+        DropBones(-movementDirection);
         Destroy(gameObject);
     }
 }

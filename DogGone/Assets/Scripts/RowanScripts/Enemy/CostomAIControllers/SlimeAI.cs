@@ -120,6 +120,7 @@ public class SlimeAI : BaseAI
     override public void Die()
     {
         //TODO: implement this
+        DropBones(-movementDirection);
         Destroy(gameObject);
     }
 }
