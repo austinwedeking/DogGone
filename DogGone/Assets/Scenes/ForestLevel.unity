@@ -755,6 +755,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6084954744602099697, guid: 927d89a76268c9946a4e25c80689647a, type: 3}
     - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
+      propertyPath: ability4
+      value: 
+      objectReference: {fileID: 6084954744602099697, guid: 5c5f47d204a6a93468680f89313b7638, type: 3}
+    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
       propertyPath: winSceneIndex
       value: 5
       objectReference: {fileID: 0}
@@ -1040,9 +1044,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopUI: {fileID: 2138616444057080332}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1001 &2889887623199435881
 PrefabInstance:
   m_ObjectHideFlags: 0
