@@ -1001,10 +1001,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1906038176}
-    - target: {fileID: 6327668707622101460, guid: 8f4a6cca7f0f9654b86576ba0667eacd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f4a6cca7f0f9654b86576ba0667eacd, type: 3}
 --- !u!1 &2138616444057080329 stripped

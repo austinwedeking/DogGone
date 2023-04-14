@@ -2465,6 +2465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a2a71603b4db2489765628aa0a05da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bonesValue: 0
+  bonePrefab: {fileID: 0}
   rightAttack: {fileID: 636274028991219374}
   attackOverlapRadius: 0.6
   playerLayer:
@@ -2688,8 +2690,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1297805551
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b23ac9a2323a6474a9746e640a9b528f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
