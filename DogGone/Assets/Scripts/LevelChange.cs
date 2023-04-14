@@ -31,6 +31,7 @@ public class LevelChange : MonoBehaviour
 
     PlayerData playerData;
     private int temp = 0; public int GetTemp() { return temp; } public void SetTemp(int i) { temp = i; }
+    private int tempBones = 0; public int GetTempBones() { return tempBones; } public void SetTempBones(int i) { tempBones = i; }
 
 
     private void Start()

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerData : MonoBehaviour
 {
-    [SerializeField] private int bones;
+    [SerializeField] private int bones; public int GetBonesAmount() { return bones; } public void SetBonesAmount(int i) { bones = i; }
     private Text bonesTextRefference;
 
     [SerializeField] private int maxHealth = 100; public int GetMaxPlayerHealth() { return maxHealth; }
@@ -23,7 +23,7 @@ public class PlayerData : MonoBehaviour
     {
         bonesTextRefference = GameObject.Find("BonesAmount").GetComponent<Text>();
 
-        AquireBones(0);
+        //AquireBones(0);
 
         gameObject.transform.position = new Vector3(-32.5f, -1, 0);
 
@@ -46,12 +46,18 @@ public class PlayerData : MonoBehaviour
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(currentHealth);
             levelChange.SetTemp(maxHealth);
+
+            bones = 0;
+            AquireBones(bones);
+            levelChange.SetTempBones(bones);
         }
 
         Debug.Log("health = " + currentHealth);
         currentHealth = levelChange.GetTemp();
         Debug.Log("health = " + currentHealth);
         healthBar.SetHealth(currentHealth);
+
+        bones = levelChange.GetTempBones();
     }
 
     public void takeDamage(int damage, float horiz, float vert)
@@ -85,6 +91,8 @@ public class PlayerData : MonoBehaviour
     public void AquireBones(int numBones)
     {
         bones += numBones;
+        SetBonesAmount(bones);
+        levelChange.SetTempBones(bones);
         bonesTextRefference.text = bones.ToString();
     }
 
