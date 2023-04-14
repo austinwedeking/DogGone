@@ -18,20 +18,23 @@ public class EnterShop : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            Collider2D temp;
-            temp = Physics2D.OverlapCircle(transform.position, 3f, playerLayer);
+            Collider2D[] temp;
+            temp = Physics2D.OverlapCircleAll(transform.position, 3f, playerLayer);
 
-            if (temp != null && temp.tag == "Player")
+            foreach (Collider2D collision in temp)
             {
-                if (shopScript.GetShopIsOpen())
+                if (collision != null && collision.tag == "Player")
                 {
-                    temp.GetComponent<PlayerMovement>().ToggleMovement();
-                    shopScript.CloseShop();
-                }
-                else
-                {
-                    temp.GetComponent<PlayerMovement>().ToggleMovement();
-                    shopScript.OpenShop();
+                    if (shopScript.GetShopIsOpen())
+                    {
+                        collision.GetComponent<PlayerMovement>().ToggleMovement();
+                        shopScript.CloseShop();
+                    }
+                    else
+                    {
+                        collision.GetComponent<PlayerMovement>().ToggleMovement();
+                        shopScript.OpenShop();
+                    }
                 }
             }
         }
