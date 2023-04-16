@@ -10,6 +10,7 @@ public class LoseMenu : MonoBehaviour
 
     GameObject theGameManager;
     Inventory theInventoryScript;
+    ShopScript shopScript;
 
     // Start is called before the first frame update
     void Awake()
@@ -28,6 +29,7 @@ public class LoseMenu : MonoBehaviour
 
         theGameManager = GameObject.Find("GameManager");
         theInventoryScript = theGameManager.GetComponent<Inventory>();
+        shopScript = FindObjectOfType<ShopScript>();
     }
 
     public void RetryLevel()
@@ -58,8 +60,21 @@ public class LoseMenu : MonoBehaviour
 
         if (levelChange.GetTemp() <= 0)
         {
-            levelChange.SetTemp(100);
+            if (shopScript.timesPurchased == 0)
+            {
+                levelChange.SetTemp(100);
+            }
+            else if (shopScript.timesPurchased == 1)
+            {
+                levelChange.SetTemp(150);
+            }
+            else if (shopScript.timesPurchased == 2)
+            {
+                levelChange.SetTemp(200);
+            }
         }
+
+        
 
         levelChange.ResetEnemies();
         SceneManager.LoadScene(levelChange.GetComponent<LevelChange>().index);

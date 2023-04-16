@@ -9,7 +9,7 @@ public class PlayerData : MonoBehaviour
     [SerializeField] private int bones; public int GetBonesAmount() { return bones; } public void SetBonesAmount(int i) { bones = i; }
     private Text bonesTextRefference;
 
-    [SerializeField] private int maxHealth = 100; public int GetMaxPlayerHealth() { return maxHealth; }
+    [SerializeField] private int maxHealth; public int GetMaxPlayerHealth() { return maxHealth; } public void SetMaxPlayerHealth(int i) { maxHealth = i; }
     [SerializeField] private int currentHealth = 100; public int GetCurrentPlayerHealth() { return currentHealth; } public void SetCurrentPlayerHealth(int i) { currentHealth = i; }
 
     private LevelChange levelChange;
@@ -18,6 +18,9 @@ public class PlayerData : MonoBehaviour
     private PlayerMovement playerMovement;
 
     public HealthBar healthBar;
+    public bool healthUpgrade = false;
+
+    ShopScript shopScript;
 
     public void Start()
     {
@@ -41,6 +44,8 @@ public class PlayerData : MonoBehaviour
 
         playerMovement = gameObject.GetComponent<PlayerMovement>();
 
+        shopScript = FindObjectOfType<ShopScript>();
+
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             currentHealth = maxHealth;
@@ -48,8 +53,24 @@ public class PlayerData : MonoBehaviour
             levelChange.SetTemp(maxHealth);
 
             bones = 0;
-            AquireBones(bones);
+            AquireBones(999);
             levelChange.SetTempBones(bones);
+        }
+
+        if (shopScript.timesPurchased == 0)
+        {
+            maxHealth = 100;
+            healthBar.SetMaxHealth(maxHealth);
+        }
+        else if (shopScript.timesPurchased == 1)
+        {
+            maxHealth = 150;
+            healthBar.SetMaxHealth(150);
+        }
+        else if (shopScript.timesPurchased == 2)
+        {
+            maxHealth = 200;
+            healthBar.SetMaxHealth(maxHealth);
         }
 
         Debug.Log("health = " + currentHealth);
@@ -104,7 +125,23 @@ public class PlayerData : MonoBehaviour
     public void Die()
     {
         Debug.Log("Player has died");
-        levelChange.SetTemp(100);
+
+        if (healthUpgrade)
+        {
+            if (shopScript.timesPurchased == 1)
+            {
+                levelChange.SetTemp(150);
+            }
+            else if(shopScript.timesPurchased == 2)
+            {
+                levelChange.SetTemp(200);
+            }
+        }
+        else
+        {
+            levelChange.SetTemp(100);
+        }
+
         levelChange.GameOver();
     }
 }

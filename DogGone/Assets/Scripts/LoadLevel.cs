@@ -12,6 +12,7 @@ public class LoadLevel : MonoBehaviour
 
     PlayerData playerData;
     HealthBar healthBar;
+    ShopScript shopScript;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class LoadLevel : MonoBehaviour
         eatPoster = GameObject.Find("eat_poster");
         playerData = FindObjectOfType<PlayerData>();
         healthBar = FindObjectOfType<HealthBar>();
+        shopScript = FindObjectOfType<ShopScript>();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -40,7 +42,18 @@ public class LoadLevel : MonoBehaviour
 
             if (levelChange.GetTemp() <= 0)
             {
-                levelChange.SetTemp(100);
+                if (shopScript.timesPurchased == 0)
+                {
+                    levelChange.SetTemp(100);
+                }
+                else if (shopScript.timesPurchased == 1)
+                {
+                    levelChange.SetTemp(150);
+                }
+                else if (shopScript.timesPurchased == 2)
+                {
+                    levelChange.SetTemp(200);
+                }
             }
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
