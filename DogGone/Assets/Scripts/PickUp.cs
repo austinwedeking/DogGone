@@ -26,9 +26,19 @@ public class PickUp : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision){
         if (collision.gameObject.name == "Player"){ //If your touching an item we can pick up
             //oldFunction();
-            theInventoryScript.theInventory[theInventoryScript.nextSpot] = abilityReference; //Insert it into the spot
-            theInventoryScript.nextSpot++; //Increment the next slot
-            //collision.GetComponent<PlayerMovement>().addAbility(abilityName);
+            if (abilityReference == null) // do this if it is an upgrade orb
+            {
+                if (theInventoryScript.nextSpot > 0) // upgrades the last picked-up ability
+                {
+                    theInventoryScript.theInventory[Random.Range(0, theInventoryScript.nextSpot - 1)].GetComponent<BaseAbility>().Upgrade();
+                } else { Debug.Log("There is no ability to upgrade"); }
+            }
+            else
+            {
+                theInventoryScript.theInventory[theInventoryScript.nextSpot] = abilityReference; //Insert it into the spot
+                theInventoryScript.nextSpot++; //Increment the next slot
+                                               //collision.GetComponent<PlayerMovement>().addAbility(abilityName);
+            }
             Debug.Log("Picked up by player");
             Destroy(this.gameObject);
         }

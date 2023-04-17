@@ -33,7 +33,10 @@ public class WaterAbility : BaseAbility
 
     public override void Upgrade()
     {
-        throw new System.NotImplementedException();
+        damage += 5;
+        cooldownTimer -= 1;
+        radius += 1;
+        force += 3;
     }
 }
 

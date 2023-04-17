@@ -50,6 +50,8 @@ public class FireballAbility : BaseAbility
 
     public override void Upgrade()
     {
-        throw new System.NotImplementedException();
+        // cannot access damage because that info is stored in the projectile
+        cooldownTimer -= 1;
+        Debug.Log(cooldownTimer);
     }
 }
