@@ -11,6 +11,7 @@ public class DashAbility : BaseAbility
 
     public override void Upgrade()
     {
-        // nothing yet
+        cooldownTimer -= 0.5f;
+        Debug.Log(cooldownTimer);
     }
 }
