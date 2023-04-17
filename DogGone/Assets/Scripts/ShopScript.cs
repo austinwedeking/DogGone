@@ -26,10 +26,7 @@ public class ShopScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timesPurchased == 2)
-        {
-            Debug.Log("health upgrade disabled");
-        }
+        
     }
 
     public void CloseShop()
