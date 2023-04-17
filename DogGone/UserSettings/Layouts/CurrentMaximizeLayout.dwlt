@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 3982
+  controlID: 7039
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 3983
+  controlID: 7040
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3984
+  controlID: 7041
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 087e0000
       m_LastClickedID: 0
-      m_ExpandedIDs: b4b3ffff6edbffff2afbfffff4ffffff
+      m_ExpandedIDs: f4fcfeff7244ffff9645fffff84fffffb4b3ffff6edbffff2afbfffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -526,9 +526,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -29.486794, y: -0.39968178, z: 0.74634105}
+    m_Target: {x: 878.6509, y: 730.18274, z: 5.3725123}
     speed: 2
-    m_Value: {x: -29.486794, y: -0.39968178, z: 0.74634105}
+    m_Value: {x: 878.6509, y: 730.18274, z: 5.3725123}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -579,9 +579,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.3945472
+    m_Target: 278.2823
     speed: 2
-    m_Value: 2.3945472
+    m_Value: 278.2823
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -636,7 +636,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -11556
+  m_LastSelectedObjectID: -47794
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -871,21 +871,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/RowanPrefabs/AbilityPrefabs/DashAbility
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 65
   m_LastFolders:
-  - Assets/Prefabs/RowanPrefabs/AbilityPrefabs/DashAbility
+  - Assets/Scenes
   m_LastFoldersGridSize: 65
   m_LastProjectPath: C:\GitRepos\DogGone\DogGone
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 207}
-    m_SelectedIDs: 446f0000
-    m_LastClickedID: 28484
+    scrollPos: {x: 0, y: 240}
+    m_SelectedIDs: 566f0000
+    m_LastClickedID: 28502
     m_ExpandedIDs: 000000002a6f00002c6f00002e6f0000306f0000326f0000346f0000366f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -939,8 +939,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 087e0000
+    m_LastClickedInstanceID: 32264
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300002a6000003a260000f85f000078650000306400001c6c0000ae8e0000facc0000
     m_RenameOverlay:

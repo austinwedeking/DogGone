@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelChange : MonoBehaviour
 {
@@ -14,14 +15,14 @@ public class LevelChange : MonoBehaviour
     [SerializeField] GameObject button1;
     [SerializeField] GameObject button2;
 
+    GameObject randAbility1;
+    GameObject randAbility2;
+
     [Header("References to ability pickup objects")]
     [SerializeField] private GameObject[] abilityList;
 
     [Header("Ability Sprites")]
-    [SerializeField] private Sprite ability1Sprite;
-    [SerializeField] private Sprite ability2Sprite;
-    [SerializeField] private Sprite ability3Sprite;
-    [SerializeField] private Sprite ability4Sprite;
+    [SerializeField] private Sprite[] abilitySpriteList;
 
     GameObject theGameManager;
     Inventory theInventoryScript;
@@ -144,16 +145,8 @@ public class LevelChange : MonoBehaviour
             Debug.Log("button2 is null");
         }
 
-        button1.SetActive(true);
-        button2.SetActive(true);
-    }
-
-    public void doThisWhenClicked(int whichButton)
-    {
         // Begin script to randomize abilities ***
-        // initialize variables to hold random abilities
-        GameObject randAbility1;
-        GameObject randAbility2;
+        // initialize variables to hold random positions
         int firstPos;
         int secondPos;
 
@@ -168,6 +161,20 @@ public class LevelChange : MonoBehaviour
         }
         randAbility2 = abilityList[secondPos]; // set after loop, ability 1 and 2 will never be the same
         // End script to randomize abilities ***
+
+        Debug.Log($"Random pos 1: {firstPos}, Random pos 2: {secondPos}");
+
+        // Apply the correct sprites
+        button1.GetComponent<Image>().sprite = abilitySpriteList[firstPos];
+        button2.GetComponent<Image>().sprite = abilitySpriteList[secondPos];
+
+        // Set the buttons active
+        button1.SetActive(true);
+        button2.SetActive(true);
+    }
+
+    public void doThisWhenClicked(int whichButton)
+    {
 
         if (whichButton == 1)
         {
