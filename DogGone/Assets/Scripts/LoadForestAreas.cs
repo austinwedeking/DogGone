@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoadForestAreas : MonoBehaviour
-{
+public class LoadForestAreas : MonoBehaviour{
     public GameObject LevelBlock1;
     public GameObject LevelBlock2;
     public GameObject LevelBlock3;
@@ -16,7 +15,7 @@ public class LoadForestAreas : MonoBehaviour
     public GameObject LevelBlock10;
     public GameObject LevelBlock11;
 
-    void Start() {
+    void Start(){
         int Areas = 4; //How many Areas are going to generate
         int Offset; //Stores how much offset a Area needs when being placed
         int RandNum; //Stores a random number to decide what Area to generate
