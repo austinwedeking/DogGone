@@ -253,7 +253,7 @@ MonoBehaviour:
   right: 100
   left: 97
   jump: 119
-  attack: 101
+  attack: 32
   ability1: 49
   ability2: 50
   ability3: 51
@@ -294,6 +294,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
+  healthUpgrade: 0
 --- !u!114 &6310411908506316459
 MonoBehaviour:
   m_ObjectHideFlags: 0

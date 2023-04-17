@@ -46,8 +46,22 @@ public class ProjectileScript : MonoBehaviour
         {
             if (owner != null)
             {
-                if (owner.GetComponent<SnakeAI>().IsFacingRight()) { direction = 1; }
-                else { direction = -1; } // instaid look for BaseAI and then get costom AI via function
+                if (owner.GetComponent<SnakeAI>() != null) {
+                    if (owner.GetComponent<SnakeAI>().IsFacingRight())
+                    {
+                        direction = 1;
+                    } else
+                    { direction = -1; }
+                }
+                else if (owner.GetComponent<RockAI>() != null) // instaid look for BaseAI and then get costom AI via function
+                {
+                    if (owner.GetComponent<RockAI>().IsFacingRight())
+                    {
+                        direction = 1;
+                    }
+                    else
+                    { direction = -1; }
+                } 
             }
         }
     }
