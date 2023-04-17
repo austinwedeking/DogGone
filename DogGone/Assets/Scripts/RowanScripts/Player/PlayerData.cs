@@ -10,7 +10,7 @@ public class PlayerData : MonoBehaviour
     private Text bonesTextRefference;
 
     [SerializeField] private int maxHealth; public int GetMaxPlayerHealth() { return maxHealth; } public void SetMaxPlayerHealth(int i) { maxHealth = i; }
-    [SerializeField] private int currentHealth = 100; public int GetCurrentPlayerHealth() { return currentHealth; } public void SetCurrentPlayerHealth(int i) { currentHealth = i; }
+    [SerializeField] private int currentHealth; public int GetCurrentPlayerHealth() { return currentHealth; } public void SetCurrentPlayerHealth(int i) { currentHealth = i; }
 
     private LevelChange levelChange;
     private SpriteRenderer renderer;
@@ -48,29 +48,41 @@ public class PlayerData : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            currentHealth = maxHealth;
+            currentHealth = 100;
             healthBar.SetMaxHealth(currentHealth);
-            levelChange.SetTemp(maxHealth);
+            healthBar.SetHealth(currentHealth);
+            levelChange.SetTemp(currentHealth);
 
             bones = 0;
             AquireBones(999);
             levelChange.SetTempBones(bones);
+
+            shopScript.timesPurchased = 0;
         }
 
         if (shopScript.timesPurchased == 0)
         {
             maxHealth = 100;
             healthBar.SetMaxHealth(maxHealth);
+            currentHealth = maxHealth;
+            healthBar.SetHealth(maxHealth);
+            levelChange.SetTemp(maxHealth);
         }
         else if (shopScript.timesPurchased == 1)
         {
             maxHealth = 150;
             healthBar.SetMaxHealth(150);
+            currentHealth = maxHealth;
+            healthBar.SetHealth(maxHealth);
+            levelChange.SetTemp(maxHealth);
         }
         else if (shopScript.timesPurchased == 2)
         {
             maxHealth = 200;
             healthBar.SetMaxHealth(maxHealth);
+            currentHealth = maxHealth;
+            healthBar.SetHealth(maxHealth);
+            levelChange.SetTemp(maxHealth);
         }
 
         Debug.Log("health = " + currentHealth);

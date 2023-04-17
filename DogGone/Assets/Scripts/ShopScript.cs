@@ -83,6 +83,7 @@ public class ShopScript : MonoBehaviour
             healthBar.SetMaxHealth(playerData.GetMaxPlayerHealth());
             healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
             Debug.Log("max health is now " + playerData.GetMaxPlayerHealth());
+            playerData.healthUpgrade = true;
             timesPurchased++;
         }
         else if (timesPurchased == 1)
