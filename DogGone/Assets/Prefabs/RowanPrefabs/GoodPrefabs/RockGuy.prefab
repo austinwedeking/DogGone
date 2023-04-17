@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111b7f9c966b5e24a9b8c04c5ae4307a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackTimer: 1.2
+  attackTimer: 1.7
   wanderTimer: 0.5
   chaseTimer: 0.2
   maxHealth: 350
@@ -305,11 +305,11 @@ MonoBehaviour:
   bonesValue: 20
   bonePrefab: {fileID: 8488709929069242251, guid: 967307e4e5c21ae46ae537a4a2d14817, type: 3}
   rightAttack: {fileID: 2767997085098378814}
-  projectile: {fileID: 5203810833062700956, guid: 3b453217cc3f316459ac4ddf561c183a, type: 3}
+  projectile: {fileID: 5203810833062700956, guid: 04d717e85f987f140a426c2b81dd6b96, type: 3}
   playerLayer:
     serializedVersion: 2
     m_Bits: 2048
-  attackDelay: 1.2
+  attackDelay: 0
   moveSpeed: 0
 --- !u!1 &2767997085098378814
 GameObject:
