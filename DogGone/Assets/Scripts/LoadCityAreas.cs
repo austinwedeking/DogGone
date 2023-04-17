@@ -27,7 +27,7 @@ public class LoadCityAreas : MonoBehaviour{
 
             Offset = Offset + ((i - 1) * 40); //Offsets the inital position by how many Areas have been loaded
             Offset = Offset - ((RandNum - 1) * 45); //Offsets the Area by the position of the prefab because I am an idiot and didn't stack them
-            Vector3 StartPosition = new Vector3(Offset, -63, 0); //Sets the placement position of the Area
+            Vector3 StartPosition = new Vector3(Offset, -60, 0); //Sets the placement position of the Area
 
             //Mega if statement to decide what Level Area to instantiate
             if      (RandNum == 1) {Instantiate(LevelBlock1,  StartPosition, Quaternion.identity);}
