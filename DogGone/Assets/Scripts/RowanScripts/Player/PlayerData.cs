@@ -28,7 +28,14 @@ public class PlayerData : MonoBehaviour
 
         //AquireBones(0);
 
-        gameObject.transform.position = new Vector3(-32.5f, -1, 0);
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            gameObject.transform.position = new Vector3(-32.5f, 2, 0);
+        }
+        else
+        {
+            gameObject.transform.position = new Vector3(-32.5f, -1, 0);
+        }
 
         levelChange = FindObjectOfType<LevelChange>();
         if (levelChange == null) { Debug.LogError("bad"); }

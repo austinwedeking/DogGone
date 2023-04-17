@@ -24,6 +24,14 @@ public class LoadLevel : MonoBehaviour
         shopScript = FindObjectOfType<ShopScript>();
     }
 
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            this.gameObject.transform.position = new Vector2(175.18f, -0.62f);
+        }
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
