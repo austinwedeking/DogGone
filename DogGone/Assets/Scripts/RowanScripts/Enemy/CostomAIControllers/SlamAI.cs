@@ -41,7 +41,7 @@ public class SlamAI : BaseAI
         //Likely update what way its facing when it re lands on ground and when it jumps
     }
 
-    public override void Die()
+    public override IEnumerator Die()
     {
         throw new System.NotImplementedException();
     }

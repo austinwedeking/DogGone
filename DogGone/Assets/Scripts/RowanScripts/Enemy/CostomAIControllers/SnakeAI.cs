@@ -128,9 +128,10 @@ public class SnakeAI : BaseAI
         return facingRight;
     }
 
-    public override void Die()
+    public override IEnumerator Die()
     {
         //TODO: implement this
+        yield return new WaitForSeconds(0f);
         DropBones(-movementDirection);
         Destroy(gameObject);
     }

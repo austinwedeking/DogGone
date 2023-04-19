@@ -114,9 +114,10 @@ public class TestAI : BaseAI
         else { gameObject.transform.rotation = Quaternion.Euler(0, 0, 0); }
     }
 
-    public override void Die()
+    public override IEnumerator Die()
     {
         //TODO: implement this
+        yield return new WaitForSeconds(0f);
         DropBones(-movementDirection);
         Destroy(gameObject);
     }

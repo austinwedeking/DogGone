@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4ac7a4c3b42989544b97f35ba322113f
+guid: b9333ba03ea70c242b78e4fa0d6592a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,95 +104,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SlimeMove_0
+      name: SlimeDeath_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 58
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3ba4c0901b5df948984c11627c6abed
-      internalID: 909069819
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeMove_1
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 0
-        width: 58
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9932bf2521115e4f8792ede47e5d58b
-      internalID: 1219337408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeMove_2
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 0
-        width: 52
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6541e39112d824a47a9b6fea0dba2780
-      internalID: 1130554516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeMove_3
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 0
-        width: 52
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78efe283c06cd8e4da94e6e052e1cec5
-      internalID: 358117547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SlimeMove_4
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
+        x: 10
+        y: 5
         width: 44
         height: 37
       alignment: 7
@@ -202,19 +118,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ad256cfa5706cd4e9ee9d114b9a347c
-      internalID: -1206057841
+      spriteID: 65bd5d784a087e34bb387cd2683093c8
+      internalID: 1521570419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlimeMove_5
+      name: SlimeDeath_1
       rect:
         serializedVersion: 2
-        x: 269
-        y: 0
-        width: 49
+        x: 70
+        y: 5
+        width: 52
         height: 32
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -223,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba434ab99ce4a6e4786fb8a5900d947b
-      internalID: -840996708
+      spriteID: b3a4c3763e300a94c93a5b6afc16bfff
+      internalID: 1173295231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlimeMove_6
+      name: SlimeDeath_2
       rect:
         serializedVersion: 2
-        x: 319
-        y: 0
-        width: 49
-        height: 32
+        x: 131
+        y: 5
+        width: 58
+        height: 19
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8052bd68e598814ab40855900b91deb
-      internalID: -1625688949
+      spriteID: e1fad6940f37af84d8ce22f55fc9b6e3
+      internalID: -369147230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlimeMove_7
+      name: SlimeDeath_3
       rect:
         serializedVersion: 2
-        x: 369
-        y: 0
-        width: 56
-        height: 29
+        x: 193
+        y: 5
+        width: 62
+        height: 10
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98fdae007c8288440b0a1eac57524797
-      internalID: 1001688583
+      spriteID: acdd0c18ced395c4f8cef26c9f599325
+      internalID: -1895054340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SlimeMove_8
+      name: SlimeDeath_4
       rect:
         serializedVersion: 2
-        x: 426
-        y: 0
-        width: 56
-        height: 29
+        x: 261
+        y: 4
+        width: 166
+        height: 7
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 396025961ce2b3a41b68d751a10fd5b2
-      internalID: -733182119
+      spriteID: 9aae339e8f8cd1b47ac7998eee7fbbd8
+      internalID: -1514247752
       vertices: []
       indices: 
       edges: []
@@ -303,15 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SlimeMove_8: -733182119
-      SlimeMove_6: -1625688949
-      SlimeMove_1: 1219337408
-      SlimeMove_4: -1206057841
-      SlimeMove_5: -840996708
-      SlimeMove_7: 1001688583
-      SlimeMove_3: 358117547
-      SlimeMove_0: 909069819
-      SlimeMove_2: 1130554516
+      SlimeDeath_4: -1514247752
+      SlimeDeath_1: 1173295231
+      SlimeDeath_2: -369147230
+      SlimeDeath_0: 1521570419
+      SlimeDeath_3: -1895054340
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

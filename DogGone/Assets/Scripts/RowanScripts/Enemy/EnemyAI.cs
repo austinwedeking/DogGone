@@ -20,7 +20,14 @@ public class EnemyAI : MonoBehaviour
         Attack,
         ChaseWithinRange,
         Chase,
-        Wander
+        Wander,
+        Dead
+    }
+
+    public bool IsPendingDestroy()
+    {
+        if (AIState == state.Dead) { return true; }
+        else { return false; }
     }
 
     private Rigidbody2D AIRigid;
@@ -101,10 +108,12 @@ public class EnemyAI : MonoBehaviour
         if (collision.tag == "Player") { collisionLayer--; }
     }
 
-    // things that affect enemy data
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void EnemyDead()
     {
-        
+        AIState = state.Dead;
+        StopAllCoroutines(); // stop this scripts coroutines
+        AIController.StopAllCoroutines(); // stop the controllers coroutines
+        AIController.StartCoroutine(AIController.Die());
     }
 
     /*private void Update() // this is bad, change

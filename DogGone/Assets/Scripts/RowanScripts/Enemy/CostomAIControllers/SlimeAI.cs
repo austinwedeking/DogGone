@@ -23,6 +23,11 @@ public class SlimeAI : BaseAI
     private bool isMoving;
     private int movementDirection;
 
+    [Space(10)]
+    [Header("Death Info")]
+    [SerializeField] private float deathTimer;
+    [SerializeField] private string deathAnimName;
+
     private void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -117,10 +122,13 @@ public class SlimeAI : BaseAI
         else { gameObject.transform.rotation = Quaternion.Euler(0, 0, 0); }
     }
 
-    override public void Die()
+    override public IEnumerator Die()
     {
-        //TODO: implement this
         DropBones(-movementDirection);
+        AIRigid.velocity = new Vector2(0f, 0f); // prevent from moving
+        // turn sprite grey to signify death
+        animator.Play(deathAnimName); // play death animation
+        yield return new WaitForSeconds(deathTimer);
         Destroy(gameObject);
     }
 }
