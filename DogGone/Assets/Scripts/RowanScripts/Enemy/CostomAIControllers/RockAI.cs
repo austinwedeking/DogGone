@@ -129,6 +129,7 @@ public class RockAI : BaseAI
     public override IEnumerator Die()
     {
         DropBones(-movementDirection);
+        AIRigid.velocity = new Vector2(0f, 0f); // prevent from moving
         // turn sprite grey to signify death
         animator.Play(deathAnimName); // play death animation
         yield return new WaitForSeconds(deathTimer);

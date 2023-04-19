@@ -247,6 +247,8 @@ MonoBehaviour:
   damage: 33
   attackDelay: 0.3
   moveSpeed: 2
+  deathTimer: 0.4
+  deathAnimName: DeathAnimation
 --- !u!1 &2596522185424884386
 GameObject:
   m_ObjectHideFlags: 0
