@@ -23,6 +23,11 @@ public class RockAI : BaseAI
     private int movementDirection;
     private bool facingRight;
 
+    [Space(10)] //TODO: add this to all base AI!!!
+    [Header("Death Info")]
+    [SerializeField] private float deathTimer;
+    [SerializeField] private string deathAnimName;
+
     private GameObject projectileRefference;
 
     private void Awake()
@@ -121,10 +126,12 @@ public class RockAI : BaseAI
         return facingRight;
     }
 
-    public override void Die()
+    public override IEnumerator Die()
     {
-        //TODO: implement this
         DropBones(-movementDirection);
+        // turn sprite grey to signify death
+        animator.Play(deathAnimName); // play death animation
+        yield return new WaitForSeconds(deathTimer);
         Destroy(gameObject);
     }
 }

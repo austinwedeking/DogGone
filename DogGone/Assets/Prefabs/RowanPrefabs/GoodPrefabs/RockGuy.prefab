@@ -311,6 +311,8 @@ MonoBehaviour:
     m_Bits: 2048
   attackDelay: 0
   moveSpeed: 0
+  deathTimer: 2.8
+  deathAnimName: DeathAnimation
 --- !u!1 &2767997085098378814
 GameObject:
   m_ObjectHideFlags: 0

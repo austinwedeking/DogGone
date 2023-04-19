@@ -117,9 +117,10 @@ public class SlimeAI : BaseAI
         else { gameObject.transform.rotation = Quaternion.Euler(0, 0, 0); }
     }
 
-    override public void Die()
+    override public IEnumerator Die()
     {
         //TODO: implement this
+        yield return new WaitForSeconds(0f);
         DropBones(-movementDirection);
         Destroy(gameObject);
     }

@@ -20,6 +20,8 @@ public class EnemyData : MonoBehaviour
     [SerializeField] private GameObject slashAffect;
     private int damage = 5; public int getDamage() { return damage; }
 
+    private EnemyAI AIController;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -31,21 +33,25 @@ public class EnemyData : MonoBehaviour
         renderer = gameObject.GetComponent<SpriteRenderer>();
         if (renderer == null) { Debug.Log("No renderer (somehow)"); }
         baseAI = GetComponent<BaseAI>();
+        AIController = gameObject.GetComponent<EnemyAI>();
     }
 
     public void takeDamage(int damage, float horiz, float vert)
     {
-        currentHealth -= damage;
-        StartCoroutine(damageFlash());
-        if (slashAffect != null)
+        if (!AIController.IsPendingDestroy())
         {
-            Instantiate(slashAffect, gameObject.transform.position, Quaternion.identity);
-        }
-        rigid.AddForce(new Vector2(horiz, vert/2), ForceMode2D.Impulse);
-        Debug.Log($"enemy took {maxHealth - currentHealth} damage");
-        if (currentHealth <= 0)
-        {
-            Die();
+            currentHealth -= damage;
+            StartCoroutine(damageFlash());
+            if (slashAffect != null)
+            {
+                Instantiate(slashAffect, gameObject.transform.position, Quaternion.identity);
+            }
+            rigid.AddForce(new Vector2(horiz, vert / 2), ForceMode2D.Impulse);
+            Debug.Log($"enemy took {maxHealth - currentHealth} damage");
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 
@@ -56,10 +62,12 @@ public class EnemyData : MonoBehaviour
         renderer.color = Color.white;
     }
 
-    public void Die()
+    public void Die() // when enemy dies, sends controll to EnemyAI to stop coroutines, then triggers death in BaseAI
     {
-        Debug.Log("Enemy Died");
         levelChange.DecrementEnemies();
-        baseAI.Die();
+        AIController.EnemyDead();
+
+        //Debug.Log("Enemy Died"); Move these to EnemyAI script
+        //baseAI.Die();
     }
 }
