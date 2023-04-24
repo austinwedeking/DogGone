@@ -7,6 +7,7 @@ public class LoseMenu : MonoBehaviour
 {
     AudioManager audioManager;
     LevelChange levelChange;
+    GameObject canvas;
 
     GameObject theGameManager;
     Inventory theInventoryScript;
@@ -30,6 +31,7 @@ public class LoseMenu : MonoBehaviour
         theGameManager = GameObject.Find("GameManager");
         theInventoryScript = theGameManager.GetComponent<Inventory>();
         shopScript = FindObjectOfType<ShopScript>();
+        canvas = GameObject.Find("GameCanvas");
     }
 
     public void RetryLevel()
@@ -85,6 +87,8 @@ public class LoseMenu : MonoBehaviour
     {
         Debug.Log("Loading menu...");
         audioManager.StopPlaying("MonkeysSpinningMonkeys");
+        audioManager.StopPlaying("ForestAmbience");
+        Destroy(canvas);
 
         for (int i = 0; i < theInventoryScript.lastValidSpot; i++)
         {

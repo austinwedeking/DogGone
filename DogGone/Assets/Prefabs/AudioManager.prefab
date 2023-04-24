@@ -47,12 +47,12 @@ MonoBehaviour:
   sounds:
   - name: MonkeysSpinningMonkeys
     clip: {fileID: 8300000, guid: 64da200066e30914dbbac066c87ef18d, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: DogBark
-    clip: {fileID: 8300000, guid: 846661b9cd6f3a64ca9796feb1c965a3, type: 3}
+    clip: {fileID: 8300000, guid: 71fc3b331e240924e9c6e30d5be118de, type: 3}
     volume: 0.25
     pitch: 1
     loop: 0
@@ -70,8 +70,32 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: FireCast
-    clip: {fileID: 8300000, guid: 43353550d6dcbf14791d838ac39bb567, type: 3}
+    clip: {fileID: 8300000, guid: ee59829f96a154046a2c921f2715ef61, type: 3}
     volume: 0.25
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: DogBite
+    clip: {fileID: 8300000, guid: 3245b47edc070b24685b8877f468b984, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DogDash
+    clip: {fileID: 8300000, guid: bec602151a254af43a6bbcf24105bf2f, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DogJump
+    clip: {fileID: 8300000, guid: bcd4cd8c0d996cd4cbd8cb7294b21064, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ForestAmbience
+    clip: {fileID: 8300000, guid: 50b53a7218c68be48ae7cef7740cd7f6, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 1
     source: {fileID: 0}

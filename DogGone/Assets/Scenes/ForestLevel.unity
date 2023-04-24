@@ -1557,7 +1557,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138616443687958120, guid: 8f4a6cca7f0f9654b86576ba0667eacd, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: GameCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 2138616443687958124, guid: 8f4a6cca7f0f9654b86576ba0667eacd, type: 3}
       propertyPath: m_Pivot.x

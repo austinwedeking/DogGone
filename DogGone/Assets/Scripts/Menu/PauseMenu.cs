@@ -73,10 +73,12 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Loading menu...");
         pauseMenuUI.SetActive(false);
+        Destroy(this.gameObject);
         Time.timeScale = 1f;
         GameIsPaused = false;
 
         audioManager.StopPlaying("MonkeysSpinningMonkeys");
+        audioManager.StopPlaying("ForestAmbience");
 
         for (int i = 0; i < theInventoryScript.lastValidSpot; i++)
         {

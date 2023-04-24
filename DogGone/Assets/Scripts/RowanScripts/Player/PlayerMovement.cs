@@ -170,6 +170,7 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             ProcessMovement(2);
+            FindObjectOfType<AudioManager>().Play("DogJump");
         }
     }
 
@@ -265,7 +266,8 @@ public class PlayerMovement : MonoBehaviour
 
                         StartCoroutine(AttackCooldown());
                         StartCoroutine(AnimationDelay());
-                        FindObjectOfType<AudioManager>().Play("DogBark");
+                        FindObjectOfType<AudioManager>().Play("DogBite");
+                        //FindObjectOfType<AudioManager>().Play("DogBark");
                     }
                     break;
                 case 1:
@@ -290,6 +292,7 @@ public class PlayerMovement : MonoBehaviour
 
                             // special case for dash ability
                             StartCoroutine(DashCooldwn());
+                            FindObjectOfType<AudioManager>().Play("DogDash");
                             StartCoroutine(Ability2Cooldown(temp2.GetComponent<BaseAbility>().GetCooldown()));
                         }
                     }

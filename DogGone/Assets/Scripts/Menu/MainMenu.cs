@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public AudioManager audioManager;
 
+
     void Awake()
     {
         audioManager = FindObjectOfType<AudioManager>();
@@ -21,6 +22,7 @@ public class MainMenu : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene(2);
         audioManager.Play("MonkeysSpinningMonkeys");
+        audioManager.Play("ForestAmbience");
     }
 
     public void QuitGame()

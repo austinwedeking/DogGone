@@ -112,7 +112,9 @@ public class PlayerData : MonoBehaviour
             StartCoroutine(damageFlash());
             rigid.AddForce(new Vector2(0, vert), ForceMode2D.Impulse);
             rigid.AddForce(new Vector2(horiz, 0), ForceMode2D.Impulse);
+
             FindObjectOfType<AudioManager>().Play("DogHurt");
+
             Debug.Log(currentHealth);
             if (currentHealth <= 0)
             {

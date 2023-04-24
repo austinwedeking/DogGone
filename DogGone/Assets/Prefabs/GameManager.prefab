@@ -62,8 +62,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numEnemies: 0
   loseSceneIndex: 1
-  winSceneIndex: 4
+  winSceneIndex: 6
   button1: {fileID: 0}
   button2: {fileID: 0}
-  ability1: {fileID: 0}
+  healthbarUI: {fileID: 0}
+  bonesUI: {fileID: 0}
+  abilityList:
+  - {fileID: 6084954744602099697, guid: c983bcfac3aef29458e45d1ac0342416, type: 3}
+  - {fileID: 6084954744602099697, guid: 5baa63a83c0fdab4dae13636aea874a0, type: 3}
+  - {fileID: 6084954744602099697, guid: 927d89a76268c9946a4e25c80689647a, type: 3}
+  - {fileID: 6084954744602099697, guid: 5c5f47d204a6a93468680f89313b7638, type: 3}
+  abilitySpriteList:
+  - {fileID: 21300000, guid: 0317375e5814f8b4898fba5c53e3d036, type: 3}
+  - {fileID: 21300000, guid: 06b23ef203f7e8a4d8d512d20efe4333, type: 3}
+  - {fileID: 21300000, guid: 987b9580c8efac04a8bbb3f645c4ad4d, type: 3}
+  - {fileID: 21300000, guid: 990f026be44f7b840abcffe6faea437d, type: 3}
   index: 0

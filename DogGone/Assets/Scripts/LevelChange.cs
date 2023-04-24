@@ -76,7 +76,6 @@ public class LevelChange : MonoBehaviour
         //}
 
         Debug.Log("psuedo start ran");
-
         button1.SetActive(false);
         button2.SetActive(false);
 
