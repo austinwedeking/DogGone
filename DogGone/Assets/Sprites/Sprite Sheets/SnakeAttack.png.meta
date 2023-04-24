@@ -1458,7 +1458,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SnakeAttack_56: 2129421191
       SnakeAttack_6: 486224475
       SnakeAttack_53: 2028312715
       SnakeAttack_0: -593623464
@@ -1508,12 +1507,13 @@ TextureImporter:
       SnakeAttack_42: -1980998845
       SnakeAttack_28: 802734087
       SnakeAttack_39: 1630313720
+      SnakeAttack_56: 2129421191
       SnakeAttack_21: 50277311
       SnakeAttack_11: 649467407
-      SnakeAttack_24: -401739543
       SnakeAttack_22: 1137690863
-      SnakeAttack_29: -2047814781
+      SnakeAttack_24: -401739543
       SnakeAttack_27: -1470393552
+      SnakeAttack_29: -2047814781
       SnakeAttack_2: 1254846300
       SnakeAttack_46: -56256447
       SnakeAttack_57: 1328849079
