@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 05e4e0f2aa0e9e349aaeac7faa2fedec
+guid: 2f60efaed33f25e42bfd3d7b61b42a74
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bone_shine_sheet_0
+      name: Bottle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba1ca0e675707fd41bd60cd7d1dab6bc
-      internalID: -685091576
+      spriteID: 0397b592c01d45e449ca853891b9796a
+      internalID: 2021493729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_1
+      name: Bottle_1
       rect:
         serializedVersion: 2
         x: 64
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4d0f048557ff2240aa1167acbeaf500
-      internalID: 997674989
+      spriteID: c3c99caab61991b40b9c6b271c11e322
+      internalID: 1145489102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_2
+      name: Bottle_2
       rect:
         serializedVersion: 2
         x: 128
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e93b8ef8e5a9d745a5c7e151604f3ee
-      internalID: 691083697
+      spriteID: acc837f97677db14da9084a294dc686d
+      internalID: -96853227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_3
+      name: Bottle_3
       rect:
         serializedVersion: 2
         x: 192
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc354ef12ccccf24a934beb981b3a928
-      internalID: -243049484
+      spriteID: 54b5377769bb1c541b693349ac05502e
+      internalID: -1800176872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_4
+      name: Bottle_4
       rect:
         serializedVersion: 2
         x: 256
@@ -214,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b97c225fa42b7f45a1ac227a313278b
-      internalID: 936147271
+      spriteID: 4cff513645c0ad24f8dd3ff36ea22f1b
+      internalID: 1531096197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_5
+      name: Bottle_5
       rect:
         serializedVersion: 2
         x: 320
@@ -235,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 083b783d5cf81f842aa64978acb05050
-      internalID: -202710003
+      spriteID: 3eafa215180fdc94d943e36721923c31
+      internalID: -1359581019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_6
+      name: Bottle_6
       rect:
         serializedVersion: 2
         x: 384
@@ -256,14 +256,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d06d00a2ae388e4680b226129f93d5f
-      internalID: -1240302133
+      spriteID: c84ada60510ad63439180c7ccf11021c
+      internalID: -139134766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_7
+      name: Bottle_7
       rect:
         serializedVersion: 2
         x: 448
@@ -277,92 +277,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 398fc491e3094354a9e4fdfe0b54d66f
-      internalID: -1802742445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone_shine_sheet_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7466a90a84b626245815acb4235c2e72
-      internalID: -1057252680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone_shine_sheet_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c883a8bedad1acf4ca40cd9b380b95fa
-      internalID: 819541662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone_shine_sheet_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 177c05ff09b46d041b1d6013fb707aa9
-      internalID: -1622986969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone_shine_sheet_11
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cf4b3589cb216c47a8aa45890a5bf55
-      internalID: 898163530
+      spriteID: 2e7e53b8ac93ea140a99e3b3403ffc37
+      internalID: 112484884
       vertices: []
       indices: 
       edges: []
@@ -378,18 +294,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bone_shine_sheet_2: 691083697
-      bone_shine_sheet_1: 997674989
-      bone_shine_sheet_6: -1240302133
-      bone_shine_sheet_11: 898163530
-      bone_shine_sheet_9: 819541662
-      bone_shine_sheet_4: 936147271
-      bone_shine_sheet_8: -1057252680
-      bone_shine_sheet_0: -685091576
-      bone_shine_sheet_5: -202710003
-      bone_shine_sheet_3: -243049484
-      bone_shine_sheet_10: -1622986969
-      bone_shine_sheet_7: -1802742445
+      Bottle_1: 1145489102
+      Bottle_4: 1531096197
+      Bottle_5: -1359581019
+      Bottle_3: -1800176872
+      Bottle_7: 112484884
+      Bottle_6: -139134766
+      Bottle_2: -96853227
+      Bottle_0: 2021493729
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

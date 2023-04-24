@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 05e4e0f2aa0e9e349aaeac7faa2fedec
+guid: d29a79ed09b41854a82d679c00d9c5ef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bone_shine_sheet_0
+      name: The_Guy_Kick_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,41 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba1ca0e675707fd41bd60cd7d1dab6bc
-      internalID: -685091576
+      spriteID: 320fa0321e08f4a4d880325a2db835a2
+      internalID: 92983509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4d0f048557ff2240aa1167acbeaf500
-      internalID: 997674989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone_shine_sheet_2
+      name: The_Guy_Kick_1
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,41 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e93b8ef8e5a9d745a5c7e151604f3ee
-      internalID: 691083697
+      spriteID: 66b41941aa928f94db4da6683a9488c2
+      internalID: 1720342614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc354ef12ccccf24a934beb981b3a928
-      internalID: -243049484
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone_shine_sheet_4
+      name: The_Guy_Kick_2
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,41 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b97c225fa42b7f45a1ac227a313278b
-      internalID: 936147271
+      spriteID: 5922f3529da7e2e47bfa0407e2380738
+      internalID: 1443408829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 083b783d5cf81f842aa64978acb05050
-      internalID: -202710003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone_shine_sheet_6
+      name: The_Guy_Kick_3
       rect:
         serializedVersion: 2
         x: 384
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,41 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d06d00a2ae388e4680b226129f93d5f
-      internalID: -1240302133
+      spriteID: 406b415079699464195ea5269a3bcf75
+      internalID: -995368969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 398fc491e3094354a9e4fdfe0b54d66f
-      internalID: -1802742445
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone_shine_sheet_8
+      name: The_Guy_Kick_4
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,41 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7466a90a84b626245815acb4235c2e72
-      internalID: -1057252680
+      spriteID: 0532323fe47ebe0429975633dc5542c5
+      internalID: 1407630217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c883a8bedad1acf4ca40cd9b380b95fa
-      internalID: 819541662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bone_shine_sheet_10
+      name: The_Guy_Kick_5
       rect:
         serializedVersion: 2
         x: 640
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 177c05ff09b46d041b1d6013fb707aa9
-      internalID: -1622986969
+      spriteID: 504c21ffb11423249b7a7f43d685a399
+      internalID: 1529858114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bone_shine_sheet_11
+      name: The_Guy_Kick_6
       rect:
         serializedVersion: 2
-        x: 704
+        x: 768
         y: 0
-        width: 64
-        height: 64
+        width: 128
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,8 +256,302 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cf4b3589cb216c47a8aa45890a5bf55
-      internalID: 898163530
+      spriteID: 4d23332d0481af64ba5cad3202a36c64
+      internalID: 1596179763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bef28ddfa1e8ea4eb3fe67165105939
+      internalID: -537215880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45549825f16d0554397e6af53a7c3b36
+      internalID: -1434814017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b6bee8f444bb742ae6e0a38710dc6f
+      internalID: -1663207710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce188dba73b7b3a44a626d7df3704c3a
+      internalID: 1788057040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7dcf966e84a174d878f5a7593d9dc5
+      internalID: 1237903166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1410574e73ba3ac4c9670b439a077682
+      internalID: 227327743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea37f90b9509e049af41a0e8387d5c2
+      internalID: -1437253665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0816a213b4cc7524694ecc1178bd4e35
+      internalID: 1575183490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa283bf3a6fb3294e9dc91e82a8983c3
+      internalID: 339267484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19d3b24de69ec546b529ea6e4ff216b
+      internalID: 986681950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_17
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27724edaea8d8ae438bc89336a3796ed
+      internalID: 344243341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_18
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d658bd2e4c62148b93df9bcfaa19bd
+      internalID: -1045349111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_19
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cfdec8275595444b2bc9d0053704a0
+      internalID: 965573278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_Kick_20
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 128
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18430ba15f49396449b27043a4e7607d
+      internalID: -101165098
       vertices: []
       indices: 
       edges: []
@@ -378,18 +567,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bone_shine_sheet_2: 691083697
-      bone_shine_sheet_1: 997674989
-      bone_shine_sheet_6: -1240302133
-      bone_shine_sheet_11: 898163530
-      bone_shine_sheet_9: 819541662
-      bone_shine_sheet_4: 936147271
-      bone_shine_sheet_8: -1057252680
-      bone_shine_sheet_0: -685091576
-      bone_shine_sheet_5: -202710003
-      bone_shine_sheet_3: -243049484
-      bone_shine_sheet_10: -1622986969
-      bone_shine_sheet_7: -1802742445
+      The_Guy_Kick_3: -995368969
+      The_Guy_Kick_16: 986681950
+      The_Guy_Kick_20: -101165098
+      The_Guy_Kick_1: 1720342614
+      The_Guy_Kick_11: 1237903166
+      The_Guy_Kick_10: 1788057040
+      The_Guy_Kick_4: 1407630217
+      The_Guy_Kick_19: 965573278
+      The_Guy_Kick_9: -1663207710
+      The_Guy_Kick_13: -1437253665
+      The_Guy_Kick_17: 344243341
+      The_Guy_Kick_8: -1434814017
+      The_Guy_Kick_15: 339267484
+      The_Guy_Kick_6: 1596179763
+      The_Guy_Kick_5: 1529858114
+      The_Guy_Kick_2: 1443408829
+      The_Guy_Kick_14: 1575183490
+      The_Guy_Kick_18: -1045349111
+      The_Guy_Kick_12: 227327743
+      The_Guy_Kick_7: -537215880
+      The_Guy_Kick_0: 92983509
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
