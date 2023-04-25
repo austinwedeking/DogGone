@@ -8,15 +8,23 @@ public class BoneScript : MonoBehaviour
     [SerializeField] private float pickupDelay;
 
     private Rigidbody2D rigid;
+    private GameObject player;
 
     private bool canPickup;
     private bool canMove;
+
+    private void Start()
+    {
+        player = FindObjectOfType<PlayerData>().gameObject;
+    }
 
     private void Update()
     {
         if (canMove)
         {
-            
+            Vector2 pos = gameObject.transform.position;
+            Vector2 playerPos = player.transform.position;
+            rigid.AddForce((playerPos - pos) * 4);
         }
     }
 

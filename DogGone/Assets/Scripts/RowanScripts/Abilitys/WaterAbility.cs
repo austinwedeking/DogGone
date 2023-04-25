@@ -8,6 +8,9 @@ public class WaterAbility : BaseAbility
     [SerializeField] private float radius;
     [SerializeField] private float force;
 
+    [Space(10)]
+    [SerializeField] GameObject waterAffect;
+
     private GameObject player;
 
     private void Settup()
@@ -26,6 +29,9 @@ public class WaterAbility : BaseAbility
             temp = collision[i].GetComponent<EnemyData>();
             if (temp != null)
             {
+                // do stuf for water affect
+
+                Instantiate(waterAffect, temp.transform.position, Quaternion.identity);
                 temp.takeDamage(damage, 0f, force);
             }
         }

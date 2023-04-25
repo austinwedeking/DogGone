@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeAffect : MonoBehaviour
+public class AbilityAffect : MonoBehaviour
 {
+    [SerializeField] private float deathDelayTime;
+
     void Start()
     {
         StartCoroutine(deathDelay());
@@ -11,7 +13,7 @@ public class SpikeAffect : MonoBehaviour
 
     private IEnumerator deathDelay()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(deathDelayTime);
         Destroy(gameObject);
     }
 }

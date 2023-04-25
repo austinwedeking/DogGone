@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &919146661721389753
 Transform:
   m_ObjectHideFlags: 0
@@ -71,7 +71,8 @@ GameObject:
   - component: {fileID: 8488709929069242253}
   - component: {fileID: 8488709929069242250}
   - component: {fileID: 5142902111137295010}
-  m_Layer: 0
+  - component: {fileID: -6146582798454699548}
+  m_Layer: 15
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,8 +133,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1297805551
-  m_SortingLayer: 7
+  m_SortingLayerID: 430162715
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 1881226100, guid: c5b44c275892906429dd892e10522f45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -197,3 +198,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &-6146582798454699548
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488709929069242251}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0dae6a2c509b35f459695508df550230, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
