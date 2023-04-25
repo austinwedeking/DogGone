@@ -205,7 +205,7 @@ MonoBehaviour:
   detectRadius: 6
   attackRadius: 1.5
   explosionAffect: {fileID: 9213798401759778893, guid: 052f59d02fbf29e418105deff9e61368, type: 3}
-  explosionDelay: 0.1
+  explosionDelay: 0.2
   numExplosions: 3
 --- !u!114 &1564294060922357080
 MonoBehaviour:
@@ -267,6 +267,8 @@ MonoBehaviour:
   damage: 10
   attackDelay: 0.28
   moveSpeed: 2
+  deathTimer: 1
+  deathAnimName: DeathAnimation
 --- !u!1 &1564294061617919524
 GameObject:
   m_ObjectHideFlags: 0
