@@ -15,6 +15,12 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float attackRadius;
     private int collisionLayer;
 
+    [Space(10)]
+    [Header("Death Affect Options")]
+    [SerializeField] private GameObject explosionAffect;
+    [SerializeField] private float explosionDelay;
+    [SerializeField] private int numExplosions;
+
     private enum state
     {
         Attack,
@@ -114,6 +120,16 @@ public class EnemyAI : MonoBehaviour
         StopAllCoroutines(); // stop this scripts coroutines
         AIController.StopAllCoroutines(); // stop the controllers coroutines
         AIController.StartCoroutine(AIController.Die());
+        StartCoroutine(ExplosionAffect());
+    }
+
+    private IEnumerator ExplosionAffect()
+    {
+        for (int i  = 0; i < numExplosions; ++i)
+        {
+            Instantiate(explosionAffect, new Vector2(transform.position.x + Random.Range(-1f, 1f), transform.position.y + Random.Range(-1f, 1f)), Quaternion.identity);
+            yield return new WaitForSeconds(explosionDelay);
+        }
     }
 
     /*private void Update() // this is bad, change

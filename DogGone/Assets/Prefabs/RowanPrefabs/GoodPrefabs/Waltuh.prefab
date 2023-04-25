@@ -204,6 +204,9 @@ MonoBehaviour:
   AIState: 0
   detectRadius: 6
   attackRadius: 1.5
+  explosionAffect: {fileID: 9213798401759778893, guid: 052f59d02fbf29e418105deff9e61368, type: 3}
+  explosionDelay: 0.1
+  numExplosions: 3
 --- !u!114 &1564294060922357080
 MonoBehaviour:
   m_ObjectHideFlags: 0
