@@ -773,6 +773,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timesPurchased: 0
   shopUI: {fileID: 6327668707622101460}
+  healthUpgradeInfo: {fileID: 2485898056625083728}
+  healInfo: {fileID: 3590885773070803304}
 --- !u!1 &2138616444089962283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,8 +1304,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Increases the maximum health of the player by 50 HP. Can be purchased twice
-    to reach a maximum health of 200 HP.
+  m_Text: 'Cost: 250 Bones. Increases the maximum health of the player by 50 HP.
+    Can be purchased twice to reach a maximum health of 200 HP.'
 --- !u!114 &6978737763466942424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,7 +1554,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restores 50 HP to the player up to their maximum health.
+  m_Text: 'Cost: 100 Bones. Restores 50 HP to the player up to their maximum health.'
 --- !u!114 &6016757682208543681
 MonoBehaviour:
   m_ObjectHideFlags: 0

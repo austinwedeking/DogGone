@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopScript : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class ShopScript : MonoBehaviour
     public int timesPurchased = 0;
     private int price = 0;
     public GameObject shopUI;
+
+    [SerializeField] GameObject healthUpgradeInfo;
+    [SerializeField] GameObject healInfo;
 
     GameObject theGameManager;
     Inventory theInventoryScript;
@@ -26,7 +30,7 @@ public class ShopScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void CloseShop()
@@ -49,24 +53,32 @@ public class ShopScript : MonoBehaviour
         if (playerData.GetCurrentPlayerHealth() < playerData.GetMaxPlayerHealth())
         {
             price = 100;
-            playerData.SetBonesAmount(playerData.GetBones() - price);
-            levelChange.SetTempBones(playerData.GetBones());
-            playerData.AquireBones(0);
 
-            playerData.SetCurrentPlayerHealth(playerData.GetCurrentPlayerHealth() + 50);
-
-            if (playerData.GetCurrentPlayerHealth() > playerData.GetMaxPlayerHealth())
+            if ((playerData.GetBones() - price) >= 0)
             {
-                playerData.SetCurrentPlayerHealth(playerData.GetMaxPlayerHealth());
+                playerData.SetBonesAmount(playerData.GetBones() - price);
+                levelChange.SetTempBones(playerData.GetBones());
+                playerData.AquireBones(0);
+
+                playerData.SetCurrentPlayerHealth(playerData.GetCurrentPlayerHealth() + 50);
+
+                if (playerData.GetCurrentPlayerHealth() > playerData.GetMaxPlayerHealth())
+                {
+                    playerData.SetCurrentPlayerHealth(playerData.GetMaxPlayerHealth());
+                }
+
+                healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
+
+                Debug.Log("current health is now " + playerData.GetCurrentPlayerHealth());
             }
-
-            healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
-
-            Debug.Log("current health is now " + playerData.GetCurrentPlayerHealth());
+            else
+            {
+                StartCoroutine(NoBones(healInfo, "You do not have enough bones to purchase this item!"));
+            }
         }
         else
         {
-            Debug.Log("player is at max health");
+            StartCoroutine(NoBones(healInfo, "You are already at max health."));
         }
     }
 
@@ -74,34 +86,58 @@ public class ShopScript : MonoBehaviour
     {
         if (timesPurchased == 0)
         {
-            price = 200;
-            playerData.SetBonesAmount(playerData.GetBones() - price);
-            levelChange.SetTempBones(playerData.GetBones());
-            playerData.AquireBones(0);
+            price = 250;
 
-            playerData.SetMaxPlayerHealth(150);
-            healthBar.SetMaxHealth(playerData.GetMaxPlayerHealth());
-            healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
-            Debug.Log("max health is now " + playerData.GetMaxPlayerHealth());
-            playerData.healthUpgrade = true;
-            timesPurchased++;
+            if ((playerData.GetBones() - price) >= 0)
+            {
+                playerData.SetBonesAmount(playerData.GetBones() - price);
+                levelChange.SetTempBones(playerData.GetBones());
+                playerData.AquireBones(0);
+
+                playerData.SetMaxPlayerHealth(150);
+                healthBar.SetMaxHealth(playerData.GetMaxPlayerHealth());
+                healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
+                Debug.Log("max health is now " + playerData.GetMaxPlayerHealth());
+                playerData.healthUpgrade = true;
+                timesPurchased++;
+            }
+            else
+            {
+                StartCoroutine(NoBones(healthUpgradeInfo, "You do not have enough bones to purchase this item!"));
+            }
         }
         else if (timesPurchased == 1)
         {
-            price = 400;
-            playerData.SetBonesAmount(playerData.GetBones() - price);
-            levelChange.SetTempBones(playerData.GetBones());
-            playerData.AquireBones(0);
+            price = 250;
 
-            playerData.SetMaxPlayerHealth(200);
-            healthBar.SetMaxHealth(playerData.GetMaxPlayerHealth());
-            healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
-            Debug.Log("max health is now " + playerData.GetMaxPlayerHealth());
-            timesPurchased++;
+            if ((playerData.GetBones() - price) >= 0)
+            {
+                playerData.SetBonesAmount(playerData.GetBones() - price);
+                levelChange.SetTempBones(playerData.GetBones());
+                playerData.AquireBones(0);
+
+                playerData.SetMaxPlayerHealth(200);
+                healthBar.SetMaxHealth(playerData.GetMaxPlayerHealth());
+                healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
+                Debug.Log("max health is now " + playerData.GetMaxPlayerHealth());
+                timesPurchased++;
+            }
+            else
+            {
+                StartCoroutine(NoBones(healthUpgradeInfo, "You do not have enough bones to purchase this item!"));
+            }
         }
         else if (timesPurchased == 2)
         {
-            Debug.Log("max health achieved");
+            StartCoroutine(NoBones(healthUpgradeInfo, "You cannot purchase this upgrade anymore."));
         }
+    }
+
+    private IEnumerator NoBones(GameObject UIObject, string text)
+    {
+        string tempText = UIObject.GetComponent<Text>().text;
+        UIObject.GetComponent<Text>().text = text;
+        yield return new WaitForSeconds(3f);
+        UIObject.GetComponent<Text>().text = tempText;
     }
 }
