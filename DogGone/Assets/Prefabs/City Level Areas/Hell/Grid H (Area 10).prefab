@@ -3570,6 +3570,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1549983744964505000}
     m_Modifications:
+    - target: {fileID: 1652953376119485274, guid: 45d7e76a89b50af4db3cde47ab72ccef, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fb5c4bea201c9834f82b14d4eba1b2a1, type: 3}
     - target: {fileID: 4731940800897565543, guid: 45d7e76a89b50af4db3cde47ab72ccef, type: 3}
       propertyPath: m_Name
       value: shop

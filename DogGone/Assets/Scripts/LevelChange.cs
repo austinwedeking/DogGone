@@ -14,6 +14,8 @@ public class LevelChange : MonoBehaviour
 
     [SerializeField] GameObject button1;
     [SerializeField] GameObject button2;
+    [SerializeField] GameObject button1Text;
+    [SerializeField] GameObject button2Text;
 
     GameObject randAbility1;
     GameObject randAbility2;
@@ -23,6 +25,9 @@ public class LevelChange : MonoBehaviour
 
     [Header("Ability Sprites")]
     [SerializeField] private Sprite[] abilitySpriteList;
+
+    [Header("Ability Info Text")]
+    [SerializeField] private string[] abilityTooltips;
 
     GameObject theGameManager;
     Inventory theInventoryScript;
@@ -166,6 +171,8 @@ public class LevelChange : MonoBehaviour
         // Apply the correct sprites
         button1.GetComponent<Image>().sprite = abilitySpriteList[firstPos];
         button2.GetComponent<Image>().sprite = abilitySpriteList[secondPos];
+        button1Text.GetComponent<Text>().text = abilityTooltips[firstPos];
+        button2Text.GetComponent<Text>().text = abilityTooltips[secondPos];
 
         // Set the buttons active
         button1.SetActive(true);
