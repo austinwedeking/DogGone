@@ -1231,22 +1231,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2138616444057080329}
     - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: ability1
-      value: 
-      objectReference: {fileID: 6084954744602099697, guid: c983bcfac3aef29458e45d1ac0342416, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: ability2
-      value: 
-      objectReference: {fileID: 6084954744602099697, guid: 5baa63a83c0fdab4dae13636aea874a0, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: ability3
-      value: 
-      objectReference: {fileID: 6084954744602099697, guid: 927d89a76268c9946a4e25c80689647a, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: ability4
-      value: 
-      objectReference: {fileID: 6084954744602099697, guid: 5c5f47d204a6a93468680f89313b7638, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
       propertyPath: button1Text
       value: 
       objectReference: {fileID: 2138616444057080332}
@@ -1254,77 +1238,6 @@ PrefabInstance:
       propertyPath: button2Text
       value: 
       objectReference: {fileID: 2138616444057080331}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: winSceneIndex
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilityList.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilityList.Array.data[0]
-      value: 
-      objectReference: {fileID: 6084954744602099697, guid: c983bcfac3aef29458e45d1ac0342416, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilityList.Array.data[1]
-      value: 
-      objectReference: {fileID: 6084954744602099697, guid: 5baa63a83c0fdab4dae13636aea874a0, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilityList.Array.data[2]
-      value: 
-      objectReference: {fileID: 6084954744602099697, guid: 927d89a76268c9946a4e25c80689647a, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilityList.Array.data[3]
-      value: 
-      objectReference: {fileID: 6084954744602099697, guid: 5c5f47d204a6a93468680f89313b7638, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilityTooltips.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilitySpriteList.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilityTooltips.Array.data[0]
-      value: Shoot a fireball straightforward by pressing 1, dealing damage upon
-        impacting with an enemy! Selecting this when already having this ability
-        will give bones instead.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilityTooltips.Array.data[1]
-      value: Dash forward by pressing 2, granting invulnerability for it's duration.
-        Selecting this when already having this ability will give bones instead.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilityTooltips.Array.data[2]
-      value: Launch enemies into the air while dealing damage with a waterspout by
-        pressing 3! Selecting this when already having this ability will give bones
-        instead.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilityTooltips.Array.data[3]
-      value: Vines shoot up from the ground by pressing 4, pinning enemies down momentarily
-        and dealing damage! Selecting this when already having this ability will
-        give bones instead.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilitySpriteList.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: 0317375e5814f8b4898fba5c53e3d036, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilitySpriteList.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 06b23ef203f7e8a4d8d512d20efe4333, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilitySpriteList.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 987b9580c8efac04a8bbb3f645c4ad4d, type: 3}
-    - target: {fileID: 1380329709072644577, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
-      propertyPath: abilitySpriteList.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 990f026be44f7b840abcffe6faea437d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc2c51aec7b63154a872a5bca1c8b324, type: 3}
 --- !u!1001 &1443544578453255048
