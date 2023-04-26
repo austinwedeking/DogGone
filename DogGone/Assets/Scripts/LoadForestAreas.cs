@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class LoadForestAreas : MonoBehaviour{
     public GameObject LevelBlock1;
@@ -36,7 +37,7 @@ public class LoadForestAreas : MonoBehaviour{
     public GameObject HLevelBlock9;
     public GameObject HLevelBlock10;
     public GameObject HLevelBlock11;
-
+    
     void Start(){
         int Areas = 4; //How many Areas are going to generate
         int Offset; //Stores how much offset a Area needs when being placed
@@ -46,16 +47,14 @@ public class LoadForestAreas : MonoBehaviour{
         for (int i = 0; i < Areas; i++){
             Offset = 40; //Inital offset of 40 as an Area is 40 units long
             RandNum = Random.Range(1, 12); //Generates a number 1 to 11
-            if(Shop == true && RandNum == 11){ //Only checks if its generating a shop if a shop has already generated
-                    RandNum = Random.Range(1, 11); //Generates a number 1 to 10 so it cannot roll the shop
-            }
+            if (Shop == true && RandNum == 11){ //Only checks if its generating a shop if a shop has already generated
+                RandNum = Random.Range(1, 11);} //Generates a number 1 to 10 so it cannot roll the shop
             if(RandNum == 11){Shop = true;} //If its going to spawn a shop set the bool that a shop has spawned
             Offset = Offset + ((i - 1) * 40); //Offsets the inital position by how many Areas have been loaded
             Offset = Offset - ((RandNum-1)*45); //Offsets the Area by the position of the prefab because I am an idiot and didn't stack them
             Vector3 StartPosition = new Vector3(Offset, -63, 0); //Sets the placement position of the Area
-
             //Mega if statement to decide what Level Area to instantiate
-            if (Difficulty == 1){
+            if (SceneManager.GetActiveScene().buildIndex == 2){
                 if     (RandNum == 1) {Instantiate(ELevelBlock1, StartPosition, Quaternion.identity);}
                 else if(RandNum == 2) {Instantiate(ELevelBlock2, StartPosition, Quaternion.identity);}
                 else if(RandNum == 3) {Instantiate(ELevelBlock3, StartPosition, Quaternion.identity);}
@@ -67,7 +66,7 @@ public class LoadForestAreas : MonoBehaviour{
                 else if(RandNum == 9) {Instantiate(ELevelBlock9, StartPosition, Quaternion.identity);}
                 else if(RandNum == 10){Instantiate(ELevelBlock10,StartPosition, Quaternion.identity);}
                 else if(RandNum == 11){Instantiate(ELevelBlock11,StartPosition, Quaternion.identity);}
-            }else if (Difficulty == 2){
+            }else if (SceneManager.GetActiveScene().buildIndex == 3){
                 if     (RandNum == 1) {Instantiate(LevelBlock1, StartPosition, Quaternion.identity);}
                 else if(RandNum == 2) {Instantiate(LevelBlock2, StartPosition, Quaternion.identity);}
                 else if(RandNum == 3) {Instantiate(LevelBlock3, StartPosition, Quaternion.identity);}
