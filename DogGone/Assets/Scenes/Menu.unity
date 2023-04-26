@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 47966308}
   - component: {fileID: 47966307}
   m_Layer: 5
-  m_Name: E
+  m_Name: Space
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: E - Attack
+  m_Text: Space - Attack
 --- !u!222 &47966309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1866,7 +1866,7 @@ GameObject:
   - component: {fileID: 1440264206}
   - component: {fileID: 1440264205}
   m_Layer: 5
-  m_Name: Space
+  m_Name: W
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1940,7 +1940,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Space - Jump
+  m_Text: W - Jump
 --- !u!222 &1440264207
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class LoadLevel : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 5)
+        if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             this.gameObject.transform.position = new Vector2(175.18f, -0.62f);
         }
