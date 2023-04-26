@@ -13,6 +13,7 @@ public class LoadLevel : MonoBehaviour
     PlayerData playerData;
     HealthBar healthBar;
     ShopScript shopScript;
+    AudioManager audioManager;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class LoadLevel : MonoBehaviour
         playerData = FindObjectOfType<PlayerData>();
         healthBar = FindObjectOfType<HealthBar>();
         shopScript = FindObjectOfType<ShopScript>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -62,6 +64,13 @@ public class LoadLevel : MonoBehaviour
                 {
                     levelChange.SetTemp(200);
                 }
+            }
+
+            if (SceneManager.GetActiveScene().buildIndex + 1 == 4)
+            {
+                audioManager.StopPlaying("MonkeysSpinningMonkeys");
+                audioManager.StopPlaying("ForestAmbience");
+                audioManager.Play("CityTheme");
             }
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
