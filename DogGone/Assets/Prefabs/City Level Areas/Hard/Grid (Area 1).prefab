@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4571588258548455549}
   - component: {fileID: 6327987360265434064}
   - component: {fileID: 3229275060698424857}
+  - component: {fileID: 6230845945128025285}
+  - component: {fileID: 7795674504749347465}
+  - component: {fileID: 4436074749746261923}
   m_Layer: 10
   m_Name: Tilemap Boxes
   m_TagString: Ground
@@ -198,6 +201,160 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!50 &6230845945128025285
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4230544856644472558}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!19719996 &7795674504749347465
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4230544856644472558}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!66 &4436074749746261923
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4230544856644472558}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 7795674504749347465}
+    m_ColliderPaths:
+    - - X: -220000000
+        Y: 590000000
+      - X: -240000000
+        Y: 590000000
+      - X: -240000000
+        Y: 580000000
+      - X: -220000000
+        Y: 580000000
+    - - X: 29531250
+        Y: 581249984
+      - X: 29531250
+        Y: 590000000
+      - X: 20781250
+        Y: 590000000
+      - X: 20468750
+        Y: 589843776
+      - X: 20312500
+        Y: 586562496
+      - X: 20312500
+        Y: 582187520
+      - X: 20625000
+        Y: 580156224
+      - X: 20937500
+        Y: 580000000
+      - X: 28906250
+        Y: 580000000
+    - - X: 39531248
+        Y: 581249984
+      - X: 39531248
+        Y: 590000000
+      - X: 30781250
+        Y: 590000000
+      - X: 30468750
+        Y: 589843776
+      - X: 30312500
+        Y: 586562496
+      - X: 30312500
+        Y: 582187520
+      - X: 30625000
+        Y: 580156224
+      - X: 30937500
+        Y: 580000000
+      - X: 38906248
+        Y: 580000000
+    - - X: 49531248
+        Y: 581249984
+      - X: 49531248
+        Y: 590000000
+      - X: 40781248
+        Y: 590000000
+      - X: 40468752
+        Y: 589843776
+      - X: 40312500
+        Y: 586562496
+      - X: 40312500
+        Y: 582187520
+      - X: 40625000
+        Y: 580156224
+      - X: 40937500
+        Y: 580000000
+      - X: 48906248
+        Y: 580000000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 4.890608, y: 58}
+      - {x: 4.953125, y: 58.125004}
+      - {x: 4.9530954, y: 59}
+      - {x: 4.0781193, y: 59}
+      - {x: 4.0468745, y: 58.984367}
+      - {x: 4.03125, y: 58.65625}
+      - {x: 4.0312505, y: 58.218754}
+      - {x: 4.062512, y: 58.015617}
+      - {x: 4.093756, y: 58}
+    - - {x: 3.890608, y: 58}
+      - {x: 3.9531248, y: 58.125004}
+      - {x: 3.9530957, y: 59}
+      - {x: 3.0781198, y: 59}
+      - {x: 3.0468745, y: 58.984367}
+      - {x: 3.03125, y: 58.65625}
+      - {x: 3.0312505, y: 58.218754}
+      - {x: 3.0625122, y: 58.015617}
+      - {x: 3.093756, y: 58}
+    - - {x: 2.8906085, y: 58}
+      - {x: 2.953125, y: 58.125004}
+      - {x: 2.9530957, y: 59}
+      - {x: 2.0781195, y: 59}
+      - {x: 2.0468745, y: 58.984367}
+      - {x: 2.03125, y: 58.65625}
+      - {x: 2.0312505, y: 58.218754}
+      - {x: 2.0625122, y: 58.015617}
+      - {x: 2.093756, y: 58}
+    - - {x: -22.000029, y: 58}
+      - {x: -22.000029, y: 59}
+      - {x: -24, y: 58.99997}
+      - {x: -23.999971, y: 58}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
 --- !u!1 &7794690512123479703
 GameObject:
   m_ObjectHideFlags: 0
