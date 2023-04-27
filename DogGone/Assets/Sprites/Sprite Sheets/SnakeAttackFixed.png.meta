@@ -1,0 +1,1530 @@
+fileFormatVersion: 2
+guid: cdc21d3b72bee4f4a96e5418370a681a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SnakeAttackFixed_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3
+        width: 65
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7510f3def4292dc45bf6f7403c7c433f
+      internalID: -185616594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 3
+        width: 62
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c817b540643fc3438efbe360362bc8f
+      internalID: -587901286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 3
+        width: 56
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f605d004db68b479c5b6d1513aab54
+      internalID: 1057314297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_3
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 3
+        width: 62
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2ef5c99b3ecdb4dbb13f252d5f729c
+      internalID: -2007836815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_4
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 3
+        width: 72
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e67e1b0ce5180b40ab2149fdfde886d
+      internalID: 351257713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_5
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 3
+        width: 72
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e54d69734a84b649baaa3c8953dc7e5
+      internalID: 1421450740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_6
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 3
+        width: 78
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1e47dbb897e7d46a0b2d5683607748
+      internalID: -162795165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_7
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 3
+        width: 78
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1911e9867e7ab214b9dbefdce7bcca73
+      internalID: -1946121301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_8
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 3
+        width: 78
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582a3c6dd50bd9440805538a18fbbaa5
+      internalID: -944956547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_9
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 3
+        width: 75
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0805b9e52689c964caa8e36606cd9212
+      internalID: -2086580802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_10
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 3
+        width: 72
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18de376e7f4b27241819e10c77330f69
+      internalID: 680637280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_11
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 3
+        width: 65
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092795b9a53b4f5419c1435e44a4db44
+      internalID: -247284685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_12
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 3
+        width: 62
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12409e8b965356c44bb7d26ffb4791b3
+      internalID: 2085193087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_13
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 3
+        width: 62
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8744c7f940d754c88cf9589a523869
+      internalID: 300238414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_14
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 3
+        width: 62
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5130bd65f3d4e55419f46044ebf36b6b
+      internalID: -543714907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_15
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 3
+        width: 62
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79afae1023951ee48944564b07438418
+      internalID: 2130551625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_16
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 3
+        width: 69
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bdfe29d0e5b8954f8f862613eeb3394
+      internalID: 979554140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_17
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 3
+        width: 65
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef7cb4eb1865f74288341f5d1ec80a0
+      internalID: -1232060622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_18
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 3
+        width: 65
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7024ed176be0d4188db0ede41972e6
+      internalID: -1762821804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_19
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 3
+        width: 69
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa71f03c30a05bf4a88d195b9925a349
+      internalID: 730530555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_20
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 3
+        width: 72
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385b87b47b622e941ad35377b8bfdb74
+      internalID: -985093578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_21
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 3
+        width: 69
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00eb1ed9cd31c914f98986f0d74ded08
+      internalID: -260452374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_22
+      rect:
+        serializedVersion: 2
+        x: 2212
+        y: 3
+        width: 69
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df31a49bef382c47a3b161029150f6e
+      internalID: -1424174608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_23
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 3
+        width: 62
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e38a717e6b29dd4f90290fad9b5de02
+      internalID: -1944775648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_24
+      rect:
+        serializedVersion: 2
+        x: 2409
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d4a911d98d32044b3c2c00c1be60e5
+      internalID: -1746958456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_25
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a6d3a2b5b66b94b8b7be2f43fc99cb
+      internalID: -210469226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_26
+      rect:
+        serializedVersion: 2
+        x: 2609
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb3b078aaf3e1b4d8f2619ed005cfbe
+      internalID: -439603406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_27
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e019c86ff3e19fb4898037fe1d8ffc34
+      internalID: 573808472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_28
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6b5c65d69b32343844b9895e06cfbe
+      internalID: 474086278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_29
+      rect:
+        serializedVersion: 2
+        x: 2909
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70837ea7bc1cfb47b13e96d9233dd49
+      internalID: 49450318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_30
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190a4d3a4f6602b469cd1d77ad5dceb6
+      internalID: 600593533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_31
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a799849a4b29b43ade25faa98bd641
+      internalID: 84459681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_32
+      rect:
+        serializedVersion: 2
+        x: 3209
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76022d82b84a8e540a2e9cd04cd8846b
+      internalID: 48634964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_33
+      rect:
+        serializedVersion: 2
+        x: 3309
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7960e94381342bc40963a3aea03c1fdd
+      internalID: 1095723601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_34
+      rect:
+        serializedVersion: 2
+        x: 3409
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd320d090e91636449df7dc39cdd7be3
+      internalID: -447648799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_35
+      rect:
+        serializedVersion: 2
+        x: 3509
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aced509e2fff6b84ea541f9e0051471f
+      internalID: -2090797114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_36
+      rect:
+        serializedVersion: 2
+        x: 3609
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9712d984dbee403408bc0a6d4c68dcb1
+      internalID: 1960244124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_37
+      rect:
+        serializedVersion: 2
+        x: 3709
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f61080d1adb38947aea4d0ff3af5779
+      internalID: -1171388674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_38
+      rect:
+        serializedVersion: 2
+        x: 3809
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83d8e18fc24c324eb56d79b13f56a7b
+      internalID: 1765164247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_39
+      rect:
+        serializedVersion: 2
+        x: 3909
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8bacf1669150b4c81af326f92b0770
+      internalID: 924183291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_40
+      rect:
+        serializedVersion: 2
+        x: 4009
+        y: 3
+        width: 72
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5a8b005dd3a1f4cb1bb5c266f5f982
+      internalID: 1988825658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_41
+      rect:
+        serializedVersion: 2
+        x: 4119
+        y: 3
+        width: 62
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81bed76aa6b2e14ead286297374f606
+      internalID: -515375052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_42
+      rect:
+        serializedVersion: 2
+        x: 4212
+        y: 3
+        width: 69
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d5e057369681a4ba177997aba897ca
+      internalID: -210635797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_43
+      rect:
+        serializedVersion: 2
+        x: 4312
+        y: 3
+        width: 69
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d901d69a3e0374b846a22271da1727
+      internalID: 659865654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_44
+      rect:
+        serializedVersion: 2
+        x: 4409
+        y: 3
+        width: 72
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da2383e07d50ee41820c34e1221aa28
+      internalID: -1050614071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_45
+      rect:
+        serializedVersion: 2
+        x: 4512
+        y: 3
+        width: 69
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67885681036ff004aaa1eebf560565ed
+      internalID: 1407295049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_46
+      rect:
+        serializedVersion: 2
+        x: 4616
+        y: 3
+        width: 65
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b0c8d5a901aac42a483dda2d88ac53
+      internalID: -1574142251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_47
+      rect:
+        serializedVersion: 2
+        x: 4716
+        y: 3
+        width: 65
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49525ebe2547fe4d9e8e1272f5e733e
+      internalID: 2005527868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_48
+      rect:
+        serializedVersion: 2
+        x: 4812
+        y: 3
+        width: 69
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3bf184dd98bec42b1d53ee8272f610
+      internalID: 1565976842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_49
+      rect:
+        serializedVersion: 2
+        x: 4919
+        y: 3
+        width: 62
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64675671b154f344af92b0692513e22
+      internalID: -984567597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_50
+      rect:
+        serializedVersion: 2
+        x: 5019
+        y: 3
+        width: 62
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702c614cbf93d0f4195f211d35918ebf
+      internalID: -1403041874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_51
+      rect:
+        serializedVersion: 2
+        x: 5119
+        y: 3
+        width: 62
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96785e51c861bc4e870de2183e21a0d
+      internalID: -1885959511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_52
+      rect:
+        serializedVersion: 2
+        x: 5219
+        y: 3
+        width: 62
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109baf22f61170044b429b339549d57d
+      internalID: 234830895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_53
+      rect:
+        serializedVersion: 2
+        x: 5316
+        y: 3
+        width: 65
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204324dc63aef8743b87609c73d96b82
+      internalID: -1993886732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_54
+      rect:
+        serializedVersion: 2
+        x: 5409
+        y: 3
+        width: 72
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e71bb1fc3168aa4f8dbc5b13901da98
+      internalID: 674429180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_55
+      rect:
+        serializedVersion: 2
+        x: 5506
+        y: 3
+        width: 75
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ea3e1b46797cf4d91ae3d756df1daa
+      internalID: 1687400305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_56
+      rect:
+        serializedVersion: 2
+        x: 5603
+        y: 3
+        width: 78
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19640bf22411e34fbfd5106077dd81f
+      internalID: 1997563856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_57
+      rect:
+        serializedVersion: 2
+        x: 5703
+        y: 3
+        width: 78
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d7bd68c4d83eb4188eeddff1a0d031
+      internalID: 2030959245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_58
+      rect:
+        serializedVersion: 2
+        x: 5803
+        y: 3
+        width: 78
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2e4619eec17234d9b78f01fbacb950
+      internalID: -620745794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_59
+      rect:
+        serializedVersion: 2
+        x: 5909
+        y: 3
+        width: 72
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e58e1c2e808f3848b7f0b7091a0217a
+      internalID: -496227348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_60
+      rect:
+        serializedVersion: 2
+        x: 6009
+        y: 3
+        width: 72
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230c821688af0ef419dfee98eb9bc2c5
+      internalID: -1925703887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_61
+      rect:
+        serializedVersion: 2
+        x: 6119
+        y: 3
+        width: 62
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3b1de840f267442bdd0ffd864eb033
+      internalID: -2089473550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_62
+      rect:
+        serializedVersion: 2
+        x: 6225
+        y: 3
+        width: 56
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb80b2c154ef1b1419644903e19e07a6
+      internalID: 2032009241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnakeAttackFixed_63
+      rect:
+        serializedVersion: 2
+        x: 6319
+        y: 3
+        width: 62
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8bdbf5e309d844ba7dd32116ccfd8b
+      internalID: 1298675364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SnakeAttackFixed_51: -1885959511
+      SnakeAttackFixed_63: 1298675364
+      SnakeAttackFixed_21: -260452374
+      SnakeAttackFixed_46: -1574142251
+      SnakeAttackFixed_31: 84459681
+      SnakeAttackFixed_48: 1565976842
+      SnakeAttackFixed_41: -515375052
+      SnakeAttackFixed_29: 49450318
+      SnakeAttackFixed_12: 2085193087
+      SnakeAttackFixed_15: 2130551625
+      SnakeAttackFixed_6: -162795165
+      SnakeAttackFixed_43: 659865654
+      SnakeAttackFixed_18: -1762821804
+      SnakeAttackFixed_27: 573808472
+      SnakeAttackFixed_35: -2090797114
+      SnakeAttackFixed_1: -587901286
+      SnakeAttackFixed_2: 1057314297
+      SnakeAttackFixed_13: 300238414
+      SnakeAttackFixed_26: -439603406
+      SnakeAttackFixed_54: 674429180
+      SnakeAttackFixed_9: -2086580802
+      SnakeAttackFixed_25: -210469226
+      SnakeAttackFixed_5: 1421450740
+      SnakeAttackFixed_42: -210635797
+      SnakeAttackFixed_14: -543714907
+      SnakeAttackFixed_56: 1997563856
+      SnakeAttackFixed_37: -1171388674
+      SnakeAttackFixed_53: -1993886732
+      SnakeAttackFixed_20: -985093578
+      SnakeAttackFixed_45: 1407295049
+      SnakeAttackFixed_28: 474086278
+      SnakeAttackFixed_0: -185616594
+      SnakeAttackFixed_23: -1944775648
+      SnakeAttackFixed_39: 924183291
+      SnakeAttackFixed_33: 1095723601
+      SnakeAttackFixed_58: -620745794
+      SnakeAttackFixed_24: -1746958456
+      SnakeAttackFixed_50: -1403041874
+      SnakeAttackFixed_8: -944956547
+      SnakeAttackFixed_38: 1765164247
+      SnakeAttackFixed_10: 680637280
+      SnakeAttackFixed_44: -1050614071
+      SnakeAttackFixed_57: 2030959245
+      SnakeAttackFixed_30: 600593533
+      SnakeAttackFixed_60: -1925703887
+      SnakeAttackFixed_47: 2005527868
+      SnakeAttackFixed_32: 48634964
+      SnakeAttackFixed_4: 351257713
+      SnakeAttackFixed_19: 730530555
+      SnakeAttackFixed_34: -447648799
+      SnakeAttackFixed_17: -1232060622
+      SnakeAttackFixed_49: -984567597
+      SnakeAttackFixed_62: 2032009241
+      SnakeAttackFixed_7: -1946121301
+      SnakeAttackFixed_16: 979554140
+      SnakeAttackFixed_40: 1988825658
+      SnakeAttackFixed_61: -2089473550
+      SnakeAttackFixed_36: 1960244124
+      SnakeAttackFixed_52: 234830895
+      SnakeAttackFixed_3: -2007836815
+      SnakeAttackFixed_22: -1424174608
+      SnakeAttackFixed_55: 1687400305
+      SnakeAttackFixed_11: -247284685
+      SnakeAttackFixed_59: -496227348
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

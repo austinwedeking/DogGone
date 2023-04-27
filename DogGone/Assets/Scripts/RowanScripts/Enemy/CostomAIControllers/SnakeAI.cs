@@ -23,6 +23,11 @@ public class SnakeAI : BaseAI
     private int movementDirection;
     private bool facingRight;
 
+    [Space(10)] //TODO: add this to all base AI!!!
+    [Header("Death Info")]
+    [SerializeField] private float deathTimer;
+    [SerializeField] private string deathAnimName;
+
     private GameObject projectileRefference;
 
     private void Awake()
@@ -130,9 +135,10 @@ public class SnakeAI : BaseAI
 
     public override IEnumerator Die()
     {
-        //TODO: implement this
-        yield return new WaitForSeconds(0f);
         DropBones(-movementDirection);
+        AIRigid.velocity = new Vector2(0f, 0f); // prevent from moving
+        animator.Play(deathAnimName); // play death animation
+        yield return new WaitForSeconds(deathTimer);
         Destroy(gameObject);
     }
 }

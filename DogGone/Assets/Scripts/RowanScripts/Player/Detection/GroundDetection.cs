@@ -7,6 +7,8 @@ public class GroundDetection : MonoBehaviour
     [SerializeField]
     private bool startGroundedState = false;
 
+    [SerializeField] GameObject landAffect;
+
     private PlayerMovement playerController;
 
     private int count = 0;
@@ -25,6 +27,9 @@ public class GroundDetection : MonoBehaviour
         {
             playerController.toggleGrounded(true);
             ++count;
+            if (count == 1) {
+                Instantiate(landAffect, new Vector2(transform.position.x, transform.position.y + 0.33f), Quaternion.identity);
+            }
         }
     }
 

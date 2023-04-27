@@ -517,3 +517,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGroundedState: 0
+  landAffect: {fileID: 7600197985974136990, guid: f8fd17bcba7737045b4070eacb150c51, type: 3}
