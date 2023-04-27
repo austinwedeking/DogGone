@@ -15,6 +15,8 @@ public class LoadLevel : MonoBehaviour
     ShopScript shopScript;
     AudioManager audioManager;
 
+    [SerializeField] private LayerMask playerLayer;
+
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -30,7 +32,58 @@ public class LoadLevel : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 4)
         {
-            this.gameObject.transform.position = new Vector2(175.18f, -0.62f);
+            this.gameObject.transform.position = new Vector2(175.18f, -0.43f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Collider2D[] temp;
+            temp = Physics2D.OverlapCircleAll(transform.position, 2f, playerLayer);
+
+            foreach (Collider2D collision in temp)
+            {
+                if (collision != null && collision.tag == "Player")
+                {
+                    Debug.Log("Loading new level...");
+
+                    //if (eatPoster != null)
+                    //{
+                    //    eatPoster.SetActive(false);
+                    //}
+                    //Debug.Log(playerData.GetCurrentPlayerHealth());
+                    //levelChange.SetTemp(playerData.GetCurrentPlayerHealth());
+                    //playerData.SetCurrentPlayerHealth(levelChange.GetTemp());
+                    //healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
+                    //Debug.Log(playerData.GetCurrentPlayerHealth());
+
+                    if (levelChange.GetTemp() <= 0)
+                    {
+                        if (shopScript.timesPurchased == 0)
+                        {
+                            levelChange.SetTemp(100);
+                        }
+                        else if (shopScript.timesPurchased == 1)
+                        {
+                            levelChange.SetTemp(150);
+                        }
+                        else if (shopScript.timesPurchased == 2)
+                        {
+                            levelChange.SetTemp(200);
+                        }
+                    }
+
+                    if (SceneManager.GetActiveScene().buildIndex + 1 == 4)
+                    {
+                        audioManager.StopPlaying("MonkeysSpinningMonkeys");
+                        audioManager.StopPlaying("ForestAmbience");
+                        audioManager.Play("CityTheme");
+                    }
+
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+                    levelChange.PsuedoStart();
+                }
+            }
         }
     }
 
@@ -38,71 +91,7 @@ public class LoadLevel : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            Debug.Log("Loading new level...");
 
-            //if (eatPoster != null)
-            //{
-            //    eatPoster.SetActive(false);
-            //}
-            //Debug.Log(playerData.GetCurrentPlayerHealth());
-            //levelChange.SetTemp(playerData.GetCurrentPlayerHealth());
-            //playerData.SetCurrentPlayerHealth(levelChange.GetTemp());
-            //healthBar.SetHealth(playerData.GetCurrentPlayerHealth());
-            //Debug.Log(playerData.GetCurrentPlayerHealth());
-
-            if (levelChange.GetTemp() <= 0)
-            {
-                if (shopScript.timesPurchased == 0)
-                {
-                    levelChange.SetTemp(100);
-                }
-                else if (shopScript.timesPurchased == 1)
-                {
-                    levelChange.SetTemp(150);
-                }
-                else if (shopScript.timesPurchased == 2)
-                {
-                    levelChange.SetTemp(200);
-                }
-            }
-
-            if (SceneManager.GetActiveScene().buildIndex + 1 == 4)
-            {
-                audioManager.StopPlaying("MonkeysSpinningMonkeys");
-                audioManager.StopPlaying("ForestAmbience");
-                audioManager.Play("CityTheme");
-            }
-
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-            levelChange.PsuedoStart();
-
-            //StartCoroutine(Wait());
-
-            //button1 = GameObject.Find("FirstOption");
-            //if (button1 != null)
-            //{
-            //    button1.SetActive(false);
-            //}
-
-            //button2 = GameObject.Find("SecondOption");
-            //if (button2 != null)
-            //{
-            //    button2.SetActive(false);
-            //}
-
-            //eatPoster = GameObject.Find("eat_poster2");
-            //if (eatPoster != null)
-            //{
-            //    eatPoster.SetActive(false);
-            //}
         }
     }
-
-    //private IEnumerator Wait()
-    //{
-    //    yield return new WaitForSeconds(0.5f);
-
-    //    levelChange.PsuedoStart();
-    //}
 }

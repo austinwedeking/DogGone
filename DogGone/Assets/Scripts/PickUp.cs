@@ -10,7 +10,7 @@ public class PickUp : MonoBehaviour
     SpriteRenderer inventorySlot1Renderer;
 
     [Tooltip("This should be a reference to an ability prefab")]
-    [SerializeField] GameObject abilityReference;
+    public GameObject abilityReference;
     [SerializeField] string abilityName;
 
     void Start(){

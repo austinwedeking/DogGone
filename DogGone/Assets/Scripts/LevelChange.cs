@@ -42,6 +42,8 @@ public class LevelChange : MonoBehaviour
     private int temp = 0; public int GetTemp() { return temp; } public void SetTemp(int i) { temp = i; }
     private int tempBones = 0; public int GetTempBones() { return tempBones; } public void SetTempBones(int i) { tempBones = i; }
 
+    [SerializeField] GameObject boneObject;
+
 
     private void Start()
     {
@@ -198,9 +200,25 @@ public class LevelChange : MonoBehaviour
                 {
                     player = GameObject.Find("Player");
                 }
+                
+                if (theInventoryScript.find(randAbility1.GetComponent<PickUp>().abilityReference.name) == null)
+                {
+                    Debug.Log(randAbility1.GetComponent<PickUp>().abilityReference.name);
+                    Debug.Log(theInventoryScript.find(randAbility1.GetComponent<PickUp>().abilityReference.name));
+                    Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
+                    Instantiate(randAbility1, tempVector, Quaternion.identity);
+                }
+                else
+                {
+                    Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
 
-                Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
-                Instantiate(randAbility1, tempVector, Quaternion.identity);
+                    GameObject temp;
+                    for (int i = 0; i < 20; ++i)
+                    {
+                        temp = Instantiate(boneObject, tempVector, Quaternion.identity);
+                        temp.GetComponent<BoneScript>().Spawn(new Vector2(0, 0));
+                    }
+                }
             }
             else
             {
@@ -222,8 +240,24 @@ public class LevelChange : MonoBehaviour
                     player = GameObject.Find("Player");
                 }
 
-                Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
-                Instantiate(randAbility2, tempVector, Quaternion.identity);
+                if (theInventoryScript.find(randAbility2.GetComponent<PickUp>().abilityReference.name) == null)
+                {
+                    Debug.Log(randAbility2.GetComponent<PickUp>().abilityReference.name);
+                    Debug.Log(theInventoryScript.find(randAbility2.GetComponent<PickUp>().abilityReference.name));
+                    Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
+                    Instantiate(randAbility2, tempVector, Quaternion.identity);
+                }
+                else
+                {
+                    Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
+
+                    GameObject temp;
+                    for (int i = 0; i < 20; ++i)
+                    {
+                        temp = Instantiate(boneObject, tempVector, Quaternion.identity);
+                        temp.GetComponent<BoneScript>().Spawn(new Vector2(0, 0));
+                    }
+                }
             }
             else
             {

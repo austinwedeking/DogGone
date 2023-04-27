@@ -89,3 +89,4 @@ MonoBehaviour:
     and dealing damage! Selecting this when already having this ability will give
     bones instead.
   index: 0
+  boneObject: {fileID: 8488709929069242251, guid: 967307e4e5c21ae46ae537a4a2d14817, type: 3}
