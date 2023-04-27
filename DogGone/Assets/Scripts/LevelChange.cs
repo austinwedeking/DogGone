@@ -44,6 +44,12 @@ public class LevelChange : MonoBehaviour
 
     [SerializeField] GameObject boneObject;
 
+    [SerializeField] GameObject fireUI;
+    [SerializeField] GameObject waterUI;
+    [SerializeField] GameObject airUI;
+    [SerializeField] GameObject earthUI;
+
+    PlayerMovement playerMovement;
 
     private void Start()
     {
@@ -55,7 +61,7 @@ public class LevelChange : MonoBehaviour
 
     private void Update()
     {
-       if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             enemyList = GameObject.FindGameObjectsWithTag("Enemy");
             for (int i = 0; i < enemyList.Length; i++)
@@ -65,6 +71,46 @@ public class LevelChange : MonoBehaviour
                     enemyList[i].GetComponent<EnemyData>().takeDamage(1000, 0, 0);
                 }
             }
+        }
+
+        for (int i = 0; i <= theInventoryScript.lastValidSpot; ++i)
+        {
+            if (theInventoryScript.find("FireAbility") != null)
+            {
+                fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+            }
+            else if (theInventoryScript.find("WaterAbility") != null)
+            {
+                waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+            }
+            else if (theInventoryScript.find("DashAbility") != null)
+            {
+                airUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+            }
+            else if (theInventoryScript.find("EarthAbility") != null)
+            {
+                earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+            }
+        }
+
+        if (playerMovement.GetAbility1Use() && (theInventoryScript.find("FireAbility") != null))
+        {
+            fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        }
+
+        if (playerMovement.GetAbility2Use() && (theInventoryScript.find("DashAbility") != null))
+        {
+            airUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        }
+
+        if (playerMovement.GetAbility3Use() && (theInventoryScript.find("WaterAbility") != null))
+        {
+            waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        }
+
+        if (playerMovement.GetAbility4Use() && (theInventoryScript.find("EarthAbility") != null))
+        {
+            earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
         }
     }
 
@@ -92,6 +138,8 @@ public class LevelChange : MonoBehaviour
         {
             eatPoster.SetActive(false);
         }
+
+        playerMovement = FindObjectOfType<PlayerMovement>();
     }
 
     private void Awake()

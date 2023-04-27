@@ -10,6 +10,12 @@ public class ShopScript : MonoBehaviour
     private int price = 0;
     public GameObject shopUI;
 
+    [SerializeField] GameObject fireUI;
+    [SerializeField] GameObject waterUI;
+    [SerializeField] GameObject airUI;
+    [SerializeField] GameObject earthUI;
+
+
     [SerializeField] GameObject healthUpgradeInfo;
     [SerializeField] GameObject healInfo;
 
@@ -37,12 +43,22 @@ public class ShopScript : MonoBehaviour
     {
         shopUI.SetActive(false);
         shopIsOpen = false;
+
+        fireUI.SetActive(true);
+        waterUI.SetActive(true);
+        airUI.SetActive(true);
+        earthUI.SetActive(true);
     }
 
     public void OpenShop()
     {
         shopUI.SetActive(true);
         shopIsOpen = true;
+
+        fireUI.SetActive(false);
+        waterUI.SetActive(false);
+        airUI.SetActive(false);
+        earthUI.SetActive(false);
 
         playerData = FindObjectOfType<PlayerData>();
         healthBar = FindObjectOfType<HealthBar>();

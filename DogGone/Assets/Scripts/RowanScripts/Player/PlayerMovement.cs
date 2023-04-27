@@ -48,10 +48,10 @@ public class PlayerMovement : MonoBehaviour
 
     // ability bools
     private bool canAttack;
-    private bool canUseAbility1;
-    private bool canUseAbility2;
-    private bool canUseAbility3;
-    private bool canUseAbility4;
+    private bool canUseAbility1; public bool GetAbility1Use() { return canUseAbility1; }
+    private bool canUseAbility2; public bool GetAbility2Use() { return canUseAbility2; }
+    private bool canUseAbility3; public bool GetAbility3Use() { return canUseAbility3; }
+    private bool canUseAbility4; public bool GetAbility4Use() { return canUseAbility4; }
 
     private bool grounded;
     private bool isHittingRightWall;
