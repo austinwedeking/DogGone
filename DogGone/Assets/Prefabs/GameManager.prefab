@@ -90,3 +90,7 @@ MonoBehaviour:
     bones instead.
   index: 0
   boneObject: {fileID: 8488709929069242251, guid: 967307e4e5c21ae46ae537a4a2d14817, type: 3}
+  fireUI: {fileID: 0}
+  waterUI: {fileID: 0}
+  airUI: {fileID: 0}
+  earthUI: {fileID: 0}

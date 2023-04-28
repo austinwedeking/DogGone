@@ -44,10 +44,10 @@ public class LevelChange : MonoBehaviour
 
     [SerializeField] GameObject boneObject;
 
-    [SerializeField] GameObject fireUI;
-    [SerializeField] GameObject waterUI;
-    [SerializeField] GameObject airUI;
-    [SerializeField] GameObject earthUI;
+    public GameObject fireUI;
+    public GameObject waterUI;
+    public GameObject airUI;
+    public GameObject earthUI;
 
     PlayerMovement playerMovement;
 
@@ -93,25 +93,25 @@ public class LevelChange : MonoBehaviour
             }
         }
 
-        if (playerMovement.GetAbility1Use() && (theInventoryScript.find("FireAbility") != null))
-        {
-            fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
-        }
+        //if (playerMovement.GetAbility1Use() && (theInventoryScript.find("FireAbility") != null))
+        //{
+        //    fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        //}
 
-        if (playerMovement.GetAbility2Use() && (theInventoryScript.find("DashAbility") != null))
-        {
-            airUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
-        }
+        //if (playerMovement.GetAbility2Use() && (theInventoryScript.find("DashAbility") != null))
+        //{
+        //    airUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        //}
 
-        if (playerMovement.GetAbility3Use() && (theInventoryScript.find("WaterAbility") != null))
-        {
-            waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
-        }
+        //if (playerMovement.GetAbility3Use() && (theInventoryScript.find("WaterAbility") != null))
+        //{
+        //    waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        //}
 
-        if (playerMovement.GetAbility4Use() && (theInventoryScript.find("EarthAbility") != null))
-        {
-            earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
-        }
+        //if (playerMovement.GetAbility4Use() && (theInventoryScript.find("EarthAbility") != null))
+        //{
+        //    earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        //}
     }
 
     public void PsuedoStart()

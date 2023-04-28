@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -53,6 +54,9 @@ public class PlayerMovement : MonoBehaviour
     private bool canUseAbility3; public bool GetAbility3Use() { return canUseAbility3; }
     private bool canUseAbility4; public bool GetAbility4Use() { return canUseAbility4; }
 
+    LevelChange levelChange;
+    Inventory inventoryScript;
+
     private bool grounded;
     private bool isHittingRightWall;
     private bool isHittingLeftWall;
@@ -94,6 +98,9 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
 
         //currArrayPos = 0;
+
+        levelChange = FindObjectOfType<LevelChange>();
+        inventoryScript = FindObjectOfType<Inventory>();
     }
 
     public void ToggleMovement()
@@ -110,6 +117,26 @@ public class PlayerMovement : MonoBehaviour
 
         // for debuging
         //Debug.Log(rigid.velocity.x);
+
+        if (canUseAbility1 && (inventoryScript.find("FireAbility") != null))
+        {
+            levelChange.fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        }
+
+        if (canUseAbility2 && (inventoryScript.find("DashAbility") != null))
+        {
+            levelChange.airUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        }
+
+        if (canUseAbility3 && (inventoryScript.find("WaterAbility") != null))
+        {
+            levelChange.waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        }
+
+        if (canUseAbility4 && (inventoryScript.find("EarthAbility") != null))
+        {
+            levelChange.earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        }
     }
 
     //public void addAbility(string name)

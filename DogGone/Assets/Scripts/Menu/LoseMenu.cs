@@ -88,6 +88,7 @@ public class LoseMenu : MonoBehaviour
         Debug.Log("Loading menu...");
         audioManager.StopPlaying("MonkeysSpinningMonkeys");
         audioManager.StopPlaying("ForestAmbience");
+        audioManager.StopPlaying("CityTheme");
         Destroy(canvas);
 
         for (int i = 0; i < theInventoryScript.lastValidSpot; i++)

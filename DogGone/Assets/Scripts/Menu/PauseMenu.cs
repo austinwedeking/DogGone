@@ -79,6 +79,7 @@ public class PauseMenu : MonoBehaviour
 
         audioManager.StopPlaying("MonkeysSpinningMonkeys");
         audioManager.StopPlaying("ForestAmbience");
+        audioManager.StopPlaying("CityTheme");
 
         for (int i = 0; i < theInventoryScript.lastValidSpot; i++)
         {
