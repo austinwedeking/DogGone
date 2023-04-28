@@ -53,7 +53,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: DogBark
     clip: {fileID: 8300000, guid: 71fc3b331e240924e9c6e30d5be118de, type: 3}
-    volume: 0.25
+    volume: 0.75
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -95,7 +95,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ForestAmbience
     clip: {fileID: 8300000, guid: 50b53a7218c68be48ae7cef7740cd7f6, type: 3}
-    volume: 0.25
+    volume: 0.15
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: CityTheme
+    clip: {fileID: 8300000, guid: ab3d0d199b2c8a340aa8112d86447693, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
