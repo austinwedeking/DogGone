@@ -158,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1619358231617397932, guid: a9af12ca294ceb24183fe47305306bd9, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1619358231617397932, guid: a9af12ca294ceb24183fe47305306bd9, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[6]
@@ -166,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1619358231617397932, guid: a9af12ca294ceb24183fe47305306bd9, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[7]
-      value: 430162715
+      value: 591694765
       objectReference: {fileID: 0}
     - target: {fileID: 1857236602806077742, guid: a9af12ca294ceb24183fe47305306bd9, type: 3}
       propertyPath: m_Name

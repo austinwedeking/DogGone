@@ -29,18 +29,18 @@ public class LightPulse : MonoBehaviour
 
             if (lightIncreasing == true && orbLight.intensity < 5)
             {
-                orbLight.intensity += 1; //brighten
+                orbLight.intensity += 0.5f; //brighten
             }
             else if (lightIncreasing == true && orbLight.intensity >= 5)
             {
                 lightIncreasing = false; //start dim
             }
 
-            if (lightIncreasing == false && orbLight.intensity > 2)
+            if (lightIncreasing == false && orbLight.intensity > 0.5)
             {
-                orbLight.intensity -= 1; //dim
+                orbLight.intensity -= 0.5f; //dim
             }
-            else if (lightIncreasing == false && orbLight.intensity <= 2)
+            else if (lightIncreasing == false && orbLight.intensity <= 0.5)
             {
                 lightIncreasing = true; //start brighten
             }
