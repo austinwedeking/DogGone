@@ -122,20 +122,36 @@ public class PlayerMovement : MonoBehaviour
         {
             levelChange.fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
         }
+        else if (!canUseAbility1 && (inventoryScript.find("FireAbility") != null))
+        {
+            levelChange.fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+        }
 
         if (canUseAbility2 && (inventoryScript.find("DashAbility") != null))
         {
             levelChange.airUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        }
+        else if (!canUseAbility2 && (inventoryScript.find("DashAbility") != null))
+        {
+            levelChange.airUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
         }
 
         if (canUseAbility3 && (inventoryScript.find("WaterAbility") != null))
         {
             levelChange.waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
         }
+        else if (!canUseAbility3 && (inventoryScript.find("WaterAbility") != null))
+        {
+            levelChange.waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+        }
 
         if (canUseAbility4 && (inventoryScript.find("EarthAbility") != null))
         {
             levelChange.earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+        }
+        else if (!canUseAbility4 && (inventoryScript.find("EarthAbility") != null))
+        {
+            levelChange.earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
         }
     }
 
