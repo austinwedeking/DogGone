@@ -26,6 +26,8 @@ public class ProjectileScript : MonoBehaviour
 
     private void Start()
     {
+        direction = 1;
+
         FindObjectOfType<AudioManager>().Play("FireCast");
 
         playerMovement = FindObjectOfType<PlayerMovement>();
@@ -61,7 +63,16 @@ public class ProjectileScript : MonoBehaviour
                     }
                     else
                     { direction = -1; }
-                } 
+                } else if (owner.GetComponent<BossAI>() != null)
+                {
+                    if (owner.GetComponent<BossAI>().IsFacingRight())
+                    {
+                        direction = 1;
+                    } else
+                    {
+                        direction = -1;
+                    }
+                }
             }
         }
     }
@@ -130,5 +141,10 @@ public class ProjectileScript : MonoBehaviour
     public void SetOwner(GameObject obj)
     {
         owner = obj;
+    }
+
+    public void SetDirection(int _direction)
+    {
+        direction = _direction;
     }
 }
