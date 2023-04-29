@@ -209,7 +209,7 @@ public class LevelChange : MonoBehaviour
                 {
                     Debug.Log(randAbility1.GetComponent<PickUp>().abilityReference.name);
                     Debug.Log(theInventoryScript.find(randAbility1.GetComponent<PickUp>().abilityReference.name));
-                    Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
+                    Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
                     Instantiate(randAbility1, tempVector, Quaternion.identity);
                 }
                 else
@@ -248,7 +248,7 @@ public class LevelChange : MonoBehaviour
                 {
                     Debug.Log(randAbility2.GetComponent<PickUp>().abilityReference.name);
                     Debug.Log(theInventoryScript.find(randAbility2.GetComponent<PickUp>().abilityReference.name));
-                    Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y + 2, player.transform.position.z);
+                    Vector3 tempVector = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
                     Instantiate(randAbility2, tempVector, Quaternion.identity);
                 }
                 else
