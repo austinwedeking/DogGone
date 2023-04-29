@@ -782,7 +782,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Heal
+  m_Text: Full Heal
 --- !u!114 &5542871199265817730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,7 +1866,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cost: 100 Bones. Restores 50 HP to the player up to their maximum health.'
+  m_Text: 'Cost: 100 Bones. Restores the player to their maximum health.'
 --- !u!114 &6016757682208543681
 MonoBehaviour:
   m_ObjectHideFlags: 0

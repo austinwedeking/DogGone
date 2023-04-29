@@ -76,7 +76,7 @@ public class ShopScript : MonoBehaviour
                 levelChange.SetTempBones(playerData.GetBones());
                 playerData.AquireBones(0);
 
-                playerData.SetCurrentPlayerHealth(playerData.GetCurrentPlayerHealth() + 50);
+                playerData.SetCurrentPlayerHealth(playerData.GetMaxPlayerHealth());
 
                 if (playerData.GetCurrentPlayerHealth() > playerData.GetMaxPlayerHealth())
                 {

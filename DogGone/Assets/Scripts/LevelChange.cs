@@ -51,8 +51,6 @@ public class LevelChange : MonoBehaviour
 
     PlayerMovement playerMovement;
 
-    public bool CityPlacement = false;
-
     private void Start()
     {
         player = FindObjectOfType<PlayerData>().gameObject;
