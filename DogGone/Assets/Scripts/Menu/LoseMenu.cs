@@ -76,9 +76,14 @@ public class LoseMenu : MonoBehaviour
             }
         }
 
-        
 
-        levelChange.ResetEnemies();
+        if (levelChange.GetComponent<LevelChange>().index >= 4){
+            levelChange.CityPlacement = true;
+        }
+
+
+
+            levelChange.ResetEnemies();
         SceneManager.LoadScene(levelChange.GetComponent<LevelChange>().index);
         levelChange.PsuedoStart();
     }

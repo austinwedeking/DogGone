@@ -28,7 +28,7 @@ public class PlayerData : MonoBehaviour
 
         //AquireBones(0);
 
-        if (SceneManager.GetActiveScene().buildIndex == 5)
+        if (SceneManager.GetActiveScene().buildIndex >= 4)
         {
             gameObject.transform.position = new Vector3(-32.5f, 2, 0);
         }

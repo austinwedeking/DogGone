@@ -9,7 +9,7 @@ public class CityCamera : MonoBehaviour
 
     void Start()
     { //Gets the player object on start
-        gameObject.transform.position = new Vector3(-26.1f, -1, -10);
+        gameObject.transform.position = new Vector3(-26.1f, 2, -10);
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
     void Update()
