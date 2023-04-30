@@ -24,8 +24,12 @@ public class ProjectileScript : MonoBehaviour
     [Header("Projectile Options")]
     [SerializeField] private bool firedFromPlayer;
 
+    private bool hasFoundOwner;
+
     private void Start()
     {
+        hasFoundOwner = false;
+
         direction = 1;
 
         FindObjectOfType<AudioManager>().Play("FireCast");
@@ -65,6 +69,7 @@ public class ProjectileScript : MonoBehaviour
                     { direction = -1; }
                 } else if (owner.GetComponent<BossAI>() != null)
                 {
+                    //Debug.LogWarning("Found the boss AI");
                     if (owner.GetComponent<BossAI>().IsFacingRight())
                     {
                         direction = 1;
@@ -79,6 +84,25 @@ public class ProjectileScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!hasFoundOwner)
+        {
+            if (owner != null)
+            {
+                if (owner.GetComponent<BossAI>() != null)
+                {
+                    if (owner.GetComponent<BossAI>().IsFacingRight())
+                    {
+                        direction = 1;
+                    }
+                    else
+                    {
+                        direction = -1;
+                    }
+                    hasFoundOwner = true;
+                }
+            }
+        }
+
         gameObject.transform.position = new Vector2(gameObject.transform.position.x + speed * (direction), gameObject.transform.position.y);
         Collider2D collision = Physics2D.OverlapCircle(gameObject.transform.position, detectRadius, groundLayer);
         if (collision != null) { Debug.Log("Fireball has been destroyed");  Destroy(gameObject); }

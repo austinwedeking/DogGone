@@ -102,7 +102,7 @@ public class BossAI : BaseAI
         switch (bossAttackState)
         {
             case attackState.Kick:
-                currentAttackState = attackState.Kick;
+                //
                 bossData.attackTimer = bossData.kickTimer;
                 Debug.Log($"Kicking, {bossData.attackTimer}");
 
@@ -110,7 +110,9 @@ public class BossAI : BaseAI
                 currentOrigin = kickAttack;
                 AIRigid.velocity = new Vector2(0, 0);
 
-                AIRigid.velocity = new Vector2(6 * movementDirection, AIRigid.velocity.y);
+                StartCoroutine(kickCoroutine());
+
+                //AIRigid.velocity = new Vector2(6 * movementDirection, AIRigid.velocity.y);
 
                 animator.Play("KickAnimation");
 
@@ -127,8 +129,7 @@ public class BossAI : BaseAI
                 currentOrigin = kickAttack;
                 AIRigid.velocity = new Vector2(0, AIRigid.velocity.y);
 
-                GameObject bottleInstance = Instantiate(bottle, throwOrigin.transform.position, Quaternion.Euler(0, 0, 0));
-                bottleInstance.GetComponent<ProjectileScript>().SetOwner(this.gameObject);
+                StartCoroutine(bottleCoroutine());
 
                 animator.Play("BottleAnimation");
 
@@ -160,6 +161,29 @@ public class BossAI : BaseAI
                 ChooseNewState();
                 break;
         }
+    }
+
+    private IEnumerator kickCoroutine()
+    {
+        yield return new WaitForSeconds(kickDelay);
+        currentAttackState = attackState.Kick;
+        AIRigid.velocity = new Vector2(6 * movementDirection, AIRigid.velocity.y);
+    }
+
+    private IEnumerator bottleCoroutine()
+    {
+        yield return new WaitForSeconds(bottleDelay);
+        GameObject bottleInstance = Instantiate(bottle, throwOrigin.transform.position, Quaternion.Euler(0, 0, 0));
+        bottleInstance.GetComponent<ProjectileScript>().SetOwner(this.gameObject);
+        bottleInstance.GetComponent<Rigidbody2D>().gravityScale = 0.1f;
+
+        bottleInstance = Instantiate(bottle, throwOrigin.transform.position, Quaternion.Euler(0, 0, 0));
+        bottleInstance.GetComponent<ProjectileScript>().SetOwner(this.gameObject);
+        bottleInstance.GetComponent<Rigidbody2D>().gravityScale = 0.5f;
+
+        bottleInstance = Instantiate(bottle, throwOrigin.transform.position, Quaternion.Euler(0, 0, 0));
+        bottleInstance.GetComponent<ProjectileScript>().SetOwner(this.gameObject);
+        bottleInstance.GetComponent<Rigidbody2D>().gravityScale = 1f;
     }
 
     private void ChooseNewState()

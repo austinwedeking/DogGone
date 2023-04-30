@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3789201807209732993}
   - component: {fileID: 3789201807209732995}
   - component: {fileID: 3789201807209732996}
+  - component: {fileID: 9014650800532791529}
+  - component: {fileID: 5539857499958779208}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Untagged
@@ -76,7 +78,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -363372050, guid: 958e0e1b003ef18498b1411574549b36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -98,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  speed: 0.1
+  speed: 0.2
   animationName: 
   tagToDamage: Player
   groundLayer:
@@ -109,3 +111,44 @@ MonoBehaviour:
     m_Bits: 2048
   detectRadius: 1
   firedFromPlayer: 0
+--- !u!95 &9014650800532791529
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789201807209732997}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9053bb6580cc264bb712c51e1c281a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &5539857499958779208
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789201807209732997}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
