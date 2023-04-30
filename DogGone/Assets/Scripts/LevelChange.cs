@@ -49,12 +49,16 @@ public class LevelChange : MonoBehaviour
     public GameObject airUI;
     public GameObject earthUI;
 
+    TextAnimation textAnim;
+
     private void Start()
     {
         player = FindObjectOfType<PlayerData>().gameObject;
         if (player == null) { Debug.Log("No player found in active scene"); }
 
         playerData = FindObjectOfType<PlayerData>();
+
+        textAnim = FindObjectOfType<TextAnimation>();
     }
 
     private void Update()
@@ -96,6 +100,13 @@ public class LevelChange : MonoBehaviour
         {
             eatPoster.SetActive(false);
         }
+
+        Debug.Log("build index: " + SceneManager.GetActiveScene().buildIndex);
+
+        if (SceneManager.GetActiveScene().buildIndex > 2)
+        {
+            textAnim.NewLevel();
+        }
     }
 
     private void Awake()
@@ -134,6 +145,7 @@ public class LevelChange : MonoBehaviour
     public void GameOver()
     { //Loads the lose screen
         index = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("index: " + index);
         SceneManager.LoadScene(loseSceneIndex);
     }
 

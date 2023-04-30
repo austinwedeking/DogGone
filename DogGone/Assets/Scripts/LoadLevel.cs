@@ -14,6 +14,7 @@ public class LoadLevel : MonoBehaviour
     HealthBar healthBar;
     ShopScript shopScript;
     AudioManager audioManager;
+    TextAnimation textAnim;
 
     [SerializeField] private LayerMask playerLayer;
 
@@ -26,6 +27,7 @@ public class LoadLevel : MonoBehaviour
         healthBar = FindObjectOfType<HealthBar>();
         shopScript = FindObjectOfType<ShopScript>();
         audioManager = FindObjectOfType<AudioManager>();
+        textAnim = FindObjectOfType<TextAnimation>();
     }
 
     void Update()
@@ -80,6 +82,7 @@ public class LoadLevel : MonoBehaviour
                     }
 
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    //textAnim.NewLevel();
 
                     levelChange.PsuedoStart();
                 }
