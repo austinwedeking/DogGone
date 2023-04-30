@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     AudioManager audioManager;
+    ReadInput readInput;
     public static PauseMenu instance;
 
     GameObject theGameManager;
@@ -33,6 +34,7 @@ public class PauseMenu : MonoBehaviour
         {
             Debug.Log($"Cannot find {audioManager}");
         }
+        readInput = FindObjectOfType<ReadInput>();
 
         theGameManager = GameObject.Find("GameManager");
         theInventoryScript = theGameManager.GetComponent<Inventory>();
@@ -73,13 +75,18 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Loading menu...");
         pauseMenuUI.SetActive(false);
-        //Destroy(this.gameObject);
         Time.timeScale = 1f;
         GameIsPaused = false;
 
         audioManager.StopPlaying("MonkeysSpinningMonkeys");
         audioManager.StopPlaying("ForestAmbience");
         audioManager.StopPlaying("CityTheme");
+        audioManager.StopPlaying("GodPlan");
+        audioManager.StopPlaying("SafeReturn");
+
+        readInput.original = true;
+        readInput.drakemode = false;
+        readInput.whalemode = false;
 
         for (int i = 0; i < theInventoryScript.lastValidSpot; i++)
         {

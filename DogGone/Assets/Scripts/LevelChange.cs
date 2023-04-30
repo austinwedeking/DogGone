@@ -55,6 +55,8 @@ public class LevelChange : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("start function ran hello");
+
         audioManager = FindObjectOfType<AudioManager>();
 
         theGameManager = GameObject.Find("GameManager");
