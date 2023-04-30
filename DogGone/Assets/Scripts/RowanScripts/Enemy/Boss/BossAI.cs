@@ -186,18 +186,25 @@ public class BossAI : BaseAI
         bottleInstance.GetComponent<Rigidbody2D>().gravityScale = 1f;
     }
 
-    private void ChooseNewState()
-    {
-        switch (bossAttackState)
-        {
+    private void ChooseNewState(){
+        int Chance = Random.Range(1,101); //All of them are % chance to happen
+        switch (bossAttackState){
             case attackState.Kick:
-                bossAttackState = attackState.Bottle;
-
-                break;
+                if (Chance <= 50){
+                    bossAttackState = attackState.Idol;
+                }else if(Chance <= 85){
+                    bossAttackState = attackState.Bottle;
+                }else{
+                    bossAttackState = attackState.Kick;
+                }break;
             case attackState.Bottle:
-                bossAttackState = attackState.Kick; // remove this loop
-
-                break;
+                if (Chance <= 50){
+                    bossAttackState = attackState.Idol;
+                }else if (Chance <= 85){
+                    bossAttackState = attackState.Kick;
+                }else{
+                    bossAttackState = attackState.Bottle;
+                }break;
             case attackState.Fist:
                 bossAttackState = attackState.Lazer;
 
@@ -207,9 +214,13 @@ public class BossAI : BaseAI
 
                 break;
             case attackState.Idol:
-                bossAttackState = attackState.Kick;
-
-                break;
+                if (Chance <= 40 && isSecondPhase == false){
+                    bossAttackState = attackState.Kick;
+                }else if (Chance <= 80 && isSecondPhase == false){
+                    bossAttackState = attackState.Bottle;
+                }else{
+                    bossAttackState = attackState.Idol;
+                }break;
         }
     }
 
