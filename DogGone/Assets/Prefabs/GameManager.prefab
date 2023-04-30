@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f057421408e58fe4a81f0eac2af31205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   numEnemies: 0
   loseSceneIndex: 5
   winSceneIndex: 6
@@ -88,7 +89,6 @@ MonoBehaviour:
   - Vines shoot up from the ground by pressing 4, pinning enemies down momentarily
     and dealing damage! Selecting this when already having this ability will give
     bones instead.
-  index: 0
   boneObject: {fileID: 8488709929069242251, guid: 967307e4e5c21ae46ae537a4a2d14817, type: 3}
   fireUI: {fileID: 0}
   waterUI: {fileID: 0}

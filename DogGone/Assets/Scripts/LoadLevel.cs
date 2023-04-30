@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
+    public static LoadLevel instance;
+
     GameObject button1;
     GameObject button2;
     GameObject eatPoster;
@@ -20,7 +22,17 @@ public class LoadLevel : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
         levelChange = FindObjectOfType<LevelChange>();
         eatPoster = GameObject.Find("eat_poster");
         playerData = FindObjectOfType<PlayerData>();
@@ -32,7 +44,7 @@ public class LoadLevel : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (audioManager.index == 3)
         {
             this.gameObject.transform.position = new Vector2(175.18f, -0.43f);
         }
@@ -74,15 +86,16 @@ public class LoadLevel : MonoBehaviour
                         }
                     }
 
-                    if (SceneManager.GetActiveScene().buildIndex + 1 == 3)
+                    if (audioManager.index + 1 == 3)
                     {
                         audioManager.StopPlaying("MonkeysSpinningMonkeys");
                         audioManager.StopPlaying("ForestAmbience");
                         audioManager.Play("CityTheme");
                     }
 
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                    //textAnim.NewLevel();
+                    audioManager.index++;
+                    SceneManager.LoadScene(audioManager.index);
+                    Debug.Log("build index after load level: " + audioManager.index);
 
                     levelChange.PsuedoStart();
                 }

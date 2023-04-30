@@ -8,7 +8,7 @@ public class ShopScript : MonoBehaviour
     public static bool shopIsOpen = false; public bool GetShopIsOpen() { return shopIsOpen; }
     public int timesPurchased = 0;
     private int price = 0;
-    public GameObject shopUI;
+    GameObject shopUI;
 
     [SerializeField] GameObject fireUI;
     [SerializeField] GameObject waterUI;
@@ -28,9 +28,12 @@ public class ShopScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("this just ran");
         theGameManager = GameObject.Find("GameManager");
         theInventoryScript = theGameManager.GetComponent<Inventory>();
         levelChange = FindObjectOfType<LevelChange>();
+        shopUI = GameObject.Find("ShopScreen");
+        shopUI.SetActive(false);
     }
 
     // Update is called once per frame

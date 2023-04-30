@@ -21,6 +21,7 @@ public class PlayerData : MonoBehaviour
     public bool healthUpgrade = false;
 
     ShopScript shopScript;
+    AudioManager audioManager;
 
     public void Start()
     {
@@ -28,7 +29,12 @@ public class PlayerData : MonoBehaviour
 
         //AquireBones(0);
 
-        if (SceneManager.GetActiveScene().buildIndex >= 3)
+        levelChange = FindObjectOfType<LevelChange>();
+        if (levelChange == null) { Debug.LogError("bad"); }
+
+        audioManager = FindObjectOfType<AudioManager>();
+
+        if (audioManager.index >= 3)
         {
             gameObject.transform.position = new Vector3(-32.5f, 2, 0);
         }
@@ -36,9 +42,6 @@ public class PlayerData : MonoBehaviour
         {
             gameObject.transform.position = new Vector3(-32.5f, -1, 0);
         }
-
-        levelChange = FindObjectOfType<LevelChange>();
-        if (levelChange == null) { Debug.LogError("bad"); }
 
         healthBar = FindObjectOfType<HealthBar>();
         if (healthBar == null) { Debug.LogError("bad"); }
@@ -53,7 +56,7 @@ public class PlayerData : MonoBehaviour
 
         shopScript = FindObjectOfType<ShopScript>();
 
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (audioManager.index == 1)
         {
             currentHealth = 100;
             healthBar.SetMaxHealth(currentHealth);

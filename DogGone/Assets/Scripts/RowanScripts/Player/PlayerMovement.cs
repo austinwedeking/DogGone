@@ -79,8 +79,11 @@ public class PlayerMovement : MonoBehaviour
         if (inputManager == null) { Debug.LogError("No component of type PlayerInputManager attached to game object"); }
         if (attackPosition == null) { Debug.LogError("No attack position object attached to game object"); }
         playerAnimator = gameObject.GetComponent<Animator>();
-        inventory = FindObjectOfType<Inventory>();
-        if (inventory == null) { Debug.Log("Could not find inventory in game manager"); }
+        levelChange = FindObjectOfType<LevelChange>();
+        inventoryScript = FindObjectOfType<Inventory>();
+        Debug.LogWarning($"inventory script is {inventoryScript}");
+        //inventory = FindObjectOfType<Inventory>();
+        //if (inventory == null) { Debug.Log("Could not find inventory in game manager"); }
 
         canAttack = true;
         canUseAbility1 = true;
@@ -98,9 +101,6 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
 
         //currArrayPos = 0;
-
-        levelChange = FindObjectOfType<LevelChange>();
-        inventoryScript = FindObjectOfType<Inventory>();
     }
 
     public void ToggleMovement()
@@ -126,6 +126,10 @@ public class PlayerMovement : MonoBehaviour
         {
             levelChange.fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
         }
+        else if (!canUseAbility1 && (inventoryScript.find("FireAbility") == null))
+        {
+            levelChange.fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+        }
 
         if (canUseAbility2 && (inventoryScript.find("DashAbility") != null))
         {
@@ -134,6 +138,10 @@ public class PlayerMovement : MonoBehaviour
         else if (!canUseAbility2 && (inventoryScript.find("DashAbility") != null))
         {
             levelChange.airUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+        }
+        else if (!canUseAbility2 && (inventoryScript.find("DashAbility") == null))
+        {
+            levelChange.airUI.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
         }
 
         if (canUseAbility3 && (inventoryScript.find("WaterAbility") != null))
@@ -144,6 +152,10 @@ public class PlayerMovement : MonoBehaviour
         {
             levelChange.waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
         }
+        else if (!canUseAbility3 && (inventoryScript.find("WaterAbility") == null))
+        {
+            levelChange.waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+        }
 
         if (canUseAbility4 && (inventoryScript.find("EarthAbility") != null))
         {
@@ -152,6 +164,10 @@ public class PlayerMovement : MonoBehaviour
         else if (!canUseAbility4 && (inventoryScript.find("EarthAbility") != null))
         {
             levelChange.earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+        }
+        else if (!canUseAbility4 && (inventoryScript.find("EarthAbility") == null))
+        {
+            levelChange.earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
         }
     }
 
@@ -314,7 +330,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     break;
                 case 1:
-                    GameObject temp = inventory.find("FireAbility");
+                    GameObject temp = inventoryScript.find("FireAbility");
                     if (temp != null)
                     {
                         if (canUseAbility1)
@@ -326,23 +342,22 @@ public class PlayerMovement : MonoBehaviour
                     else { Debug.Log("1 was pressed but there is no ability"); }
                     break;
                 case 2:
-                    GameObject temp2 = inventory.find("DashAbility");
-                    if (temp2 != null)
+                    if (inventoryScript.find("DashAbility") != null)
                     {
                         if (canUseAbility2)
                         {
-                            temp2.GetComponent<BaseAbility>().Cast();
+                            inventoryScript.find("DashAbility").GetComponent<BaseAbility>().Cast();
 
                             // special case for dash ability
                             StartCoroutine(DashCooldwn());
                             FindObjectOfType<AudioManager>().Play("DogDash");
-                            StartCoroutine(Ability2Cooldown(temp2.GetComponent<BaseAbility>().GetCooldown()));
+                            StartCoroutine(Ability2Cooldown(inventoryScript.find("DashAbility").GetComponent<BaseAbility>().GetCooldown()));
                         }
                     }
                     else { Debug.Log("2 was pressed but there is no ability"); }
                     break;
                 case 3:
-                    GameObject temp3 = inventory.find("WaterAbility");
+                    GameObject temp3 = inventoryScript.find("WaterAbility");
                     if (temp3 != null)
                     {
                         if (canUseAbility3)
@@ -354,7 +369,7 @@ public class PlayerMovement : MonoBehaviour
                     else { Debug.Log("3 was pressed but there is no ability"); }
                     break;
                 case 4:
-                    GameObject temp4 = inventory.find("EarthAbility");
+                    GameObject temp4 = inventoryScript.find("EarthAbility");
                     if (temp4 != null)
                     {
                         if (canUseAbility4)

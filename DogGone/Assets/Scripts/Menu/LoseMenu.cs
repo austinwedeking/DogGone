@@ -46,19 +46,19 @@ public class LoseMenu : MonoBehaviour
         //    }
         //}
 
-        for (int i = levelChange.GetComponent<LevelChange>().index; i < levelChange.GetComponent<LevelChange>().index + 1; i++)
-        {
-            if (theInventoryScript.theInventory[i - 1] != null)
-            {
-                Debug.Log(theInventoryScript.theInventory[i - 1].name + " is in this spot");
-                theInventoryScript.theInventory[i - 1] = null;
-                if (theInventoryScript.theInventory[i - 1] == null)
-                {
-                    Debug.Log("same spot is now null");
-                }
-                theInventoryScript.nextSpot--;
-            }
-        }
+        //for (int i = levelChange.GetComponent<LevelChange>().index; i < levelChange.GetComponent<LevelChange>().index + 1; i++)
+        //{
+        //    if (theInventoryScript.theInventory[i - 1] != null)
+        //    {
+        //        Debug.Log(theInventoryScript.theInventory[i - 1].name + " is in this spot");
+        //        theInventoryScript.theInventory[i - 1] = null;
+        //        if (theInventoryScript.theInventory[i - 1] == null)
+        //        {
+        //            Debug.Log("same spot is now null");
+        //        }
+        //        theInventoryScript.nextSpot--;
+        //    }
+        //}
 
         if (levelChange.GetTemp() <= 0)
         {
@@ -77,8 +77,8 @@ public class LoseMenu : MonoBehaviour
         }
 
         levelChange.ResetEnemies();
-        SceneManager.LoadScene(levelChange.GetComponent<LevelChange>().index);
-        levelChange.PsuedoStart();
+        SceneManager.LoadScene(audioManager.index);
+        //levelChange.PsuedoStart();
     }
 
     public void LoadMenu()
@@ -96,7 +96,8 @@ public class LoseMenu : MonoBehaviour
 
         levelChange.ResetEnemies();
         theInventoryScript.nextSpot = 0;
-        SceneManager.LoadScene("Menu");
+        audioManager.index = 0;
+        SceneManager.LoadScene(audioManager.index);
     }
 
     public void QuitGame()

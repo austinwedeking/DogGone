@@ -73,7 +73,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Loading menu...");
         pauseMenuUI.SetActive(false);
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
         Time.timeScale = 1f;
         GameIsPaused = false;
 
@@ -88,7 +88,8 @@ public class PauseMenu : MonoBehaviour
 
         levelChange.ResetEnemies();
         theInventoryScript.nextSpot = 0;
-        SceneManager.LoadScene("Menu");
+        audioManager.index = 0;
+        SceneManager.LoadScene(audioManager.index);
     }
 
     public void QuitGame()

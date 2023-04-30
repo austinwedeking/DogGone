@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class LevelChange : MonoBehaviour
 {
+    public static LevelChange instance;
+
+    AudioManager audioManager;
     [SerializeField] private int numEnemies;
     [SerializeField] private int loseSceneIndex;
     [SerializeField] private int winSceneIndex;
@@ -33,7 +36,6 @@ public class LevelChange : MonoBehaviour
     Inventory theInventoryScript;
 
     GameObject eatPoster;
-    public int index;
 
     EnemyData[] enemies = new EnemyData[100];
     GameObject[] enemyList; // = new GameObject[100];
@@ -53,12 +55,22 @@ public class LevelChange : MonoBehaviour
 
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+
+        theGameManager = GameObject.Find("GameManager");
+
+        theInventoryScript = theGameManager.GetComponent<Inventory>();
+
         player = FindObjectOfType<PlayerData>().gameObject;
         if (player == null) { Debug.Log("No player found in active scene"); }
 
         playerData = FindObjectOfType<PlayerData>();
 
         textAnim = FindObjectOfType<TextAnimation>();
+
+        eatPoster = FindObjectOfType<LoadLevel>().gameObject;
+
+        PsuedoStart();
     }
 
     private void Update()
@@ -90,7 +102,14 @@ public class LevelChange : MonoBehaviour
         //    button2.SetActive(false);
         //}
 
+        //if (!audioManager.gameStarted)
+        //{
+        //    index = 1;
+        //    audioManager.gameStarted = false;
+        //}
+
         Debug.Log("psuedo start ran");
+
         button1.SetActive(false);
         button2.SetActive(false);
 
@@ -101,24 +120,36 @@ public class LevelChange : MonoBehaviour
             eatPoster.SetActive(false);
         }
 
-        Debug.Log("build index: " + SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("build index: " + audioManager.index);
 
-        if (SceneManager.GetActiveScene().buildIndex > 1)
+        if (audioManager.index > 1)
         {
             textAnim.NewLevel();
+        }
+
+        if (audioManager.index >= 3)
+        {
+            player.transform.position = new Vector3(-32.5f, 2, 0);
+        }
+        else
+        {
+            player.transform.position = new Vector3(-32.5f, -1, 0);
         }
     }
 
     private void Awake()
     { //Called before start on object creation, just here to make the value start at 0
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         numEnemies = 0;
-
-        eatPoster = FindObjectOfType<LoadLevel>().gameObject;
-
-        PsuedoStart();
-
-        theGameManager = GameObject.Find("GameManager");
-        theInventoryScript = theGameManager.GetComponent<Inventory>();
     }
 
     public void IncrementEnemies()
@@ -144,8 +175,8 @@ public class LevelChange : MonoBehaviour
 
     public void GameOver()
     { //Loads the lose screen
-        index = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log("index: " + index);
+        //index = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("index: " + audioManager.index);
         SceneManager.LoadScene(loseSceneIndex);
     }
 

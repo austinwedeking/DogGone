@@ -1078,7 +1078,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timesPurchased: 0
-  shopUI: {fileID: 6327668707622101460}
   fireUI: {fileID: 2034065923}
   waterUI: {fileID: 228493017}
   airUI: {fileID: 329691950}
@@ -2025,7 +2024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2697337019429767145
 RectTransform:
   m_ObjectHideFlags: 0
