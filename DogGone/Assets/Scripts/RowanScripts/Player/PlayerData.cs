@@ -28,7 +28,7 @@ public class PlayerData : MonoBehaviour
 
         //AquireBones(0);
 
-        if (SceneManager.GetActiveScene().buildIndex >= 4)
+        if (SceneManager.GetActiveScene().buildIndex >= 3)
         {
             gameObject.transform.position = new Vector3(-32.5f, 2, 0);
         }
@@ -53,7 +53,7 @@ public class PlayerData : MonoBehaviour
 
         shopScript = FindObjectOfType<ShopScript>();
 
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             currentHealth = 100;
             healthBar.SetMaxHealth(currentHealth);

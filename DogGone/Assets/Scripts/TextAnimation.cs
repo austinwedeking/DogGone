@@ -24,18 +24,18 @@ public class TextAnimation : MonoBehaviour
     {
         this.gameObject.GetComponent<Text>().color = new Color(255, 255, 255, 1f);
         
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             Debug.Log("the statement was reached");
             this.gameObject.GetComponent<Text>().text = "Nearly out of the forest...";
             StartCoroutine(Fade());
         }
-        else if (SceneManager.GetActiveScene().buildIndex == 4)
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             this.gameObject.GetComponent<Text>().text = "Back in the city...";
             StartCoroutine(Fade());
         }
-        else if (SceneManager.GetActiveScene().buildIndex == 5)
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             this.gameObject.GetComponent<Text>().text = "Almost home, seems like danger's ahead...";
             StartCoroutine(Fade());

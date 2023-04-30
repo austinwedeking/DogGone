@@ -103,7 +103,7 @@ public class LevelChange : MonoBehaviour
 
         Debug.Log("build index: " + SceneManager.GetActiveScene().buildIndex);
 
-        if (SceneManager.GetActiveScene().buildIndex > 2)
+        if (SceneManager.GetActiveScene().buildIndex > 1)
         {
             textAnim.NewLevel();
         }

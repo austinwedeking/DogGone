@@ -61,8 +61,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numEnemies: 0
-  loseSceneIndex: 1
-  winSceneIndex: 5
+  loseSceneIndex: 5
+  winSceneIndex: 6
   button1: {fileID: 0}
   button2: {fileID: 0}
   button1Text: {fileID: 0}

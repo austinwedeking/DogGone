@@ -32,7 +32,7 @@ public class LoadLevel : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 4)
+        if (SceneManager.GetActiveScene().buildIndex == 3)
         {
             this.gameObject.transform.position = new Vector2(175.18f, -0.43f);
         }
@@ -74,7 +74,7 @@ public class LoadLevel : MonoBehaviour
                         }
                     }
 
-                    if (SceneManager.GetActiveScene().buildIndex + 1 == 4)
+                    if (SceneManager.GetActiveScene().buildIndex + 1 == 3)
                     {
                         audioManager.StopPlaying("MonkeysSpinningMonkeys");
                         audioManager.StopPlaying("ForestAmbience");

@@ -48,11 +48,11 @@ public class LoseMenu : MonoBehaviour
 
         for (int i = levelChange.GetComponent<LevelChange>().index; i < levelChange.GetComponent<LevelChange>().index + 1; i++)
         {
-            if (theInventoryScript.theInventory[i - 2] != null)
+            if (theInventoryScript.theInventory[i - 1] != null)
             {
-                Debug.Log(theInventoryScript.theInventory[i - 2].name + " is in this spot");
-                theInventoryScript.theInventory[i - 2] = null;
-                if (theInventoryScript.theInventory[i - 2] == null)
+                Debug.Log(theInventoryScript.theInventory[i - 1].name + " is in this spot");
+                theInventoryScript.theInventory[i - 1] = null;
+                if (theInventoryScript.theInventory[i - 1] == null)
                 {
                     Debug.Log("same spot is now null");
                 }

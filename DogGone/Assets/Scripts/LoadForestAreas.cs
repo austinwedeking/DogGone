@@ -54,7 +54,7 @@ public class LoadForestAreas : MonoBehaviour{
             Offset = Offset - ((RandNum-1)*45); //Offsets the Area by the position of the prefab because I am an idiot and didn't stack them
             Vector3 StartPosition = new Vector3(Offset, -63, 0); //Sets the placement position of the Area
             //Mega if statement to decide what Level Area to instantiate
-            if (SceneManager.GetActiveScene().buildIndex == 2){
+            if (SceneManager.GetActiveScene().buildIndex == 1){
                 if     (RandNum == 1) {Instantiate(ELevelBlock1, StartPosition, Quaternion.identity);}
                 else if(RandNum == 2) {Instantiate(ELevelBlock2, StartPosition, Quaternion.identity);}
                 else if(RandNum == 3) {Instantiate(ELevelBlock3, StartPosition, Quaternion.identity);}
@@ -66,7 +66,7 @@ public class LoadForestAreas : MonoBehaviour{
                 else if(RandNum == 9) {Instantiate(ELevelBlock9, StartPosition, Quaternion.identity);}
                 else if(RandNum == 10){Instantiate(ELevelBlock10,StartPosition, Quaternion.identity);}
                 else if(RandNum == 11){Instantiate(ELevelBlock11,StartPosition, Quaternion.identity);}
-            }else if (SceneManager.GetActiveScene().buildIndex == 3){
+            }else if (SceneManager.GetActiveScene().buildIndex == 2){
                 if     (RandNum == 1) {Instantiate(LevelBlock1, StartPosition, Quaternion.identity);}
                 else if(RandNum == 2) {Instantiate(LevelBlock2, StartPosition, Quaternion.identity);}
                 else if(RandNum == 3) {Instantiate(LevelBlock3, StartPosition, Quaternion.identity);}
