@@ -2,16 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoseMenu : MonoBehaviour
 {
     AudioManager audioManager;
     LevelChange levelChange;
     GameObject canvas;
+    ReadInput readInput;
 
     GameObject theGameManager;
     Inventory theInventoryScript;
     ShopScript shopScript;
+
+    public GameObject normalLose;
+    public GameObject drakeLose;
+    public GameObject whaleLose;
+    public GameObject screenText;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,6 +39,51 @@ public class LoseMenu : MonoBehaviour
         theInventoryScript = theGameManager.GetComponent<Inventory>();
         shopScript = FindObjectOfType<ShopScript>();
         canvas = GameObject.Find("GameCanvas");
+        readInput = FindObjectOfType<ReadInput>();
+
+        normalLose = GameObject.Find("NormalScreen");
+        drakeLose = GameObject.Find("DrakeScreen");
+        whaleLose = GameObject.Find("WhaleScreen");
+        screenText = GameObject.Find("ScreenText");
+
+        if (readInput.original)
+        {
+            normalLose.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+            drakeLose.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            whaleLose.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            screenText.GetComponent<Text>().color = new Color(255, 255, 255, 0f);
+
+            //normalLose.SetActive(true);
+            //drakeLose.SetActive(false);
+            //whaleLose.SetActive(false);
+            //screenText.SetActive(false);
+        }
+
+        if (readInput.whalemode)
+        {
+            normalLose.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            drakeLose.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            whaleLose.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+            screenText.GetComponent<Text>().color = new Color(255, 255, 255, 1f);
+
+            //normalLose.SetActive(false);
+            //drakeLose.SetActive(false);
+            //whaleLose.SetActive(true);
+            //screenText.SetActive(true);
+        }
+
+        if (readInput.drakemode)
+        {
+            normalLose.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            drakeLose.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+            whaleLose.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            screenText.GetComponent<Text>().color = new Color(255, 255, 255, 1f);
+
+            //normalLose.SetActive(false);
+            //drakeLose.SetActive(true);
+            //whaleLose.SetActive(false);
+            //screenText.SetActive(true);
+        }
     }
 
     public void RetryLevel()
@@ -87,7 +139,13 @@ public class LoseMenu : MonoBehaviour
         audioManager.StopPlaying("MonkeysSpinningMonkeys");
         audioManager.StopPlaying("ForestAmbience");
         audioManager.StopPlaying("CityTheme");
-        Destroy(canvas);
+        audioManager.StopPlaying("GodPlan");
+        audioManager.StopPlaying("SafeReturn");
+        //Destroy(canvas);
+
+        readInput.original = true;
+        readInput.whalemode = false;
+        readInput.drakemode = false;
 
         for (int i = 0; i < theInventoryScript.lastValidSpot; i++)
         {

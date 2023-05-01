@@ -31,23 +31,35 @@ public class MainMenu : MonoBehaviour
 
         if (readInput.whalemode)
         {
-            canvas.SetActive(false);
-            whaleBG.SetActive(true);
-            drakeBG.SetActive(false);
+            canvas.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            whaleBG.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+            drakeBG.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+
+            //canvas.SetActive(false);
+            //whaleBG.SetActive(true);
+            //drakeBG.SetActive(false);
         }
 
         if (readInput.drakemode)
         {
-            canvas.SetActive(false);
-            whaleBG.SetActive(false);
-            drakeBG.SetActive(true);
+            canvas.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            whaleBG.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            drakeBG.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+
+            //canvas.SetActive(false);
+            //whaleBG.SetActive(false);
+            //drakeBG.SetActive(true);
         }
 
         if (readInput.original)
         {
-            canvas.SetActive(true);
-            whaleBG.SetActive(false);
-            drakeBG.SetActive(false);
+            canvas.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+            whaleBG.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            drakeBG.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+
+            //canvas.SetActive(true);
+            //whaleBG.SetActive(false);
+            //drakeBG.SetActive(false);
         }
     }
 
@@ -57,23 +69,35 @@ public class MainMenu : MonoBehaviour
         {
             if (readInput.whalemode)
             {
-                canvas.SetActive(false);
-                whaleBG.SetActive(true);
-                drakeBG.SetActive(false);
+                canvas.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+                whaleBG.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+                drakeBG.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+
+                //canvas.SetActive(false);
+                //whaleBG.SetActive(true);
+                //drakeBG.SetActive(false);
             }
 
             if (readInput.drakemode)
             {
-                canvas.SetActive(false);
-                whaleBG.SetActive(false);
-                drakeBG.SetActive(true);
+                canvas.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+                whaleBG.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+                drakeBG.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+
+                //canvas.SetActive(false);
+                //whaleBG.SetActive(false);
+                //drakeBG.SetActive(true);
             }
 
             if (readInput.original)
             {
-                canvas.SetActive(true);
-                whaleBG.SetActive(false);
-                drakeBG.SetActive(false);
+                canvas.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+                whaleBG.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+                drakeBG.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+
+                //canvas.SetActive(true);
+                //whaleBG.SetActive(false);
+                //drakeBG.SetActive(false);
             }
         }
     }

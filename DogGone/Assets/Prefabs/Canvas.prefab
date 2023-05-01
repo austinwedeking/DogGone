@@ -1345,6 +1345,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioManager: {fileID: 0}
   readInput: {fileID: 0}
+  canvas: {fileID: 0}
+  whaleBG: {fileID: 0}
+  drakeBG: {fileID: 0}
 --- !u!1 &5935630370968783078
 GameObject:
   m_ObjectHideFlags: 0

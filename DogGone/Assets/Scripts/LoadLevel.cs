@@ -18,6 +18,8 @@ public class LoadLevel : MonoBehaviour
     AudioManager audioManager;
     TextAnimation textAnim;
 
+    ReadInput readInput;
+
     [SerializeField] private LayerMask playerLayer;
 
     private void Start()
@@ -40,13 +42,18 @@ public class LoadLevel : MonoBehaviour
         shopScript = FindObjectOfType<ShopScript>();
         audioManager = FindObjectOfType<AudioManager>();
         textAnim = FindObjectOfType<TextAnimation>();
+        readInput = FindObjectOfType<ReadInput>();
     }
 
     void Update()
     {
-        if (audioManager.index == 3)
+        if (audioManager.index >= 3)
         {
             this.gameObject.transform.position = new Vector2(175.18f, -0.43f);
+        }
+        else
+        {
+            this.gameObject.transform.position = new Vector2(135.15f, -0.182f);
         }
 
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -86,7 +93,7 @@ public class LoadLevel : MonoBehaviour
                         }
                     }
 
-                    if (audioManager.index + 1 == 3)
+                    if (audioManager.index + 1 == 3 && readInput.original)
                     {
                         audioManager.StopPlaying("MonkeysSpinningMonkeys");
                         audioManager.StopPlaying("ForestAmbience");
