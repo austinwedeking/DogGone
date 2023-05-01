@@ -1942,7 +1942,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3 -Water Ability (When Acquired)
+  m_Text: 3 - Water Ability (When Acquired)
 --- !u!114 &5935630371202779660
 MonoBehaviour:
   m_ObjectHideFlags: 0

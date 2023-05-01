@@ -60,7 +60,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f057421408e58fe4a81f0eac2af31205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 0
   numEnemies: 0
   loseSceneIndex: 5
   winSceneIndex: 6
@@ -94,3 +93,7 @@ MonoBehaviour:
   waterUI: {fileID: 0}
   airUI: {fileID: 0}
   earthUI: {fileID: 0}
+  fireText: {fileID: 0}
+  waterText: {fileID: 0}
+  airText: {fileID: 0}
+  earthText: {fileID: 0}

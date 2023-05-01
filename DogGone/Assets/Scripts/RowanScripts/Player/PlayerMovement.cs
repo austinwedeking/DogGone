@@ -121,53 +121,65 @@ public class PlayerMovement : MonoBehaviour
         if (canUseAbility1 && (inventoryScript.find("FireAbility") != null))
         {
             levelChange.fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+            levelChange.fireText.GetComponent<Text>().color = new Color(255, 255, 255, 1f);
         }
         else if (!canUseAbility1 && (inventoryScript.find("FireAbility") != null))
         {
             levelChange.fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+            levelChange.fireText.GetComponent<Text>().color = new Color(255, 255, 255, 0.2f);
         }
         else if (!canUseAbility1 && (inventoryScript.find("FireAbility") == null))
         {
             levelChange.fireUI.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            levelChange.fireText.GetComponent<Text>().color = new Color(255, 255, 255, 0f);
         }
 
         if (canUseAbility2 && (inventoryScript.find("DashAbility") != null))
         {
             levelChange.airUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+            levelChange.airText.GetComponent<Text>().color = new Color(255, 255, 255, 1f);
         }
         else if (!canUseAbility2 && (inventoryScript.find("DashAbility") != null))
         {
             levelChange.airUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+            levelChange.airText.GetComponent<Text>().color = new Color(255, 255, 255, 0.2f);
         }
         else if (!canUseAbility2 && (inventoryScript.find("DashAbility") == null))
         {
             levelChange.airUI.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            levelChange.airText.GetComponent<Text>().color = new Color(255, 255, 255, 0f);
         }
 
         if (canUseAbility3 && (inventoryScript.find("WaterAbility") != null))
         {
             levelChange.waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+            levelChange.waterText.GetComponent<Text>().color = new Color(255, 255, 255, 1f);
         }
         else if (!canUseAbility3 && (inventoryScript.find("WaterAbility") != null))
         {
             levelChange.waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+            levelChange.waterText.GetComponent<Text>().color = new Color(255, 255, 255, 0.2f);
         }
         else if (!canUseAbility3 && (inventoryScript.find("WaterAbility") == null))
         {
             levelChange.waterUI.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            levelChange.waterText.GetComponent<Text>().color = new Color(255, 255, 255, 0f);
         }
 
         if (canUseAbility4 && (inventoryScript.find("EarthAbility") != null))
         {
             levelChange.earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+            levelChange.earthText.GetComponent<Text>().color = new Color(255, 255, 255, 1f);
         }
         else if (!canUseAbility4 && (inventoryScript.find("EarthAbility") != null))
         {
             levelChange.earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 0.2f);
+            levelChange.earthText.GetComponent<Text>().color = new Color(255, 255, 255, 0.2f);
         }
         else if (!canUseAbility4 && (inventoryScript.find("EarthAbility") == null))
         {
             levelChange.earthUI.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
+            levelChange.earthText.GetComponent<Text>().color = new Color(255, 255, 255, 0f);
         }
     }
 

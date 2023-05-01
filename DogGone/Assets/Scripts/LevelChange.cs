@@ -51,6 +51,11 @@ public class LevelChange : MonoBehaviour
     public GameObject airUI;
     public GameObject earthUI;
 
+    public GameObject fireText;
+    public GameObject waterText;
+    public GameObject airText;
+    public GameObject earthText;
+
     TextAnimation textAnim;
     GameObject tip;
 
