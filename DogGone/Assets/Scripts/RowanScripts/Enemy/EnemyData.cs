@@ -27,7 +27,20 @@ public class EnemyData : MonoBehaviour
         currentHealth = maxHealth;
         levelChange = FindObjectOfType<LevelChange>();
         if (levelChange == null) { Debug.LogError("No Level change present in the current scene"); }
-        else { levelChange.IncrementEnemies(); }
+        else { 
+            if (gameObject.tag == "Boss1")
+            {
+                levelChange.IncrementEnemies();
+                levelChange.IncrementEnemies();
+            }
+            else if (gameObject.tag == "Boss2")
+            {
+                // don't
+            } else
+            {
+                levelChange.IncrementEnemies();
+            }
+        }
         rigid = gameObject.GetComponent<Rigidbody2D>();
         if (rigid == null) { Debug.Log("No rigidbody on this enemy"); }
         renderer = gameObject.GetComponent<SpriteRenderer>();
@@ -64,10 +77,16 @@ public class EnemyData : MonoBehaviour
 
     public void Die() // when enemy dies, sends controll to EnemyAI to stop coroutines, then triggers death in BaseAI
     {
+       
         levelChange.DecrementEnemies();
         AIController.EnemyDead();
 
         //Debug.Log("Enemy Died"); Move these to EnemyAI script
         //baseAI.Die();
+    }
+
+    public void resetHealth()
+    {
+        currentHealth = maxHealth;
     }
 }

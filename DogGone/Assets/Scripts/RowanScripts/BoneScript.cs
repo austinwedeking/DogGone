@@ -9,6 +9,7 @@ public class BoneScript : MonoBehaviour
 
     private Rigidbody2D rigid;
     private GameObject player;
+    private Animator animator;
 
     private bool canPickup;
     private bool canMove;
@@ -16,6 +17,7 @@ public class BoneScript : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<PlayerData>().gameObject;
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -50,7 +52,14 @@ public class BoneScript : MonoBehaviour
         if (canPickup && collision.gameObject.tag == "Player")
         {
             collision.GetComponent<PlayerData>().AquireBones(value);
-            Destroy(gameObject);
+            StartCoroutine(SparkleDelay());
         }
+    }
+
+    private IEnumerator SparkleDelay()
+    {
+        animator.Play("SparkleAnimation");
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 }

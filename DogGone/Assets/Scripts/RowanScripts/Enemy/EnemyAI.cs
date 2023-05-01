@@ -116,11 +116,11 @@ public class EnemyAI : MonoBehaviour
 
     public void EnemyDead()
     {
-        AIState = state.Dead;
-        StopAllCoroutines(); // stop this scripts coroutines
-        AIController.StopAllCoroutines(); // stop the controllers coroutines
-        AIController.StartCoroutine(AIController.Die());
-        StartCoroutine(ExplosionAffect());
+         AIState = state.Dead;
+         StopAllCoroutines(); // stop this scripts coroutines
+         AIController.StopAllCoroutines(); // stop the controllers coroutines
+         AIController.StartCoroutine(AIController.Die());
+         StartCoroutine(ExplosionAffect());
     }
 
     private IEnumerator ExplosionAffect()

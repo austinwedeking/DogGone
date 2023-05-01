@@ -121,7 +121,7 @@ public class ProjectileScript : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
-            else if (collision2.tag == "Enemy")
+            else if (collision2.tag == "Enemy" || collision2.tag == "Boss1" || collision2.tag == "Boss2")
             {
                 data2 = collision2.GetComponent<EnemyData>();
                 if (data2 != null)

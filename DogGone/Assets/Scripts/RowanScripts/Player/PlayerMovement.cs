@@ -402,6 +402,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator DashCooldwn()
     {
         isDashing = true;
+        playerAnimator.Play("DashAnimation");
         yield return new WaitForSeconds(dashLength);
         isDashing = false;
     }

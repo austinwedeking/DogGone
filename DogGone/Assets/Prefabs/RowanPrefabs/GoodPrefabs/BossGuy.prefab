@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6736685801054392988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.88, y: -0.27, z: 0}
+  m_LocalPosition: {x: 0.88, y: 1.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7927626761484873663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.71, y: -0.99, z: 0}
+  m_LocalPosition: {x: 0.52, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 6736685802386633667}
   m_Layer: 3
   m_Name: BossGuy
-  m_TagString: Enemy
+  m_TagString: Boss1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,7 @@ SpriteRenderer:
   m_SortingLayerID: 1297805551
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1996938165, guid: 8f82f0660465efc4ba243d2f20db134d, type: 3}
+  m_Sprite: {fileID: 579813668, guid: 63104a0de646f8a4f88dc076c70adc25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -169,11 +169,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
+  m_Offset: {x: 0, y: 1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 3}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 3, y: 8}
     newSize: {x: 24, y: 16.570312}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
   attackTimer: 0
   wanderTimer: 0
   chaseTimer: 0
-  maxHealth: 1000
+  maxHealth: 500
   currentHealth: 0
   slashAffect: {fileID: 4223967124453810894, guid: 978d148962188a24a9c4b7096dc4d949, type: 3}
   kickTimer: 2
@@ -265,6 +265,7 @@ MonoBehaviour:
   fistTimer: 4
   lazerTimer: 5
   idolTimer: 2
+  fullStopTimer: 0
 --- !u!114 &6736685802386633667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,22 +282,17 @@ MonoBehaviour:
   bonePrefab: {fileID: 8488709929069242251, guid: 967307e4e5c21ae46ae537a4a2d14817, type: 3}
   bossData: {fileID: 6736685802386633664}
   bossAttackState: 4
+  nextPhase: {fileID: 417639657385753772, guid: d25669a4831c570478ea97c6cb18fade, type: 3}
   kickAttack: {fileID: 7927626761484873663}
   throwOrigin: {fileID: 6736685801054392988}
-  fistAttack: {fileID: 0}
-  lazerOrigin: {fileID: 0}
   bottle: {fileID: 3789201807209732997, guid: 616b76e8a408545459d5e07d5847ba48, type: 3}
   kickOverlapRadius: 1
-  fistOverlapRadius: 2
   playerLayer:
     serializedVersion: 2
     m_Bits: 2048
-  kickDamage: 20
-  fistDamage: 35
+  kickDamage: 25
   kickDelay: 0.5
   bottleDelay: 0.8
-  fistDelay: 0
-  lazerDelay: 0
   moveSpeed: 0
   deathTimer: 0
   deathAnimName: 
@@ -325,7 +321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7927626762190071866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.61, z: 0}
+  m_LocalPosition: {x: 0, y: 0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -373,7 +369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7927626762637516186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.61, z: 0}
+  m_LocalPosition: {x: 0, y: 0.84000003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

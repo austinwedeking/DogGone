@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Ground
   - Attack Collider
+  - Boss1
+  - Boss2
   layers:
   - Default
   - TransparentFX

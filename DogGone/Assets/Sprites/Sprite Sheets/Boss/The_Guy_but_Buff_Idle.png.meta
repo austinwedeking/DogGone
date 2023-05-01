@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8f82f0660465efc4ba243d2f20db134d
+guid: f46f51c5d0d60064496471b885317615
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_0
+      name: The_Guy_but_Buff_Idle_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 30
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 600e1ff487ac6e745913aa5e4e5de877
-      internalID: -1996938165
+      spriteID: 761565769f8f77243a2022708a5fcf7f
+      internalID: -23195763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_1
+      name: The_Guy_but_Buff_Idle_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 222
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4a5e8b627d2b274fbb3dc2892e910f7
-      internalID: 1040268489
+      spriteID: a24883ebc9f8e314c88cdb87c160fd6e
+      internalID: 192386878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_2
+      name: The_Guy_but_Buff_Idle_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 414
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: debb10099b67f5e4db97138776229c35
-      internalID: -1570611570
+      spriteID: 07abb0bc394c5604d94264324988d76b
+      internalID: 1074562950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_3
+      name: The_Guy_but_Buff_Idle_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 606
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dbe18a2f174fbe4c994807db214ead2
-      internalID: 1352326864
+      spriteID: 5dd215e6ea1980e4e8fdfcdaacf0c9e5
+      internalID: -781109869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_4
+      name: The_Guy_but_Buff_Idle_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 798
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd872823b237c394d808a982e49d9808
-      internalID: -1848144880
+      spriteID: b9931d7968b69114d84b92886a9818ad
+      internalID: -705400882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_5
+      name: The_Guy_but_Buff_Idle_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 990
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45d7c5c9ae9742e4c8003107c6d2d9a1
-      internalID: -2091643906
+      spriteID: 3cb73cab4415f7a4780b8a8653f1ef74
+      internalID: 1993338101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_6
+      name: The_Guy_but_Buff_Idle_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1182
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a77b5b3c8c922146bfe17c5d05728cc
-      internalID: -644717164
+      spriteID: 912865bd2e96f3d4fb0cd3acfbd08761
+      internalID: 1341194571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_7
+      name: The_Guy_but_Buff_Idle_7
       rect:
         serializedVersion: 2
-        x: 896
+        x: 1374
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2d8d017b88417c449820131cfdb6e4f
-      internalID: -731468303
+      spriteID: dc63b4d0967311143bc16b1c7c42ab14
+      internalID: -1213771312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_8
+      name: The_Guy_but_Buff_Idle_8
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1566
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ad88e94ba4e7d8488588ab399d5c85d
-      internalID: 1907376161
+      spriteID: 67d9ad0e68a476542a9df7a8588bfd43
+      internalID: 2112094967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_9
+      name: The_Guy_but_Buff_Idle_9
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 1758
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,20 +307,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 185067a3277772747a074e3c5488a1f7
-      internalID: -2012013567
+      spriteID: 7f1f6168572b6b748b6d2c897fdd85f7
+      internalID: -1720719695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_10
+      name: The_Guy_but_Buff_Idle_10
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1950
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,20 +328,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f94e6b085d0ed074fa802236db3c206e
-      internalID: -2026601840
+      spriteID: b1417363984fbff4893e09ff999c8f92
+      internalID: 1290289559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_11
+      name: The_Guy_but_Buff_Idle_11
       rect:
         serializedVersion: 2
-        x: 1408
+        x: 2142
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,20 +349,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77bc0f107b59623428863810cfc5e813
-      internalID: 991552458
+      spriteID: 4605fae754a961248a2d52f266584191
+      internalID: -305373353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_12
+      name: The_Guy_but_Buff_Idle_12
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 2334
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,20 +370,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 762a5fa5c5cfdbd4c922039ff1232d94
-      internalID: -1454566940
+      spriteID: 58d16f519202bcd48a6bdfe6cd0b49ce
+      internalID: 1966083516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_13
+      name: The_Guy_but_Buff_Idle_13
       rect:
         serializedVersion: 2
-        x: 1664
+        x: 2526
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,20 +391,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95f5e0fccad29964ba4e3fa014d50d83
-      internalID: -820736537
+      spriteID: c5cc894ace43c9d4a99baf7a7fef91a5
+      internalID: 1572199653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_14
+      name: The_Guy_but_Buff_Idle_14
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 2718
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,20 +412,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9329fd33ca26e9e428f203b381281c6a
-      internalID: 1941172051
+      spriteID: 71dfd99eb5222814fb62e325c6dce367
+      internalID: -1025604433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_15
+      name: The_Guy_but_Buff_Idle_15
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 2910
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,20 +433,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6b9740310ddb0547b2a5c7dbf49bcf2
-      internalID: 2067828946
+      spriteID: b5e1966b91183a941bc3449ed5e7d77d
+      internalID: 817655854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_16
+      name: The_Guy_but_Buff_Idle_16
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 3102
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,20 +454,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b62ba116c00a8942b0fc96da30a51e1
-      internalID: -518095060
+      spriteID: fab43d90b5c5e4247a56cde1e98455c3
+      internalID: 932912493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_17
+      name: The_Guy_but_Buff_Idle_17
       rect:
         serializedVersion: 2
-        x: 2176
+        x: 3294
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -475,20 +475,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f201c3c520856424baae4f15ded07d1f
-      internalID: -467835037
+      spriteID: 85fe32c863dee74438c6b8ae8d8baa7b
+      internalID: 2106404777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_18
+      name: The_Guy_but_Buff_Idle_18
       rect:
         serializedVersion: 2
-        x: 2304
+        x: 3486
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,20 +496,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7d11088a2494274085a50a93b4451ec
-      internalID: -854998497
+      spriteID: a1cafe0a8b5b57647a52b7713f22b8c5
+      internalID: -2124806158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_19
+      name: The_Guy_but_Buff_Idle_19
       rect:
         serializedVersion: 2
-        x: 2432
+        x: 3678
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,20 +517,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a469cbcb2426ec4399855beb740b0b6
-      internalID: 678780874
+      spriteID: 1c8f796f1d5525b4ebc1617a50bcbc1b
+      internalID: -375210705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_20
+      name: The_Guy_but_Buff_Idle_20
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 3870
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,20 +538,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7775e84d223debc48af8504c53c9acf4
-      internalID: -1297934804
+      spriteID: 03df32f9f49ff5048a4573ff64beb9df
+      internalID: 157601689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_21
+      name: The_Guy_but_Buff_Idle_21
       rect:
         serializedVersion: 2
-        x: 2688
+        x: 4062
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,20 +559,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b954e72dadc4dae44818e21c58fbd6cc
-      internalID: -2069897212
+      spriteID: b56db899e198a0f40822b463ef287aca
+      internalID: -480404521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_22
+      name: The_Guy_but_Buff_Idle_22
       rect:
         serializedVersion: 2
-        x: 2816
+        x: 4254
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,20 +580,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbc4ae49876f72d469339ec69619a481
-      internalID: 2075505187
+      spriteID: 1fdd4c9c6cd92514195c89b69eba8e17
+      internalID: -1510261569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: The_Guy_Idle (1)-sheet_23
+      name: The_Guy_but_Buff_Idle_23
       rect:
         serializedVersion: 2
-        x: 2944
+        x: 4446
         y: 0
-        width: 128
-        height: 192
+        width: 135
+        height: 512
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,8 +601,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e01d107e7c61731498e852596ac6fc15
-      internalID: -558683006
+      spriteID: 77842df529c917442aa6bc2ac0c96d66
+      internalID: 1732561847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_but_Buff_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 4638
+        y: 0
+        width: 135
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06bbdd3e23cb9f47b072f2475f3b7d4
+      internalID: 667375892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_but_Buff_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 4830
+        y: 0
+        width: 135
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7069eea5517614458f9162c266870d4
+      internalID: -2094919100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_but_Buff_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 0
+        width: 135
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5578e4e282703454a82f4ed73760f013
+      internalID: -1711798768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_but_Buff_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 5214
+        y: 0
+        width: 135
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f8801e555f8e64b9ecf5f23066b66a
+      internalID: 1585321413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_but_Buff_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 5406
+        y: 0
+        width: 135
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6989a6d0a677747b621b5892a269c1
+      internalID: 512538465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_but_Buff_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 5598
+        y: 0
+        width: 135
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136202b9b604ee3418427472c96eb2c5
+      internalID: -2105302129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_but_Buff_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 5790
+        y: 0
+        width: 135
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6535b14322286e14ab04bdea1c5f17d2
+      internalID: -840720705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Guy_but_Buff_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 5982
+        y: 0
+        width: 135
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1649622dd2cf384aa4bf4f12596e0a6
+      internalID: 177429219
       vertices: []
       indices: 
       edges: []
@@ -618,30 +786,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      The_Guy_Idle (1)-sheet_10: -2026601840
-      The_Guy_Idle (1)-sheet_20: -1297934804
-      The_Guy_Idle (1)-sheet_17: -467835037
-      The_Guy_Idle (1)-sheet_22: 2075505187
-      The_Guy_Idle (1)-sheet_8: 1907376161
-      The_Guy_Idle (1)-sheet_0: -1996938165
-      The_Guy_Idle (1)-sheet_19: 678780874
-      The_Guy_Idle (1)-sheet_11: 991552458
-      The_Guy_Idle (1)-sheet_4: -1848144880
-      The_Guy_Idle (1)-sheet_12: -1454566940
-      The_Guy_Idle (1)-sheet_3: 1352326864
-      The_Guy_Idle (1)-sheet_1: 1040268489
-      The_Guy_Idle (1)-sheet_5: -2091643906
-      The_Guy_Idle (1)-sheet_18: -854998497
-      The_Guy_Idle (1)-sheet_21: -2069897212
-      The_Guy_Idle (1)-sheet_2: -1570611570
-      The_Guy_Idle (1)-sheet_23: -558683006
-      The_Guy_Idle (1)-sheet_14: 1941172051
-      The_Guy_Idle (1)-sheet_6: -644717164
-      The_Guy_Idle (1)-sheet_16: -518095060
-      The_Guy_Idle (1)-sheet_13: -820736537
-      The_Guy_Idle (1)-sheet_15: 2067828946
-      The_Guy_Idle (1)-sheet_9: -2012013567
-      The_Guy_Idle (1)-sheet_7: -731468303
+      The_Guy_but_Buff_Idle_15: 817655854
+      The_Guy_but_Buff_Idle_25: -2094919100
+      The_Guy_but_Buff_Idle_21: -480404521
+      The_Guy_but_Buff_Idle_2: 1074562950
+      The_Guy_but_Buff_Idle_29: -2105302129
+      The_Guy_but_Buff_Idle_0: -23195763
+      The_Guy_but_Buff_Idle_20: 157601689
+      The_Guy_but_Buff_Idle_1: 192386878
+      The_Guy_but_Buff_Idle_28: 512538465
+      The_Guy_but_Buff_Idle_27: 1585321413
+      The_Guy_but_Buff_Idle_22: -1510261569
+      The_Guy_but_Buff_Idle_30: -840720705
+      The_Guy_but_Buff_Idle_13: 1572199653
+      The_Guy_but_Buff_Idle_3: -781109869
+      The_Guy_but_Buff_Idle_14: -1025604433
+      The_Guy_but_Buff_Idle_17: 2106404777
+      The_Guy_but_Buff_Idle_31: 177429219
+      The_Guy_but_Buff_Idle_6: 1341194571
+      The_Guy_but_Buff_Idle_18: -2124806158
+      The_Guy_but_Buff_Idle_4: -705400882
+      The_Guy_but_Buff_Idle_19: -375210705
+      The_Guy_but_Buff_Idle_24: 667375892
+      The_Guy_but_Buff_Idle_23: 1732561847
+      The_Guy_but_Buff_Idle_26: -1711798768
+      The_Guy_but_Buff_Idle_5: 1993338101
+      The_Guy_but_Buff_Idle_8: 2112094967
+      The_Guy_but_Buff_Idle_7: -1213771312
+      The_Guy_but_Buff_Idle_12: 1966083516
+      The_Guy_but_Buff_Idle_9: -1720719695
+      The_Guy_but_Buff_Idle_11: -305373353
+      The_Guy_but_Buff_Idle_10: 1290289559
+      The_Guy_but_Buff_Idle_16: 932912493
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
