@@ -64,7 +64,7 @@ public class PlayerData : MonoBehaviour
             levelChange.SetTemp(currentHealth);
 
             bones = 0;
-            AquireBones(100);
+            AquireBones(0);
             levelChange.SetTempBones(bones);
 
             shopScript.timesPurchased = 0;
