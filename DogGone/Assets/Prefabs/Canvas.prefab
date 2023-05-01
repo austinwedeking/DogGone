@@ -1699,7 +1699,7 @@ GameObject:
   - component: {fileID: 5935630371163714960}
   - component: {fileID: 5935630371163714967}
   m_Layer: 5
-  m_Name: S
+  m_Name: Space
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1766,7 +1766,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: S - Attack
+  m_Text: Space - Attack
 --- !u!114 &5935630371163714967
 MonoBehaviour:
   m_ObjectHideFlags: 0
