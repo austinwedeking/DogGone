@@ -194,10 +194,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 100
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: c240c968577c2774c9be0921ddd91d8d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -257,7 +257,7 @@ MonoBehaviour:
   attackTimer: 0
   wanderTimer: 0
   chaseTimer: 0
-  maxHealth: 500
+  maxHealth: 700
   currentHealth: 0
   slashAffect: {fileID: 4223967124453810894, guid: 978d148962188a24a9c4b7096dc4d949, type: 3}
   kickTimer: 2
