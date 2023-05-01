@@ -197,7 +197,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 100
   m_Material: {fileID: 6200000, guid: c240c968577c2774c9be0921ddd91d8d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -265,7 +265,7 @@ MonoBehaviour:
   fistTimer: 4
   lazerTimer: 5
   idolTimer: 2
-  fullStopTimer: 0
+  SpawnTimer: 0
 --- !u!114 &6736685802386633667
 MonoBehaviour:
   m_ObjectHideFlags: 0
