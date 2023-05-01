@@ -2926,6 +2926,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121944579}
     m_Modifications:
+    - target: {fileID: 4436074749746261923, guid: a3d76b53e164beb49a405ee2333f7a36, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794690512416136072, guid: a3d76b53e164beb49a405ee2333f7a36, type: 3}
       propertyPath: m_Name
       value: Grid (Area 1)

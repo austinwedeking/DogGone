@@ -64,7 +64,15 @@ public class LoseMenu : MonoBehaviour
             normalLose.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
             drakeLose.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
             whaleLose.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
-            screenText.GetComponent<Text>().color = new Color(255, 255, 255, 1f);
+
+            if (audioManager.index == 5)
+            {
+                screenText.GetComponent<Text>().color = new Color(212, 23, 23, 1f);
+            }
+            else if (audioManager.index == 6)
+            {
+                screenText.GetComponent<Text>().color = new Color(52, 255, 0, 1f);
+            }
 
             //normalLose.SetActive(false);
             //drakeLose.SetActive(false);
@@ -77,7 +85,15 @@ public class LoseMenu : MonoBehaviour
             normalLose.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
             drakeLose.GetComponent<Image>().color = new Color(255, 255, 255, 1f);
             whaleLose.GetComponent<Image>().color = new Color(255, 255, 255, 0f);
-            screenText.GetComponent<Text>().color = new Color(255, 255, 255, 1f);
+
+            if (audioManager.index == 5)
+            {
+                screenText.GetComponent<Text>().color = new Color(212, 23, 23, 1f);
+            }
+            else if (audioManager.index == 6)
+            {
+                screenText.GetComponent<Text>().color = new Color(52, 255, 0, 1f);
+            }
 
             //normalLose.SetActive(false);
             //drakeLose.SetActive(true);

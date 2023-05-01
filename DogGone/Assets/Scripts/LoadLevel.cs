@@ -13,6 +13,8 @@ public class LoadLevel : MonoBehaviour
     GameObject eatPoster;
     LevelChange levelChange;
 
+    private GameObject player;
+
     PlayerData playerData;
     HealthBar healthBar;
     ShopScript shopScript;
@@ -38,6 +40,7 @@ public class LoadLevel : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         levelChange = FindObjectOfType<LevelChange>();
+        player = FindObjectOfType<PlayerData>().gameObject;
         eatPoster = GameObject.Find("eat_poster");
         playerData = FindObjectOfType<PlayerData>();
         healthBar = FindObjectOfType<HealthBar>();
@@ -50,9 +53,13 @@ public class LoadLevel : MonoBehaviour
 
     void Update()
     {
-        if (audioManager.index >= 3)
+        if (audioManager.index == 3)
         {
             this.gameObject.transform.position = new Vector2(175.18f, -0.43f);
+        }
+        else if (audioManager.index == 4)
+        {
+            this.gameObject.transform.position = new Vector2(15.65f, -0.43f);
         }
         else
         {
