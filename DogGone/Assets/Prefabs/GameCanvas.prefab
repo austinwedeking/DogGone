@@ -3413,7 +3413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cost: 250 Bones. Increases the maximum health of the player by 50 HP.
+  m_Text: 'Cost: 500 Bones. Increases the maximum health of the player by 50 HP.
     Can be purchased twice to reach a maximum health of 200 HP.'
 --- !u!114 &6978737763466942424
 MonoBehaviour:

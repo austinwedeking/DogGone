@@ -106,6 +106,25 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: GodPlan
+    clip: {fileID: 8300000, guid: 278ebc353318e334bbde7fc7e133d49c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: SafeReturn
+    clip: {fileID: 8300000, guid: dba59adb454f2a74da748eee6062a162, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: BossTheme
+    clip: {fileID: 8300000, guid: 1be41dc3accd8b74994de6c9d6f0431a, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  index: 0
 --- !u!114 &7903001600372552471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,3 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc269742bc3e754a9ab37d04cbae309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drakemode: 0
+  whalemode: 0
+  original: 1
+  canvas: {fileID: 0}
+  whaleBG: {fileID: 0}
+  drakeBG: {fileID: 0}

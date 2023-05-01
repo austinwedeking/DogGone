@@ -110,6 +110,12 @@ public class LoadLevel : MonoBehaviour
                         audioManager.Play("CityTheme");
                     }
 
+                    if (audioManager.index + 1 == 4 && readInput.original)
+                    {
+                        audioManager.StopPlaying("CityTheme");
+                        audioManager.Play("BossTheme");
+                    }
+
                     audioManager.index++;
                     SceneManager.LoadScene(audioManager.index);
                     Debug.Log("build index after load level: " + audioManager.index);

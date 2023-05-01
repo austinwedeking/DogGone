@@ -105,7 +105,7 @@ public class ShopScript : MonoBehaviour
     {
         if (timesPurchased == 0)
         {
-            price = 250;
+            price = 500;
 
             if ((playerData.GetBones() - price) >= 0)
             {
@@ -127,7 +127,7 @@ public class ShopScript : MonoBehaviour
         }
         else if (timesPurchased == 1)
         {
-            price = 250;
+            price = 500;
 
             if ((playerData.GetBones() - price) >= 0)
             {

@@ -83,6 +83,7 @@ public class PauseMenu : MonoBehaviour
         audioManager.StopPlaying("CityTheme");
         audioManager.StopPlaying("GodPlan");
         audioManager.StopPlaying("SafeReturn");
+        audioManager.StopPlaying("BossTheme");
 
         readInput.original = true;
         readInput.drakemode = false;

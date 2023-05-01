@@ -157,6 +157,7 @@ public class LoseMenu : MonoBehaviour
         audioManager.StopPlaying("CityTheme");
         audioManager.StopPlaying("GodPlan");
         audioManager.StopPlaying("SafeReturn");
+        audioManager.StopPlaying("BossTheme");
         //Destroy(canvas);
 
         readInput.original = true;
