@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadLevel : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class LoadLevel : MonoBehaviour
     ShopScript shopScript;
     AudioManager audioManager;
     TextAnimation textAnim;
+    GameObject tip;
 
     ReadInput readInput;
 
@@ -43,6 +45,7 @@ public class LoadLevel : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
         textAnim = FindObjectOfType<TextAnimation>();
         readInput = FindObjectOfType<ReadInput>();
+        tip = GameObject.Find("TipText");
     }
 
     void Update()
@@ -56,7 +59,7 @@ public class LoadLevel : MonoBehaviour
             this.gameObject.transform.position = new Vector2(135.15f, -0.182f);
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Collider2D[] temp;
             temp = Physics2D.OverlapCircleAll(transform.position, 2f, playerLayer);
@@ -114,7 +117,15 @@ public class LoadLevel : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+            tip.GetComponent<Text>().text = "Press 'E' to push onward!";
+        }
+    }
 
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            tip.GetComponent<Text>().text = "";
         }
     }
 }

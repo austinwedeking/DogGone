@@ -535,25 +535,9 @@ PrefabInstance:
       propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5161728868364591844}
-    - target: {fileID: 5935630370414332957, guid: 85dd894d8bf74f542ad84a931890175b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5935630370610162735, guid: 85dd894d8bf74f542ad84a931890175b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5935630370828107447, guid: 85dd894d8bf74f542ad84a931890175b, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 5161728868364591843}
-    - target: {fileID: 5935630371922449985, guid: 85dd894d8bf74f542ad84a931890175b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 5935630371922449985, guid: 85dd894d8bf74f542ad84a931890175b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85dd894d8bf74f542ad84a931890175b, type: 3}

@@ -52,6 +52,7 @@ public class LevelChange : MonoBehaviour
     public GameObject earthUI;
 
     TextAnimation textAnim;
+    GameObject tip;
 
     private void Start()
     {
@@ -71,6 +72,8 @@ public class LevelChange : MonoBehaviour
         textAnim = FindObjectOfType<TextAnimation>();
 
         eatPoster = FindObjectOfType<LoadLevel>().gameObject;
+
+        tip = GameObject.Find("TipText");
 
         PsuedoStart();
     }
@@ -191,6 +194,8 @@ public class LevelChange : MonoBehaviour
     { //Loads the win screen
         Debug.Log("Choose a power");
 
+        tip.GetComponent<Text>().text = "Select an ability using the mouse!";
+
         if (button1 == null)
         {
             Debug.Log("button1 is null");
@@ -236,6 +241,7 @@ public class LevelChange : MonoBehaviour
         if (whichButton == 1)
         {
             Debug.Log("chose 1");
+            tip.GetComponent<Text>().text = "";
             button1.SetActive(false);
             button2.SetActive(false);
 
@@ -279,6 +285,7 @@ public class LevelChange : MonoBehaviour
         else if (whichButton == 2)
         {
             Debug.Log("chose 2");
+            tip.GetComponent<Text>().text = "";
             button1.SetActive(false);
             button2.SetActive(false);
 

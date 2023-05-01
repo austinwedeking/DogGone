@@ -253,7 +253,7 @@ MonoBehaviour:
   right: 100
   left: 97
   jump: 119
-  attack: 32
+  attack: 115
   ability1: 49
   ability2: 50
   ability3: 51
