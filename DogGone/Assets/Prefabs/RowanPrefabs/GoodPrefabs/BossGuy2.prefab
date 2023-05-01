@@ -282,7 +282,7 @@ MonoBehaviour:
   fistTimer: 1.65
   lazerTimer: 1.55
   idolTimer: 2.5
-  fullStopTimer: 0
+  SpawnTimer: 9
 --- !u!114 &7768524122048602220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +298,7 @@ MonoBehaviour:
   bonesValue: 0
   bonePrefab: {fileID: 0}
   bossData: {fileID: 3941445226000716705}
-  bossAttackState: 2
+  bossAttackState: 3
   fistAttack: {fileID: 417639656703463390}
   lazerOrigin: {fileID: 3941445225179869949}
   lazer: {fileID: 3920218868352150916, guid: 39af276de43faa4409cb2adab5280910, type: 3}

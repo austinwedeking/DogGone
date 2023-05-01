@@ -10,5 +10,5 @@ public class BossData : EnemyData
     public float fistTimer;
     public float lazerTimer;
     public float idolTimer;
-    public float fullStopTimer;
+    public float SpawnTimer;
 }

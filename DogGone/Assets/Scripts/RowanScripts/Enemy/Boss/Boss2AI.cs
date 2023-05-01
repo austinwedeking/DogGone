@@ -45,12 +45,13 @@ public class Boss2AI : BaseAI
     {
         Fist,
         Lazer,
-        Idol
+        Idol,
+        Spawn
     }
 
     private void Start()
     {
-        bossAttackState = attackState.Idol;
+        bossAttackState = attackState.Spawn;
         hasHitPlayer = false;
         AIRigid = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
@@ -137,6 +138,17 @@ public class Boss2AI : BaseAI
 
                 ChooseNewState();
                 break;
+            case attackState.Spawn:
+                currentAttackState = attackState.Spawn;
+                bossData.attackTimer = bossData.SpawnTimer;
+                Debug.Log($"Spawning, {bossData.attackTimer}");
+
+                AIRigid.velocity = new Vector2(0, 0);
+
+                animator.Play("Transformation1");
+
+                ChooseNewState();
+                break;
         }
     }
 
@@ -205,6 +217,9 @@ public class Boss2AI : BaseAI
                 {
                     bossAttackState = attackState.Idol;
                 }
+                break;
+            case attackState.Spawn:
+                bossAttackState = attackState.Idol;
                 break;
         }
     }
