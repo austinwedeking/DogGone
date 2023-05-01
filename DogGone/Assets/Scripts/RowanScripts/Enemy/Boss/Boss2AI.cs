@@ -39,6 +39,7 @@ public class Boss2AI : BaseAI
 
     private bool hasHitPlayer;
     private bool isFacingRight;
+    public bool isHittable;
 
     //TODO: add more states for variations of attacks
     private enum attackState
@@ -51,6 +52,7 @@ public class Boss2AI : BaseAI
 
     private void Start()
     {
+        isHittable = false;
         bossAttackState = attackState.Spawn;
         hasHitPlayer = false;
         AIRigid = gameObject.GetComponent<Rigidbody2D>();
@@ -205,6 +207,7 @@ public class Boss2AI : BaseAI
                 }
                 break;
             case attackState.Idol: //In idle then 45% to do ranged attack, 45% to do melee attack, 10% to idle again
+                if (!isHittable) { isHittable = true; } // makes him take damage after the transformation is done
                 if (Chance <= 45)
                 {
                     bossAttackState = attackState.Fist;

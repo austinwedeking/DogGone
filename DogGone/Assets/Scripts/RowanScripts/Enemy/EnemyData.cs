@@ -53,17 +53,38 @@ public class EnemyData : MonoBehaviour
     {
         if (!AIController.IsPendingDestroy())
         {
-            currentHealth -= damage;
-            StartCoroutine(damageFlash());
-            if (slashAffect != null)
+            if (gameObject.tag == "Boss2")
             {
-                Instantiate(slashAffect, gameObject.transform.position, Quaternion.identity);
+                if (gameObject.GetComponent<Boss2AI>().isHittable)
+                {
+                    currentHealth -= damage;
+                    StartCoroutine(damageFlash());
+                    if (slashAffect != null)
+                    {
+                        Instantiate(slashAffect, gameObject.transform.position, Quaternion.identity);
+                    }
+                    rigid.AddForce(new Vector2(horiz, vert / 2), ForceMode2D.Impulse);
+                    Debug.Log($"enemy took {maxHealth - currentHealth} damage");
+                    if (currentHealth <= 0)
+                    {
+                        Die();
+                    }
+                }
             }
-            rigid.AddForce(new Vector2(horiz, vert / 2), ForceMode2D.Impulse);
-            Debug.Log($"enemy took {maxHealth - currentHealth} damage");
-            if (currentHealth <= 0)
+            else
             {
-                Die();
+                currentHealth -= damage;
+                StartCoroutine(damageFlash());
+                if (slashAffect != null)
+                {
+                    Instantiate(slashAffect, gameObject.transform.position, Quaternion.identity);
+                }
+                rigid.AddForce(new Vector2(horiz, vert / 2), ForceMode2D.Impulse);
+                Debug.Log($"enemy took {maxHealth - currentHealth} damage");
+                if (currentHealth <= 0)
+                {
+                    Die();
+                }
             }
         }
     }
