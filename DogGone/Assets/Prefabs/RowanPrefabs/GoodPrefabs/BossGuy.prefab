@@ -264,7 +264,7 @@ MonoBehaviour:
   bottleThrowTimer: 1.4
   fistTimer: 4
   lazerTimer: 5
-  idolTimer: 2
+  idolTimer: 1.5
   SpawnTimer: 0
 --- !u!114 &6736685802386633667
 MonoBehaviour:

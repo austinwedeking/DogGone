@@ -179,11 +179,11 @@ public class Boss2AI : BaseAI
         switch (bossAttackState)
         { //In an attack its a 50% to idle, 35% to do the other attack, and 15% to repeat attack
             case attackState.Fist:
-                if (Chance <= 50)
+                if (Chance <= 40)
                 {
                     bossAttackState = attackState.Idol;
                 }
-                else if (Chance <= 85)
+                else if (Chance <= 70)
                 {
                     bossAttackState = attackState.Lazer;
                 }
@@ -193,17 +193,17 @@ public class Boss2AI : BaseAI
                 }
                 break;
             case attackState.Lazer:
-                if (Chance <= 50)
+                if (Chance <= 40)
                 {
                     bossAttackState = attackState.Idol;
                 }
                 else if (Chance <= 85)
                 {
-                    bossAttackState = attackState.Fist;
+                    bossAttackState = attackState.Lazer;
                 }
                 else
                 {
-                    bossAttackState = attackState.Lazer;
+                    bossAttackState = attackState.Fist;
                 }
                 break;
             case attackState.Idol: //In idle then 45% to do ranged attack, 45% to do melee attack, 10% to idle again
