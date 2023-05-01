@@ -55,11 +55,11 @@ public class LoadLevel : MonoBehaviour
     {
         if (audioManager.index == 3)
         {
-            this.gameObject.transform.position = new Vector2(175.18f, -0.43f);
+            this.gameObject.transform.position = new Vector2(175.18f, -0.182f);
         }
         else if (audioManager.index == 4)
         {
-            this.gameObject.transform.position = new Vector2(15.65f, -0.43f);
+            this.gameObject.transform.position = new Vector2(-8f, -0.182f);
         }
         else
         {

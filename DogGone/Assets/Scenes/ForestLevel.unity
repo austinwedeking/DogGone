@@ -11822,6 +11822,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2636671829429319018, guid: ea2c2e1a098ddb0448ea5067fdd6769e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 5151656897915717160, guid: ea2c2e1a098ddb0448ea5067fdd6769e, type: 3}
       propertyPath: m_Name
       value: eat_poster
